@@ -1,0 +1,36 @@
+package de.digitalcollections.cudami.external.config;
+
+import java.net.http.HttpClient;
+import java.time.Duration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import de.digitalcollections.cudami.client.CudamiClient;
+import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
+
+@Configuration
+public class SpringConfig {
+
+  @Bean
+  public CudamiClient cudamiClient(CudamiConfig cfg, ObjectMapper mapper) {
+    return new CudamiClient(
+        HttpClient.newBuilder()
+            .followRedirects(HttpClient.Redirect.ALWAYS)
+            .connectTimeout(Duration.ofSeconds(10))
+            .version(HttpClient.Version.HTTP_1_1)
+            .build(),
+        String.valueOf(cfg.getServer().getUrl()),
+        mapper);
+  }
+
+  @Bean
+  @Primary
+  public ObjectMapper objectMapper() {
+    DigitalCollectionsObjectMapper objectMapper = new DigitalCollectionsObjectMapper();
+    return objectMapper;
+  }
+}

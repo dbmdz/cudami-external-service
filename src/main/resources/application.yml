@@ -1,1 +1,27 @@
+cudami:
+  server:
+    url: http://localhost:9000
 
+management:
+  endpoints:
+    web:
+      base-path: "/monitoring"
+      exposure:
+        include: "*"
+  server:
+    port: 18080
+
+server:
+  port: 8080
+  server-header: "@project.name@ v@project.version@"
+
+spring:
+  main:
+    banner-mode: 'off'
+  profiles:
+    active: local
+  security:
+    user:
+      name: admin
+      password: secret
+      roles: MONITORING
