@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mx="http://www.loc.gov/MARC21/slim"
+  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd
+                      http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd
+                      http://www.loc.gov/standards/premis/ http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd
+                      http://www.loc.gov/standards/mix/ http://www.loc.gov/standards/mix/mix.xsd">
+  <mets:dmdSec ID="DMDLOG_0000">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3">
+          <mods:location>
+            <mods:shelfLocator>Hbl/Film 4 Eph.pol. 50-355#1925</mods:shelfLocator>
+          </mods:location>
+          <mods:relatedItem type="host">
+            <mods:titleInfo>
+              <mods:title>Allgemeine Zeitung</mods:title>
+            </mods:titleInfo>
+            <mods:language>
+              <mods:languageTerm authority="iso639-2b" type="code">ger</mods:languageTerm>
+            </mods:language>
+            <mods:recordInfo>
+              <mods:recordIdentifier>
+                https://opacplus.bsb-muenchen.de/title/2747832-4</mods:recordIdentifier>
+            </mods:recordInfo>
+          </mods:relatedItem>
+          <mods:physicalDescription>
+            <mods:digitalOrigin>reformatted digital</mods:digitalOrigin>
+          </mods:physicalDescription>
+          <mods:identifier type="purl">
+            http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images</mods:identifier>
+          <mods:identifier type="urn">urn:nbn:de:bvb:12-bsb00092927-9</mods:identifier>
+          <mods:originInfo>
+            <mods:place>
+              <mods:placeTerm type="text">München</mods:placeTerm>
+            </mods:place>
+            <mods:dateIssued encoding="w3cdtf" keyDate="yes">1925-02-28</mods:dateIssued>
+          </mods:originInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec ID="AMD">
+    <mets:rightsMD ID="RIGHTS">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVRIGHTS">
+        <mets:xmlData>
+          <dv:rights xmlns:dv="http://dfg-viewer.de/">
+            <dv:owner>Bayerische Staatsbibliothek</dv:owner>
+            <dv:ownerLogo>
+              http://daten.digitale-sammlungen.de/~zend-bsb/bsblogo_dfgviewer.jpg</dv:ownerLogo>
+            <dv:ownerSiteURL>http://daten.digitale-sammlungen.de</dv:ownerSiteURL>
+            <dv:ownerContact>mailto:mdz@bsb-muenchen.de</dv:ownerContact>
+          </dv:rights>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:rightsMD>
+    <mets:digiprovMD ID="DIGIPROV">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVLINKS">
+        <mets:xmlData>
+          <dv:links xmlns:dv="http://dfg-viewer.de/">
+            <dv:reference linkText="OPACplus">
+              https://opacplus.bsb-muenchen.de/title/2747832-4</dv:reference>
+            <dv:presentation>
+              https://digipress2.digitale-sammlungen.de/view/bsb00092927_00697_u001/1</dv:presentation>
+          </dv:links>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:digiprovMD>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp USE="DEFAULT">
+      <mets:file ID="FILE_0000_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00697.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0001_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00698.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0002_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00699.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0003_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00700.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0004_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00701.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0005_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00702.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0006_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00703.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0007_DEFAULT" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/bsb00092927_00704.jpg" />
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="MAX">
+      <mets:file ID="FILE_0000_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00697.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0001_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00698.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0002_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00699.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0003_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00700.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0004_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00701.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0005_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00702.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0006_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00703.jpg" />
+      </mets:file>
+      <mets:file ID="FILE_0007_MAX" MIMETYPE="image/jpeg">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/0009/bsb00092927/images/200/bsb00092927_00704.jpg" />
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="MIN" />
+    <mets:fileGrp USE="DOWNLOAD">
+      <mets:file ID="bsb00092927_PDF" MIMETYPE="application/pdf">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="https://download.digitale-sammlungen.de/BOOKS/pdf_download.pl?id=bsb00092927" />
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="LOGICAL">
+    <mets:div CONTENTIDS="urn:nbn:de:bvb:12-bsb00092927-9" ID="LOG_0000"
+      LABEL="Allgemeine Zeitung" TYPE="newspaper">
+      <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+        xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/anchor_243901-3_mets.xml" />
+      <mets:div ID="LOG_0001" LABEL="1925" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1925_mets.xml" />
+        <mets:div ID="LOG_0002" LABEL="02" TYPE="month">
+          <mets:div ID="LOG_0003" LABEL="28" TYPE="day">
+            <mets:div ADMID="AMD" DMDID="DMDLOG_0000" ID="LOG_0004"
+              LABEL="28.02.1925" TYPE="issue" />
+          </mets:div>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+  <mets:structMap TYPE="PHYSICAL">
+    <mets:div ID="PHYS_0000" TYPE="physSequence">
+      <mets:fptr FILEID="bsb00092927_PDF" />
+      <mets:div ID="PHYS_0001" ORDER="1" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0000_DEFAULT" />
+        <mets:fptr FILEID="FILE_0000_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0002" ORDER="2" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0001_DEFAULT" />
+        <mets:fptr FILEID="FILE_0001_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0003" ORDER="3" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0002_DEFAULT" />
+        <mets:fptr FILEID="FILE_0002_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0004" ORDER="4" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0003_DEFAULT" />
+        <mets:fptr FILEID="FILE_0003_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0005" ORDER="5" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0004_DEFAULT" />
+        <mets:fptr FILEID="FILE_0004_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0006" ORDER="6" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0005_DEFAULT" />
+        <mets:fptr FILEID="FILE_0005_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0007" ORDER="7" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0006_DEFAULT" />
+        <mets:fptr FILEID="FILE_0006_MAX" />
+      </mets:div>
+      <mets:div ID="PHYS_0008" ORDER="8" ORDERLABEL="00" TYPE="page">
+        <mets:fptr FILEID="FILE_0007_DEFAULT" />
+        <mets:fptr FILEID="FILE_0007_MAX" />
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+  <mets:structLink>
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0001"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0002"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0003"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0004"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0005"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0006"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0007"
+      xlink:from="LOG_0004" />
+    <mets:smLink xmlns:xlink="http://www.w3.org/1999/xlink" xlink:to="PHYS_0008"
+      xlink:from="LOG_0004" />
+  </mets:structLink>
+</mets:mets>

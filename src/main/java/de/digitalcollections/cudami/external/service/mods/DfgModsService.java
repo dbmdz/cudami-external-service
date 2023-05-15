@@ -10,6 +10,7 @@ public class DfgModsService extends ModsService {
   @Override
   public Mods getModsForDigitalObject(DigitalObject digitalObject) throws Exception {
     Mods mods = super.getModsForDigitalObject(digitalObject);
+    
     return mods;
   }
 }
