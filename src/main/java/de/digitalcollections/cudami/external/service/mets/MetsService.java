@@ -21,7 +21,7 @@ public class MetsService {
    * @param digitalObject data object containing relevant data for filling
    * @return
    */
-  public AmdSec createAmdSec(DigitalObject digitalObject) {
+  protected AmdSec createAmdSec(DigitalObject digitalObject) {
     AmdSec amdSec = AmdSec.builder().ID("AMD").build();
 
     MdSec rightsMD = createRightsMD(digitalObject);
@@ -33,12 +33,12 @@ public class MetsService {
     return amdSec;
   }
 
-  public MdSec createDigiprovMD(DigitalObject digitalObject) {
+  protected MdSec createDigiprovMD(DigitalObject digitalObject) {
     MdSec mdSec = MdSec.builder().ID("DIGIPROV").build();
     return mdSec;
   }
 
-  public FileSec createFileSec(DigitalObject digitalObject) {
+  protected FileSec createFileSec(DigitalObject digitalObject) {
     FileGrp fileGrpDefault = FileGrp.builder().USE("DEFAULT").build();
     FileGrp fileGrpMax = FileGrp.builder().USE("MAX").build();
     FileGrp fileGrpMin = FileGrp.builder().USE("MIN").build();
@@ -60,22 +60,22 @@ public class MetsService {
    * @param digitalObject data object containing relevant data for filling
    * @return
    */
-  public MdSec createRightsMD(DigitalObject digitalObject) {
+  protected MdSec createRightsMD(DigitalObject digitalObject) {
     MdSec mdSec = MdSec.builder().ID("RIGHTS").build();
     return mdSec;
   }
 
-  public StructLink createStructLink(DigitalObject digitalObject) {
+  protected StructLink createStructLink(DigitalObject digitalObject) {
     StructLink structLink = StructLink.builder().build();
     return structLink;
   }
 
-  public StructMap createStructMapLogical(DigitalObject digitalObject) {
+  protected StructMap createStructMapLogical(DigitalObject digitalObject) {
     StructMap structMap = StructMap.builder().TYPE("LOGICAL").build();
     return structMap;
   }
 
-  public StructMap createStructMapPhysical(DigitalObject digitalObject) {
+  protected StructMap createStructMapPhysical(DigitalObject digitalObject) {
     StructMap structMap = StructMap.builder().TYPE("PHYSICAL").build();
     return structMap;
   }
