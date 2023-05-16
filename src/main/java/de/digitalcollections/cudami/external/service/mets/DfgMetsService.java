@@ -1,5 +1,7 @@
 package de.digitalcollections.cudami.external.service.mets;
 
+import de.digitalcollections.cudami.external.service.mods.DfgModsService;
+import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model._enums.MDTYPE;
 import org.mycore.libmeta.mets.model.mdsec.MdSec;
@@ -10,13 +12,7 @@ import org.mycore.libmeta.mods.model.Mods;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
 
-import de.digitalcollections.cudami.external.service.mods.DfgModsService;
-import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
-
-/**
- * Service for creation of DFG specific METS metadata by given (fully filled)
- * DigitalObject.
- */
+/** Service for creation of DFG specific METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class DfgMetsService extends MetsService {
   private DfgModsService dfgModsService;

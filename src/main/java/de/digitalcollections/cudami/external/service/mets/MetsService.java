@@ -1,5 +1,6 @@
 package de.digitalcollections.cudami.external.service.mets;
 
+import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model.filesec.FileGrp;
 import org.mycore.libmeta.mets.model.filesec.FileSec;
@@ -8,11 +9,7 @@ import org.mycore.libmeta.mets.model.structlink.StructLink;
 import org.mycore.libmeta.mets.model.structmap.StructMap;
 import org.springframework.stereotype.Service;
 
-import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
-
-/**
- * Service for creation of METS metadata by given (fully filled) DigitalObject.
- */
+/** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class MetsService {
 
@@ -26,12 +23,13 @@ public class MetsService {
     FileGrp fileGrpMax = FileGrp.builder().USE("MAX").build();
     FileGrp fileGrpMin = FileGrp.builder().USE("MIN").build();
     FileGrp fileGrpDownload = FileGrp.builder().USE("DOWNLOAD").build();
-    FileSec fileSec = FileSec.builder()
-        .addFileGrp(fileGrpDefault)
-        .addFileGrp(fileGrpMax)
-        .addFileGrp(fileGrpMin)
-        .addFileGrp(fileGrpDownload)
-        .build();
+    FileSec fileSec =
+        FileSec.builder()
+            .addFileGrp(fileGrpDefault)
+            .addFileGrp(fileGrpMax)
+            .addFileGrp(fileGrpMin)
+            .addFileGrp(fileGrpDownload)
+            .build();
     mets.setFileSec(fileSec);
   }
 
@@ -43,7 +41,6 @@ public class MetsService {
   private void addStructMapLogical(Mets mets, DigitalObject digitalObject) {
     StructMap structMap = StructMap.builder().TYPE("LOGICAL").build();
     mets.getStructMap().add(structMap);
-
   }
 
   private void addStructMapPhysical(Mets mets, DigitalObject digitalObject) {

@@ -1,9 +1,5 @@
 package de.digitalcollections.cudami.external.repository;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
-
 import de.digitalcollections.cudami.client.CudamiClient;
 import de.digitalcollections.cudami.client.identifiable.entity.CudamiDigitalObjectsClient;
 import de.digitalcollections.cudami.client.identifiable.entity.work.CudamiItemsClient;
@@ -14,6 +10,9 @@ import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObje
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import de.digitalcollections.model.identifiable.entity.work.Work;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class CudamiRepositoryManager {
@@ -29,7 +28,8 @@ public class CudamiRepositoryManager {
     try {
       // DigitalObject
       CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
-      DigitalObject digitalObject = cudamiDigitalObjectsClient.getByUuid(digitalObjectExample.getUuid());
+      DigitalObject digitalObject =
+          cudamiDigitalObjectsClient.getByUuid(digitalObjectExample.getUuid());
 
       if (digitalObject.getItem() != null) {
         // Item
@@ -40,7 +40,8 @@ public class CudamiRepositoryManager {
         if (item.getManifestation() != null) {
           // Manifestation
           CudamiManifestationsClient cudamiManifestationsClient = cudamiClient.forManifestations();
-          Manifestation manifestation = cudamiManifestationsClient.getByUuid(item.getManifestation().getUuid());
+          Manifestation manifestation =
+              cudamiManifestationsClient.getByUuid(item.getManifestation().getUuid());
           item.setManifestation(manifestation);
 
           if (manifestation.getWork() != null) {

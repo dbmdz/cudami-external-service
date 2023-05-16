@@ -1,16 +1,13 @@
 package de.digitalcollections.cudami.external.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import de.digitalcollections.cudami.client.CudamiClient;
+import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
 import java.net.http.HttpClient;
 import java.time.Duration;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import de.digitalcollections.cudami.client.CudamiClient;
-import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
 
 @Configuration
 public class SpringConfig {

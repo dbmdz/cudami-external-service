@@ -1,7 +1,6 @@
 package de.digitalcollections.cudami.external.config;
 
 import java.net.URI;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
