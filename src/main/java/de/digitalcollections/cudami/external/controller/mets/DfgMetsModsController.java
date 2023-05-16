@@ -1,7 +1,7 @@
 package de.digitalcollections.cudami.external.controller.mets;
 
 import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
-import de.digitalcollections.cudami.external.service.mets.DfgMetsService;
+import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.util.UUID;
@@ -15,19 +15,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DfgMetsController {
+public class DfgMetsModsController {
 
   public static final String UUID_PATTERN =
       "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$";
 
-  private final DfgMetsService dfgMetsService;
+  private final DfgMetsModsService dfgMetsModsService;
   private final CudamiRepositoryManager cudamiRepositoryManager;
 
   @SuppressFBWarnings
-  public DfgMetsController(
-      CudamiRepositoryManager cudamiRepositoryManager, DfgMetsService dfgMetsService) {
+  public DfgMetsModsController(
+      CudamiRepositoryManager cudamiRepositoryManager, DfgMetsModsService dfgMetsModsService) {
     this.cudamiRepositoryManager = cudamiRepositoryManager;
-    this.dfgMetsService = dfgMetsService;
+    this.dfgMetsModsService = dfgMetsModsService;
   }
 
   @GetMapping(
@@ -38,7 +38,7 @@ public class DfgMetsController {
     digitalObject.setUuid(uuid);
     digitalObject = cudamiRepositoryManager.getDigitalObject(digitalObject);
 
-    Mets mets = dfgMetsService.getMetsForDigitalObject(digitalObject);
+    Mets mets = dfgMetsModsService.getMetsForDigitalObject(digitalObject);
 
     String xml = METSXMLProcessor.getInstance().marshalToString(mets);
     return new ResponseEntity<String>(xml, HttpStatus.OK);

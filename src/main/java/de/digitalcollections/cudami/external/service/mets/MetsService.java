@@ -5,6 +5,7 @@ import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model.filesec.FileGrp;
 import org.mycore.libmeta.mets.model.filesec.FileSec;
 import org.mycore.libmeta.mets.model.mdsec.AmdSec;
+import org.mycore.libmeta.mets.model.mdsec.MdSec;
 import org.mycore.libmeta.mets.model.structlink.StructLink;
 import org.mycore.libmeta.mets.model.structmap.StructMap;
 import org.springframework.stereotype.Service;
@@ -13,12 +14,31 @@ import org.springframework.stereotype.Service;
 @Service
 public class MetsService {
 
-  private void addAmdSec(Mets mets, DigitalObject digitalObject) {
-    AmdSec amdSec = AmdSec.builder().ID("AMD").addRightsMD(null).build();
-    mets.getAmdSec().add(amdSec);
+  /**
+   * Conforming METS documents must contain administrative metadata (AMD).
+   *
+   * @param mets METS object AmdSec should be added to
+   * @param digitalObject data object containing relevant data for filling
+   * @return
+   */
+  public AmdSec createAmdSec(DigitalObject digitalObject) {
+    AmdSec amdSec = AmdSec.builder().ID("AMD").build();
+
+    MdSec rightsMD = createRightsMD(digitalObject);
+    amdSec.getRightsMD().add(rightsMD);
+
+    MdSec digiprovMD = createDigiprovMD(digitalObject);
+    amdSec.getDigiprovMD().add(digiprovMD);
+
+    return amdSec;
   }
 
-  private void addFileSec(Mets mets, DigitalObject digitalObject) {
+  public MdSec createDigiprovMD(DigitalObject digitalObject) {
+    MdSec mdSec = MdSec.builder().ID("DIGIPROV").build();
+    return mdSec;
+  }
+
+  public FileSec createFileSec(DigitalObject digitalObject) {
     FileGrp fileGrpDefault = FileGrp.builder().USE("DEFAULT").build();
     FileGrp fileGrpMax = FileGrp.builder().USE("MAX").build();
     FileGrp fileGrpMin = FileGrp.builder().USE("MIN").build();
@@ -30,42 +50,60 @@ public class MetsService {
             .addFileGrp(fileGrpMin)
             .addFileGrp(fileGrpDownload)
             .build();
-    mets.setFileSec(fileSec);
+    return fileSec;
   }
 
-  private void addStructLink(Mets mets, DigitalObject digitalObject) {
+  /**
+   * rightsMD (intellectual property rights metadata) - Access Rights Policy, Copyrights Metadata.
+   *
+   * @param amdSec AmdSec-section the RightsMD should be add to
+   * @param digitalObject data object containing relevant data for filling
+   * @return
+   */
+  public MdSec createRightsMD(DigitalObject digitalObject) {
+    MdSec mdSec = MdSec.builder().ID("RIGHTS").build();
+    return mdSec;
+  }
+
+  public StructLink createStructLink(DigitalObject digitalObject) {
     StructLink structLink = StructLink.builder().build();
-    mets.setStructLink(structLink);
+    return structLink;
   }
 
-  private void addStructMapLogical(Mets mets, DigitalObject digitalObject) {
+  public StructMap createStructMapLogical(DigitalObject digitalObject) {
     StructMap structMap = StructMap.builder().TYPE("LOGICAL").build();
-    mets.getStructMap().add(structMap);
+    return structMap;
   }
 
-  private void addStructMapPhysical(Mets mets, DigitalObject digitalObject) {
+  public StructMap createStructMapPhysical(DigitalObject digitalObject) {
     StructMap structMap = StructMap.builder().TYPE("PHYSICAL").build();
-    mets.getStructMap().add(structMap);
+    return structMap;
   }
 
   public Mets getMetsForDigitalObject(DigitalObject digitalObject) throws Exception {
-    Mets mets = new Mets();
-
     // mets:amdSec
-    addAmdSec(mets, digitalObject);
+    AmdSec amdSec = createAmdSec(digitalObject);
 
     // mets:fileSec
-    addFileSec(mets, digitalObject);
+    FileSec fileSec = createFileSec(digitalObject);
 
     // mets:structMap TYPE="LOGICAL"
-    addStructMapLogical(mets, digitalObject);
+    StructMap structMapLogical = createStructMapLogical(digitalObject);
 
     // mets:structMap TYPE="PHYSICAL"
-    addStructMapPhysical(mets, digitalObject);
+    StructMap structMapPhysical = createStructMapPhysical(digitalObject);
 
     // mets:structLink
-    addStructLink(mets, digitalObject);
+    StructLink structLink = createStructLink(digitalObject);
 
+    Mets mets =
+        Mets.builder()
+            .addAmdSec(amdSec)
+            .fileSec(fileSec)
+            .addStructMap(structMapLogical)
+            .addStructMap(structMapPhysical)
+            .structLink(structLink)
+            .build();
     return mets;
   }
 }
