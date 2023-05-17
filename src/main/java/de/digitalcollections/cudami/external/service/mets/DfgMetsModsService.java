@@ -40,7 +40,8 @@ public class DfgMetsModsService extends MetsService {
     rightsMD.setMdWrap(mdWrapDVRights);
 
     // add DVLINKS to <mets:amdSec ID="AMD">/<mets:digiprovMD ID="DIGIPROV">
-    MdSec digiprovMD = mets.getAmdSec().get(0).getDigiprovMD().get(0); // has been created before
+    //    MdSec digiprovMD = mets.getAmdSec().get(0).getDigiprovMD().get(0); // has been created
+    // before
 
     return mets;
   }

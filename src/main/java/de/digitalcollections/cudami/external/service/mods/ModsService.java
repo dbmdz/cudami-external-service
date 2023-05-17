@@ -2,14 +2,30 @@ package de.digitalcollections.cudami.external.service.mods;
 
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
+import java.time.LocalDate;
+import java.util.Locale;
 import org.mycore.libmeta.mods.model.Mods;
+import org.mycore.libmeta.mods.model.ModsVersion;
+import org.mycore.libmeta.mods.model._misc.CodeOrText;
+import org.mycore.libmeta.mods.model._misc.DateEncoding;
+import org.mycore.libmeta.mods.model._misc.enums.LanguageTermAuthority;
 import org.mycore.libmeta.mods.model._misc.enums.RelatedItemType;
+import org.mycore.libmeta.mods.model._misc.enums.Yes;
 import org.mycore.libmeta.mods.model._toplevel.Identifier;
+import org.mycore.libmeta.mods.model._toplevel.Language;
 import org.mycore.libmeta.mods.model._toplevel.Location;
 import org.mycore.libmeta.mods.model._toplevel.OriginInfo;
 import org.mycore.libmeta.mods.model._toplevel.PhysicalDescription;
+import org.mycore.libmeta.mods.model._toplevel.RecordInfo;
 import org.mycore.libmeta.mods.model._toplevel.RelatedItem;
+import org.mycore.libmeta.mods.model._toplevel.TitleInfo;
+import org.mycore.libmeta.mods.model.language.LanguageTerm;
 import org.mycore.libmeta.mods.model.location.ShelfLocator;
+import org.mycore.libmeta.mods.model.origininfo.DateIssued;
+import org.mycore.libmeta.mods.model.origininfo.Place;
+import org.mycore.libmeta.mods.model.origininfo.place.PlaceTerm;
+import org.mycore.libmeta.mods.model.physicaldescription.DigitalOrigin;
 import org.springframework.stereotype.Service;
 
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
@@ -38,38 +54,83 @@ public class ModsService {
   }
 
   protected OriginInfo createOriginInfo(DigitalObject digitalObject) {
-    // mods:place
+    Item item = digitalObject.getItem();
+    if (item.getExemplifiesManifestation()) {
+      Manifestation manifestation = item.getManifestation();
+      if (manifestation != null) {
+        System.out.println(manifestation.getCreated());
+
+        LocalDate publicationDate = manifestation.getPublicationInfo().getNavDateRange().getStart();
+      }
+    }
+
+    // mods:place/mods:placeTerm
+    PlaceTerm placeTerm = PlaceTerm.builderForPlaceTerm().type(CodeOrText.TEXT).build();
+    Place place = Place.builderForPlace().addContent(placeTerm).build();
     // TODO
 
     // mods:dateIssued
+    // see w3cdtf = https://www.w3.org/TR/NOTE-datetime
+    // see
+    // https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE
+    // DateTimeFormatter ISO_LOCAL_DATE as '2011-12-03'
+    /*
+       * LocalDate date = LocalDate.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
+    String text = date.format(formatter);
+       */
+    DateIssued dateIssued =
+        DateIssued.builderForDateIssued().encoding(DateEncoding.W3CDTF).keyDate(Yes.YES).build();
     // TODO
 
-    OriginInfo originInfo = OriginInfo.builderForOriginInfo().build();
+    OriginInfo originInfo =
+        OriginInfo.builderForOriginInfo().addContent(place).addContent(dateIssued).build();
     return originInfo;
   }
 
   protected PhysicalDescription createPhysicalDescription(DigitalObject digitalObject) {
-    // TODO use DigitalOrigin.REFORMATTED_DIGITAL
-    // see https://github.com/MyCoRe-Org/libmeta/issues/5
-    // PhysicalDescription physicalDescription =
-    //   PhysicalDescription.builderForPhysicalDescription().addContent(???).build();
     PhysicalDescription physicalDescription =
-        PhysicalDescription.builderForPhysicalDescription().build();
+        PhysicalDescription.builderForPhysicalDescription()
+            .addContent(DigitalOrigin.REFORMATTED_DIGITAL)
+            .build();
     return physicalDescription;
   }
 
   protected RelatedItem createRelatedItem(DigitalObject digitalObject) {
+    Item item = digitalObject.getItem();
+    if (item.getExemplifiesManifestation()) {
+      Manifestation manifestation = item.getManifestation();
+      if (manifestation != null) {
+        System.out.println(manifestation.getCreated());
+
+        Locale locale = manifestation.getLanguage();
+      }
+    }
     // mods:titleInfo
+    TitleInfo titleInfo = TitleInfo.builder().build();
     // TODO
 
-    // mods:language
+    // mods:language/mods:languageTerm authority="iso639-2b" type="code"
+    LanguageTerm languageTerm =
+        LanguageTerm.builderForLanguaeTerm()
+            .authority(LanguageTermAuthority.ISO639_2B)
+            .type(CodeOrText.CODE)
+            .build();
+    Language language = Language.builderForLanguage().addLanguageTerm(languageTerm).build();
     // TODO
 
     // mods:recordInfo
+    RecordInfo recordInfo = RecordInfo.builderForRecordInfo().build();
+    // mods:recordIdentifier
     // TODO
 
     RelatedItem relatedItem =
-        RelatedItem.builderForRelatedItem().type(RelatedItemType.HOST).build();
+        RelatedItem.builderForRelatedItem()
+            .type(RelatedItemType.HOST)
+            .addContent(titleInfo)
+            .addContent(language)
+            .addContent(recordInfo)
+            .build();
     return relatedItem;
   }
 
@@ -106,6 +167,7 @@ public class ModsService {
 
     Mods mods =
         Mods.builder()
+            .version(ModsVersion.VERSION_3_5)
             .addContent(location)
             .addContent(relatedItem)
             .addContent(physicalDescription)
