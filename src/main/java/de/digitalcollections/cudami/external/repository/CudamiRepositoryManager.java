@@ -10,6 +10,8 @@ import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObje
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import de.digitalcollections.model.identifiable.entity.work.Work;
+import de.digitalcollections.model.identifiable.resource.ImageFileResource;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -54,6 +56,18 @@ public class CudamiRepositoryManager {
       }
 
       return digitalObject;
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get DigitalObject by UUID.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public List<ImageFileResource> getIiifFileResources(DigitalObject digitalObject) {
+    CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
+    try {
+      List<ImageFileResource> imageFileResources =
+          cudamiDigitalObjectsClient.getIiifImageFileResources(digitalObject.getUuid());
+      return imageFileResources;
     } catch (TechnicalException e) {
       LOGGER.error("can not get DigitalObject by UUID.", e);
       throw new RuntimeException(e.getMessage());

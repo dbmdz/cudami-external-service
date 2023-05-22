@@ -1,6 +1,9 @@
 package de.digitalcollections.cudami.external.service.mets;
 
+import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.resource.ImageFileResource;
+import java.util.List;
 import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model.filesec.FileGrp;
 import org.mycore.libmeta.mets.model.filesec.FileSec;
@@ -13,6 +16,12 @@ import org.springframework.stereotype.Service;
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class MetsService {
+
+  private CudamiRepositoryManager cudamiRepositoryManager;
+
+  public MetsService(CudamiRepositoryManager cudamiRepositoryManager) {
+    this.cudamiRepositoryManager = cudamiRepositoryManager;
+  }
 
   /**
    * Conforming METS documents must contain administrative metadata (AMD).
@@ -39,6 +48,10 @@ public class MetsService {
   }
 
   protected FileSec createFileSec(DigitalObject digitalObject) {
+    // get IIIF-FileResources for DigitalObject and build different sizes/urls on our own
+    List<ImageFileResource> fileResources =
+        cudamiRepositoryManager.getIiifFileResources(digitalObject);
+
     FileGrp fileGrpDefault = FileGrp.builder().USE("DEFAULT").build();
     FileGrp fileGrpMax = FileGrp.builder().USE("MAX").build();
     FileGrp fileGrpMin = FileGrp.builder().USE("MIN").build();
