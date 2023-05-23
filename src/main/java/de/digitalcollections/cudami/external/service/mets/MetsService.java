@@ -181,6 +181,10 @@ public class MetsService {
      * <p>Die logische Struktur kann aus beliebig vielen mets:div aufgebaut werden, die zudem
      * beliebig in einander verschachtelt werden können, um die Hierarchie abzubilden.
      * verpflichtend: Jede METS-Datei muss mindestens ein logisches Strukturelement enthalten.
+     *
+     * <p>Das Attribut ID dient der Verknüpfung innerhalb der METS-Datei und muss zwingend eindeutig
+     * belegt werden. Im Attribut TYPE muss die Art des Strukturelements näher bezeichnet werden.
+     * Dabei sind nur Werte aus der DFG-Viewer-
      */
     return structMap;
   }
