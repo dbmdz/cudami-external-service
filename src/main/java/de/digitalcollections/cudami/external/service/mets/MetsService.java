@@ -4,15 +4,19 @@ import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model._enums.LOCTYPE;
+import org.mycore.libmeta.mets.model.div.Fptr;
 import org.mycore.libmeta.mets.model.filesec.File;
 import org.mycore.libmeta.mets.model.filesec.FileGrp;
 import org.mycore.libmeta.mets.model.filesec.FileSec;
 import org.mycore.libmeta.mets.model.filesec.file.FLocat;
 import org.mycore.libmeta.mets.model.mdsec.AmdSec;
 import org.mycore.libmeta.mets.model.mdsec.MdSec;
+import org.mycore.libmeta.mets.model.structlink.SmLink;
 import org.mycore.libmeta.mets.model.structlink.StructLink;
+import org.mycore.libmeta.mets.model.structmap.Div;
 import org.mycore.libmeta.mets.model.structmap.StructMap;
 import org.springframework.stereotype.Service;
 
@@ -55,12 +59,7 @@ public class MetsService {
    * and the location for the content files that comprise the digital object being described in the
    * METS document
    */
-  protected FileSec createFileSec(DigitalObject digitalObject) {
-    // get IIIF-FileResources for DigitalObject and build different sizes/urls on
-    // our own
-    List<ImageFileResource> fileResources =
-        cudamiRepositoryManager.getIiifFileResources(digitalObject);
-
+  protected FileSec createFileSec(List<ImageFileResource> fileResources) {
     /**
      * A sequence of file group elements <fileGrp> can be used to group the digital files comprising
      * the content of a METS object.
@@ -83,14 +82,14 @@ public class MetsService {
      */
     FileGrp fileGrpDefault = createFileGrpDefault(fileResources);
 
-    FileGrp fileGrpDownload = FileGrp.builder().USE("DOWNLOAD").build();
+    //    FileGrp fileGrpDownload = FileGrp.builder().USE("DOWNLOAD").build();
 
     FileSec fileSec =
         FileSec.builder()
             .addFileGrp(fileGrpDefault)
             // .addFileGrp(fileGrpMax)
             // .addFileGrp(fileGrpMin)
-            .addFileGrp(fileGrpDownload)
+            //            .addFileGrp(fileGrpDownload)
             .build();
     return fileSec;
   }
@@ -129,8 +128,13 @@ public class MetsService {
    */
   private FileGrp createFileGrpDefault(List<ImageFileResource> fileResources) {
     FileGrp fileGrpDefault = FileGrp.builder().USE("DEFAULT").build();
+    int i = 0;
     for (ImageFileResource imageFileResource : fileResources) {
-      File file = File.builder().MIMETYPE("application/vnd.kitodo.iiif").build();
+      File file =
+          File.builder()
+              .ID("FILE_" + StringUtils.leftPad("" + i, 4, "0") + "_DEFAULT")
+              .MIMETYPE("application/vnd.kitodo.iiif")
+              .build();
       fileGrpDefault.getFile().add(file);
 
       FLocat fLocat =
@@ -139,6 +143,7 @@ public class MetsService {
               .xlinkHref(imageFileResource.getHttpBaseUrl().toString())
               .build();
       file.getFLocat().add(fLocat);
+      i++;
     }
     return fileGrpDefault;
   }
@@ -155,8 +160,17 @@ public class MetsService {
     return mdSec;
   }
 
-  protected StructLink createStructLink(DigitalObject digitalObject) {
+  protected StructLink createStructLink(List<ImageFileResource> fileResources) {
     StructLink structLink = StructLink.builder().build();
+
+    int i = 1;
+    for (ImageFileResource imageFileResource : fileResources) {
+      String number = StringUtils.leftPad("" + i, 4, "0");
+      SmLink smLink = SmLink.builder().xlinkTo("PHYS_" + number).xlinkFrom("LOG_0000").build();
+      structLink.getSmLinkOrSmLinkGrp().add(smLink);
+      i++;
+    }
+
     return structLink;
   }
 
@@ -183,14 +197,53 @@ public class MetsService {
      * verpflichtend: Jede METS-Datei muss mindestens ein logisches Strukturelement enthalten.
      *
      * <p>Das Attribut ID dient der Verknüpfung innerhalb der METS-Datei und muss zwingend eindeutig
-     * belegt werden. Im Attribut TYPE muss die Art des Strukturelements näher bezeichnet werden.
-     * Dabei sind nur Werte aus der DFG-Viewer-
+     * belegt werden.
+     *
+     * <p>Im Attribut TYPE muss die Art des Strukturelements näher bezeichnet werden. Dabei sind nur
+     * Werte aus der DFG-Viewer-Strukturdatenliste erlaubt.
+     *
+     * <p>Das Attribut LABEL kann eine Bezeichnung enthalten, unter der das Strukturelement in der
+     * Navigation des DFG-Viewers erscheinen soll. Wird kein LABEL angegeben, erscheint dort der
+     * Strukturtyp.
+     *
+     * <p>Das Attribut ORDERLABEL kann einen Ordnungswert wie z.B. eine Bandzählung enthalten, die
+     * in der Navigation des DFG-Viewers erscheinen soll.
+     *
+     * <p>Existiert zum Strukturelement eine deskriptive Metadatensektion (siehe Kapitel 2.5), so
+     * ist deren ID im Attribut DMDID anzugeben.
+     *
+     * <p>Für das primäre Strukturelement der METS-Datei ist im Attribut ADMID die ID der für den
+     * DFG-Viewer relevanten administrativen Metadatensektion (siehe Kapitel 2.6) anzugeben.
+     *
+     * <p>Das Attribut CONTENTIDS sollte die das Strukturelement identifizierenden PURL und/oder URN
+     * mit Leerzeichen getrennt enthalten.
      */
+    // TODO replace fix values
+    Div divTop = Div.builder().ID("LOG_0000").LABEL("Allgemeine Zeitung").TYPE("newspaper").build();
+    structMap.setDiv(divTop);
+
     return structMap;
   }
 
-  protected StructMap createStructMapPhysical(DigitalObject digitalObject) {
+  protected StructMap createStructMapPhysical(List<ImageFileResource> fileResources) {
     StructMap structMap = StructMap.builder().TYPE("PHYSICAL").build();
+    Div div = Div.builder().ID("PHYS_0000").TYPE("physSequence").build();
+    structMap.setDiv(div);
+
+    int i = 1;
+    for (ImageFileResource imageFileResource : fileResources) {
+      String number = StringUtils.leftPad("" + i, 4, "0");
+      Div subDiv =
+          Div.builder().ID("PHYS_" + number).ORDER(i).ORDERLABEL(number).TYPE("page").build();
+      div.getDiv().add(subDiv);
+
+      Fptr fptr =
+          Fptr.builder()
+              .FILEID("FILE_" + StringUtils.leftPad("" + (i - 1), 4, "0") + "_DEFAULT")
+              .build();
+      subDiv.getFptr().add(fptr);
+      i++;
+    }
     return structMap;
   }
 
@@ -198,17 +251,22 @@ public class MetsService {
     // mets:amdSec
     AmdSec amdSec = createAmdSec(digitalObject);
 
+    // get (IIIF-)ImageFileResources for DigitalObject and build different sizes/urls on
+    // our own
+    List<ImageFileResource> fileResources =
+        cudamiRepositoryManager.getIiifFileResources(digitalObject);
+
     // mets:fileSec
-    FileSec fileSec = createFileSec(digitalObject);
+    FileSec fileSec = createFileSec(fileResources);
 
     // mets:structMap TYPE="LOGICAL"
     StructMap structMapLogical = createStructMapLogical(digitalObject);
 
     // mets:structMap TYPE="PHYSICAL"
-    StructMap structMapPhysical = createStructMapPhysical(digitalObject);
+    StructMap structMapPhysical = createStructMapPhysical(fileResources);
 
     // mets:structLink
-    StructLink structLink = createStructLink(digitalObject);
+    StructLink structLink = createStructLink(fileResources);
 
     Mets mets =
         Mets.builder()
