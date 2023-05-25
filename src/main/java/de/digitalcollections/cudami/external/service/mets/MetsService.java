@@ -126,7 +126,7 @@ public class MetsService {
    * </mets:file>
    * </pre>
    */
-  private FileGrp createFileGrpDefault(List<ImageFileResource> fileResources) {
+  protected FileGrp createFileGrpDefault(List<ImageFileResource> fileResources) {
     FileGrp fileGrpDefault = FileGrp.builder().USE("DEFAULT").build();
     int i = 0;
     for (ImageFileResource imageFileResource : fileResources) {

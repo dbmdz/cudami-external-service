@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mx="http://www.loc.gov/MARC21/slim" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd
+                      http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd
+                      http://www.loc.gov/standards/premis/ http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd
+                      http://www.loc.gov/standards/mix/ http://www.loc.gov/standards/mix/mix.xsd">
+  <mets:dmdSec ID="DMDLOG_0000">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3">
+          <mods:recordInfo>
+            <mods:recordIdentifier>https://opacplus.bsb-muenchen.de/title/2747832-4</mods:recordIdentifier>
+          </mods:recordInfo>
+          <mods:physicalDescription>
+            <mods:digitalOrigin>reformatted digital</mods:digitalOrigin>
+          </mods:physicalDescription>
+          <mods:identifier type="zdb">243901-3</mods:identifier>
+          <mods:identifier type="VD18">90283392</mods:identifier>
+          <mods:titleInfo>
+            <mods:title>Allgemeine Zeitung</mods:title>
+          </mods:titleInfo>
+          <mods:language>
+            <mods:languageTerm authority="iso639-2b" type="code">ger</mods:languageTerm>
+          </mods:language>
+          <mods:originInfo>
+            <mods:place>
+              <mods:placeTerm type="text">München</mods:placeTerm>
+            </mods:place>
+            <mods:name type="personal">
+              <mods:displayForm>Cotta, Johann Friedrich von</mods:displayForm>
+            </mods:name>
+            <mods:dateIssued encoding="w3cdtf" keyDate="yes">1925</mods:dateIssued>
+            <mods:Issuance>serial</mods:Issuance>
+          </mods:originInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec ID="AMD">
+    <mets:rightsMD ID="RIGHTS">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVRIGHTS">
+        <mets:xmlData>
+          <dv:rights xmlns:dv="http://dfg-viewer.de/">
+            <dv:owner>Bayerische Staatsbibliothek</dv:owner>
+            <dv:ownerLogo>
+              http://daten.digitale-sammlungen.de/~zend-bsb/bsblogo_dfgviewer.jpg
+            </dv:ownerLogo>
+            <dv:ownerSiteURL>http://daten.digitale-sammlungen.de</dv:ownerSiteURL>
+            <dv:ownerContact>mailto:mdz@bsb-muenchen.de</dv:ownerContact>
+          </dv:rights>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:rightsMD>
+    <mets:digiprovMD ID="DIGIPROV">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVLINKS">
+        <mets:xmlData>
+          <dv:links xmlns:dv="http://dfg-viewer.de/">
+            <dv:reference linkText="OPACplus">https://opacplus.bsb-muenchen.de/title/2747832-4</dv:reference>
+            <dv:presentation>
+              https://digipress2.digitale-sammlungen.de/calendar/1925/newspaper/bsbmult00000002
+            </dv:presentation>
+          </dv:links>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:digiprovMD>
+  </mets:amdSec>
+  <mets:structMap TYPE="LOGICAL">
+    <mets:div ADMID="AMD" DMDID="DMDLOG_0000" ID="LOG_0000" LABEL="Allgemeine Zeitung" TYPE="newspaper">
+      <mets:mptr LOCTYPE="URL" xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/anchor_243901-3_mets.xml" />
+      <mets:div ID="LOG_0001" ORDERLABEL="1925" LABEL="1925" TYPE="year">
+        <mets:div ID="LOG_0002" ORDERLABEL="1" LABEL="01" TYPE="month">
+          <mets:div ID="LOG_0003" ORDERLABEL="1" LABEL="01" TYPE="day">
+            <mets:div ID="LOG_0004" LABEL="01.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-01-41_bsb00092927_00001_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0005" ORDERLABEL="2" LABEL="02" TYPE="day">
+            <mets:div ID="LOG_0006" LABEL="02.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-02-41_bsb00092927_00015_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0007" ORDERLABEL="3" LABEL="03" TYPE="day">
+            <mets:div ID="LOG_0008" LABEL="03.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-03-41_bsb00092927_00023_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0009" ORDERLABEL="4" LABEL="04" TYPE="day">
+            <mets:div ID="LOG_0010" LABEL="04.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-04-41_bsb00092927_00031_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0011" ORDERLABEL="5" LABEL="05" TYPE="day">
+            <mets:div ID="LOG_0012" LABEL="05.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-05-41_bsb00092927_00047_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0013" ORDERLABEL="6" LABEL="06" TYPE="day">
+            <mets:div ID="LOG_0014" LABEL="06.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-06-41_bsb00092927_00055_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0015" ORDERLABEL="7" LABEL="07" TYPE="day">
+            <mets:div ID="LOG_0016" LABEL="07.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-07-41_bsb00092927_00063_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0017" ORDERLABEL="8" LABEL="08" TYPE="day">
+            <mets:div ID="LOG_0018" LABEL="08.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-08-41_bsb00092927_00071_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0019" ORDERLABEL="9" LABEL="09" TYPE="day">
+            <mets:div ID="LOG_0020" LABEL="09.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-09-41_bsb00092927_00085_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0021" ORDERLABEL="10" LABEL="10" TYPE="day">
+            <mets:div ID="LOG_0022" LABEL="10.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-10-41_bsb00092927_00101_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0023" ORDERLABEL="11" LABEL="11" TYPE="day">
+            <mets:div ID="LOG_0024" LABEL="11.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-11-41_bsb00092927_00109_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0025" ORDERLABEL="12" LABEL="12" TYPE="day">
+            <mets:div ID="LOG_0026" LABEL="12.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-12-41_bsb00092927_00125_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0027" ORDERLABEL="13" LABEL="13" TYPE="day">
+            <mets:div ID="LOG_0028" LABEL="13.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-13-41_bsb00092927_00133_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0029" ORDERLABEL="14" LABEL="14" TYPE="day">
+            <mets:div ID="LOG_0030" LABEL="14.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-14-41_bsb00092927_00147_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0031" ORDERLABEL="15" LABEL="15" TYPE="day">
+            <mets:div ID="LOG_0032" LABEL="15.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-15-41_bsb00092927_00161_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0033" ORDERLABEL="16" LABEL="16" TYPE="day">
+            <mets:div ID="LOG_0034" LABEL="16.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-16-41_bsb00092927_00175_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0035" ORDERLABEL="17" LABEL="17" TYPE="day">
+            <mets:div ID="LOG_0036" LABEL="17.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-17-41_bsb00092927_00191_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0037" ORDERLABEL="18" LABEL="18" TYPE="day">
+            <mets:div ID="LOG_0038" LABEL="18.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-18-41_bsb00092927_00199_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0039" ORDERLABEL="19" LABEL="19" TYPE="day">
+            <mets:div ID="LOG_0040" LABEL="19.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-19-41_bsb00092927_00215_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0041" ORDERLABEL="20" LABEL="20" TYPE="day">
+            <mets:div ID="LOG_0042" LABEL="20.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-20-41_bsb00092927_00223_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0043" ORDERLABEL="21" LABEL="21" TYPE="day">
+            <mets:div ID="LOG_0044" LABEL="21.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-21-41_bsb00092927_00237_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0045" ORDERLABEL="22" LABEL="22" TYPE="day">
+            <mets:div ID="LOG_0046" LABEL="22.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-22-41_bsb00092927_00251_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0047" ORDERLABEL="23" LABEL="23" TYPE="day">
+            <mets:div ID="LOG_0048" LABEL="23.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-23-41_bsb00092927_00265_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0049" ORDERLABEL="24" LABEL="24" TYPE="day">
+            <mets:div ID="LOG_0050" LABEL="24.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-24-41_bsb00092927_00283_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0051" ORDERLABEL="25" LABEL="25" TYPE="day">
+            <mets:div ID="LOG_0052" LABEL="25.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-25-41_bsb00092927_00291_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0053" ORDERLABEL="26" LABEL="26" TYPE="day">
+            <mets:div ID="LOG_0054" LABEL="26.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-26-41_bsb00092927_00307_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0055" ORDERLABEL="27" LABEL="27" TYPE="day">
+            <mets:div ID="LOG_0056" LABEL="27.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-27-41_bsb00092927_00315_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0057" ORDERLABEL="28" LABEL="28" TYPE="day">
+            <mets:div ID="LOG_0058" LABEL="28.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-28-41_bsb00092927_00329_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0059" ORDERLABEL="29" LABEL="29" TYPE="day">
+            <mets:div ID="LOG_0060" LABEL="29.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-29-41_bsb00092927_00343_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0061" ORDERLABEL="30" LABEL="30" TYPE="day">
+            <mets:div ID="LOG_0062" LABEL="30.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-30-41_bsb00092927_00359_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0063" ORDERLABEL="31" LABEL="31" TYPE="day">
+            <mets:div ID="LOG_0064" LABEL="31.01.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-01-31-41_bsb00092927_00375_mets.xml" />
+            </mets:div>
+          </mets:div>
+        </mets:div>
+        <mets:div ID="LOG_0065" ORDERLABEL="2" LABEL="02" TYPE="month">
+          <mets:div ID="LOG_0066" ORDERLABEL="1" LABEL="01" TYPE="day">
+            <mets:div ID="LOG_0067" LABEL="01.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-01-41_bsb00092927_00383_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0068" ORDERLABEL="2" LABEL="02" TYPE="day">
+            <mets:div ID="LOG_0069" LABEL="02.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-02-41_bsb00092927_00403_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0070" ORDERLABEL="3" LABEL="03" TYPE="day">
+            <mets:div ID="LOG_0071" LABEL="03.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-03-41_bsb00092927_00411_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0072" ORDERLABEL="4" LABEL="04" TYPE="day">
+            <mets:div ID="LOG_0073" LABEL="04.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-04-41_bsb00092927_00425_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0074" ORDERLABEL="5" LABEL="05" TYPE="day">
+            <mets:div ID="LOG_0075" LABEL="05.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-05-41_bsb00092927_00433_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0076" ORDERLABEL="6" LABEL="06" TYPE="day">
+            <mets:div ID="LOG_0077" LABEL="06.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-06-41_bsb00092927_00447_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0078" ORDERLABEL="7" LABEL="07" TYPE="day">
+            <mets:div ID="LOG_0079" LABEL="07.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-07-41_bsb00092927_00461_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0080" ORDERLABEL="8" LABEL="08" TYPE="day">
+            <mets:div ID="LOG_0081" LABEL="08.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-08-41_bsb00092927_00469_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0082" ORDERLABEL="9" LABEL="09" TYPE="day">
+            <mets:div ID="LOG_0083" LABEL="09.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-09-41_bsb00092927_00485_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0084" ORDERLABEL="10" LABEL="10" TYPE="day">
+            <mets:div ID="LOG_0085" LABEL="10.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-10-41_bsb00092927_00493_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0086" ORDERLABEL="11" LABEL="11" TYPE="day">
+            <mets:div ID="LOG_0087" LABEL="11.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-11-41_bsb00092927_00507_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0088" ORDERLABEL="12" LABEL="12" TYPE="day">
+            <mets:div ID="LOG_0089" LABEL="12.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-12-41_bsb00092927_00523_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0090" ORDERLABEL="13" LABEL="13" TYPE="day">
+            <mets:div ID="LOG_0091" LABEL="13.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-13-41_bsb00092927_00537_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0092" ORDERLABEL="14" LABEL="14" TYPE="day">
+            <mets:div ID="LOG_0093" LABEL="14.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-14-41_bsb00092927_00551_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0094" ORDERLABEL="15" LABEL="15" TYPE="day">
+            <mets:div ID="LOG_0095" LABEL="15.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-15-41_bsb00092927_00559_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0096" ORDERLABEL="16" LABEL="16" TYPE="day">
+            <mets:div ID="LOG_0097" LABEL="16.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-16-41_bsb00092927_00575_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0098" ORDERLABEL="17" LABEL="17" TYPE="day">
+            <mets:div ID="LOG_0099" LABEL="17.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-17-41_bsb00092927_00583_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0100" ORDERLABEL="18" LABEL="18" TYPE="day">
+            <mets:div ID="LOG_0101" LABEL="18.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-18-41_bsb00092927_00597_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0102" ORDERLABEL="19" LABEL="19" TYPE="day">
+            <mets:div ID="LOG_0103" LABEL="19.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-19-41_bsb00092927_00611_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0104" ORDERLABEL="20" LABEL="20" TYPE="day">
+            <mets:div ID="LOG_0105" LABEL="20.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-20-41_bsb00092927_00625_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0106" ORDERLABEL="21" LABEL="21" TYPE="day">
+            <mets:div ID="LOG_0107" LABEL="21.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-21-41_bsb00092927_00639_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0108" ORDERLABEL="22" LABEL="22" TYPE="day">
+            <mets:div ID="LOG_0109" LABEL="22.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-22-41_bsb00092927_00647_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0110" ORDERLABEL="23" LABEL="23" TYPE="day">
+            <mets:div ID="LOG_0111" LABEL="23.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-23-41_bsb00092927_00659_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0112" ORDERLABEL="24" LABEL="24" TYPE="day">
+            <mets:div ID="LOG_0113" LABEL="24.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-24-41_bsb00092927_00665_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0114" ORDERLABEL="25" LABEL="25" TYPE="day">
+            <mets:div ID="LOG_0115" LABEL="25.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-25-41_bsb00092927_00673_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0116" ORDERLABEL="26" LABEL="26" TYPE="day">
+            <mets:div ID="LOG_0117" LABEL="26.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-26-41_bsb00092927_00681_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0118" ORDERLABEL="27" LABEL="27" TYPE="day">
+            <mets:div ID="LOG_0119" LABEL="27.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-27-41_bsb00092927_00689_mets.xml" />
+            </mets:div>
+          </mets:div>
+          <mets:div ID="LOG_0120" ORDERLABEL="28" LABEL="28" TYPE="day">
+            <mets:div ID="LOG_0121" LABEL="28.02.1925" TYPE="issue">
+              <mets:mptr LOCTYPE="URL"
+                xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/issues_243901-3_1925/issue_243901-3_1925-40-02-28-41_bsb00092927_00697_mets.xml" />
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>
