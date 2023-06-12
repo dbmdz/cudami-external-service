@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.util.List;
 import org.mycore.oai.pmh.BadResumptionTokenException;
 import org.mycore.oai.pmh.CannotDisseminateFormatException;
+import org.mycore.oai.pmh.Granularity;
 import org.mycore.oai.pmh.Header;
 import org.mycore.oai.pmh.IdDoesNotExistException;
 import org.mycore.oai.pmh.Identify;
@@ -14,6 +15,7 @@ import org.mycore.oai.pmh.NoSetHierarchyException;
 import org.mycore.oai.pmh.OAIDataList;
 import org.mycore.oai.pmh.Record;
 import org.mycore.oai.pmh.Set;
+import org.mycore.oai.pmh.SimpleIdentify;
 import org.mycore.oai.pmh.dataprovider.OAIAdapter;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +28,10 @@ public class OAIPmhService implements OAIAdapter {
 
   @Override
   public Identify getIdentify() {
-    // TODO Auto-generated method stub
-    return null;
+    SimpleIdentify identify = new SimpleIdentify();
+    identify.setGranularity(
+        Granularity.YYYY_MM_DD_THH_MM_SS_Z); // cudami model provides lastModified as timestamp....
+    return identify;
   }
 
   @Override
