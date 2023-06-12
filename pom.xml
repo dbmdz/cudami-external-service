@@ -37,6 +37,11 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <version>2.2.9</version>
+    </dependency>
+    <dependency>
       <groupId>org.mycore</groupId>
       <artifactId>oaipmh-dataprovider</artifactId>
       <version>3.0</version>

@@ -1,6 +1,7 @@
 package de.digitalcollections.cudami.external.controller.oai;
 
 import de.digitalcollections.cudami.external.service.oai.OAIPmhService;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.mycore.oai.pmh.Argument;
 import org.mycore.oai.pmh.dataprovider.OAIProvider;
 import org.mycore.oai.pmh.dataprovider.OAIRequest;
@@ -16,8 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * OAI-PMH endpoint fulfilling http://www.openarchives.org/OAI/openarchivesprotocol.html
  *
- * <p>see http://www.openarchives.org/OAI/openarchivesprotocol.html#ProtocolFeatures
- * http://www.openarchives.org/OAI/openarchivesprotocol.html#ProtocolMessages
+ * <p>see http://www.openarchives.org/OAI/openarchivesprotocol.html#ProtocolFeatures,
+ * http://www.openarchives.org/OAI/openarchivesprotocol.html#ProtocolMessages,
+ * http://www.openarchives.org/OAI/2.0/guidelines.htm,
+ * http://www.openarchives.org/OAI/2.0/guidelines-repository.htm
  */
 @RestController
 public class OAIPmhController {
@@ -32,13 +35,53 @@ public class OAIPmhController {
       value = {"/oai"},
       produces = MediaType.APPLICATION_XML_VALUE)
   public ResponseEntity<String> getByUuid(
-      @RequestParam(name = "verb", required = true) String verb,
-      @RequestParam(name = "metadataPrefix", required = false) String metadataPrefix)
-      // TODO all other params
+      @Parameter(
+              example = "1957-03-20T20:30:00Z or 1957-03-20",
+              description =
+                  "an optional argument with a UTCdatetime value, which specifies a lower bound for datestamp-based selective harvesting")
+          @RequestParam(name = "from", required = false)
+          String from,
+      @Parameter(
+              example = "bsb10000001",
+              description =
+                  "a required argument that specifies the unique identifier of the item in the repository from which the record must be disseminated")
+          @RequestParam(name = "identifier", required = false)
+          String identifier,
+      @Parameter(
+              example = "oai_dc",
+              description =
+                  "a required argument that specifies the metadataPrefix of the format that should be included in the metadata part of the returned record . A record should only be returned if the format specified by the metadataPrefix can be disseminated from the item identified by the value of the identifier argument. The metadata formats supported by a repository and for a particular record can be retrieved using the ListMetadataFormats request")
+          @RequestParam(name = "metadataPrefix", required = false)
+          String metadataPrefix,
+      @Parameter(
+              example = "9023A210CD007",
+              description =
+                  "an exclusive argument with a value that is the flow control token returned by a previous ListRecords request that issued an incomplete list."
+                      + "(something url encoded to be decoded on server side; must contain complete information for next request/paging)."
+                      + "The OAI-PMH does not specify the syntax or even suggest an implementation strategy for resumptionToken elements")
+          @RequestParam(name = "resumptionToken", required = false)
+          String resumptionToken,
+      @Parameter(
+              example = "handwritings",
+              description =
+                  "an optional argument with a setSpec value , which specifies set criteria for selective harvesting")
+          @RequestParam(name = "set", required = false)
+          String set,
+      @Parameter(
+              example = "1957-03-21T20:30:00Z or 1957-03-21",
+              description =
+                  "an optional argument with a UTCdatetime value, which specifies a upper bound for datestamp-based selective harvesting")
+          @RequestParam(name = "until", required = false)
+          String until,
+      @RequestParam(name = "verb", required = true) String verb)
       throws Exception {
     OAIRequest oaiRequest = new OAIRequest(verb);
+    oaiRequest.setArgument(Argument.from, from);
+    oaiRequest.setArgument(Argument.identifier, identifier);
     oaiRequest.setArgument(Argument.metadataPrefix, metadataPrefix);
-    // TODO ...
+    oaiRequest.setArgument(Argument.resumptionToken, resumptionToken);
+    oaiRequest.setArgument(Argument.set, set);
+    oaiRequest.setArgument(Argument.until, until);
 
     OAIResponse response = oaiProvider.handleRequest(oaiRequest);
     String xml = response.toString();

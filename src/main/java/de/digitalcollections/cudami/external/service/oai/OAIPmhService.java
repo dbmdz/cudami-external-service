@@ -75,10 +75,38 @@ public class OAIPmhService implements OAIAdapter {
     return null;
   }
 
+  /**
+   * resumptionToken: see http://www.openarchives.org/OAI/openarchivesprotocol.html#FlowControl
+   *
+   * <ul>
+   *   <li>The only defined use of resumptionToken is as follows:
+   *       <ul>
+   *         <li>a repository must include a resumptionToken element as part of each response that
+   *             includes an incomplete list;
+   *         <li>in order to retrieve the next portion of the complete list, the next request must
+   *             use the value of that resumptionToken element as the value of the resumptionToken
+   *             argument of the request;
+   *         <li>the response containing the incomplete list that completes the list must include an
+   *             empty resumptionToken element;
+   *       </ul>
+   *       All other uses of resumptionToken by a harvester are illegal and must return an error.
+   *   <li>In all cases when a resumptionToken is issued, the incomplete list must consist of
+   *       complete entities; e.g., all individual records returned in an incomplete record list
+   *       from a ListRecords request must be intact.
+   *   <li>The format of the resumptionToken is not defined by the OAI-PMH and should be considered
+   *       opaque by the harvester.
+   *   <li>The protocol does not define the semantics of incompleteness. Therefore, a harvester
+   *       should not assume that the members in an incomplete list conform to some selection
+   *       criteria (e.g., date ordering).
+   *   <li>Before including a resumptionToken in the URL of a subsequent request, a harvester must
+   *       encode any special characters in it.
+   * </ul>
+   */
   @Override
   public OAIDataList<? extends Record> getRecords(String resumptionToken)
       throws BadResumptionTokenException {
-    // TODO Auto-generated method stub
+    // TODO decode resumptionToken and extract PageRequest with filtering from it; issue PageRequest
+    // for next page
     return null;
   }
 
