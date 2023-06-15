@@ -8,6 +8,7 @@ import org.mycore.oai.pmh.Granularity;
 import org.mycore.oai.pmh.Header;
 import org.mycore.oai.pmh.IdDoesNotExistException;
 import org.mycore.oai.pmh.Identify;
+import org.mycore.oai.pmh.Identify.DeletedRecordPolicy;
 import org.mycore.oai.pmh.MetadataFormat;
 import org.mycore.oai.pmh.NoMetadataFormatsException;
 import org.mycore.oai.pmh.NoRecordsMatchException;
@@ -31,6 +32,11 @@ public class OAIPmhService implements OAIAdapter {
     SimpleIdentify identify = new SimpleIdentify();
     identify.setGranularity(
         Granularity.YYYY_MM_DD_THH_MM_SS_Z); // cudami model provides lastModified as timestamp....
+    identify.setDeletedRecordPolicy(
+        DeletedRecordPolicy.No); // the repository does not maintain information about
+    // deletions. A repository that indicates this level of
+    // support must not reveal a deleted status in any
+    // response.
     return identify;
   }
 

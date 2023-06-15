@@ -42,6 +42,7 @@ class OAIPmhControllerTest {
     // deletions. A repository that indicates this level of
     // support must not reveal a deleted status in any
     // response.
+
     when(service.getIdentify()).thenReturn(identify);
 
     this.mockMvc
