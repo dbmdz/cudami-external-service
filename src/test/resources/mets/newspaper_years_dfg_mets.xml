@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mx="http://www.loc.gov/MARC21/slim"
+  xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd
+                      http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd
+                      http://www.loc.gov/standards/premis/ http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd
+                      http://www.loc.gov/standards/mix/ http://www.loc.gov/standards/mix/mix.xsd">
+  <mets:dmdSec ID="DMDLOG_0000">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods xmlns:mods="http://www.loc.gov/mods/v3">
+          <mods:recordInfo>
+            <mods:recordIdentifier>
+              https://opacplus.bsb-muenchen.de/title/2747832-4</mods:recordIdentifier>
+          </mods:recordInfo>
+          <mods:physicalDescription>
+            <mods:digitalOrigin>reformatted digital</mods:digitalOrigin>
+          </mods:physicalDescription>
+          <mods:identifier type="zdb">243901-3</mods:identifier>
+          <mods:identifier type="VD18">90283392</mods:identifier>
+          <mods:titleInfo>
+            <mods:title>Allgemeine Zeitung</mods:title>
+          </mods:titleInfo>
+          <mods:language>
+            <mods:languageTerm authority="iso639-2b" type="code">ger</mods:languageTerm>
+          </mods:language>
+          <mods:originInfo>
+            <mods:place>
+              <mods:placeTerm type="text">München</mods:placeTerm>
+            </mods:place>
+            <mods:name type="personal">
+              <mods:displayForm>Cotta, Johann Friedrich von</mods:displayForm>
+            </mods:name>
+            <mods:dateIssued encoding="w3cdtf" keyDate="yes" point="start"
+              type="anchor">1798</mods:dateIssued>
+            <mods:dateIssued encoding="w3cdtf" point="end" type="anchor">1925</mods:dateIssued>
+            <mods:Issuance>serial</mods:Issuance>
+            <mods:dateOther>1798 - 1803,16.Nov.; 1807,16.Jan. - 1925,1.März</mods:dateOther>
+          </mods:originInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec ID="AMD">
+    <mets:rightsMD ID="RIGHTS">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVRIGHTS">
+        <mets:xmlData>
+          <dv:rights xmlns:dv="http://dfg-viewer.de/">
+            <dv:owner>Bayerische Staatsbibliothek</dv:owner>
+            <dv:ownerLogo>
+              http://daten.digitale-sammlungen.de/~zend-bsb/bsblogo_dfgviewer.jpg</dv:ownerLogo>
+            <dv:ownerSiteURL>http://daten.digitale-sammlungen.de</dv:ownerSiteURL>
+            <dv:ownerContact>mailto:mdz@bsb-muenchen.de</dv:ownerContact>
+          </dv:rights>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:rightsMD>
+    <mets:digiprovMD ID="DIGIPROV">
+      <mets:mdWrap MDTYPE="OTHER" MIMETYPE="text/xml" OTHERMDTYPE="DVLINKS">
+        <mets:xmlData>
+          <dv:links xmlns:dv="http://dfg-viewer.de/">
+            <dv:reference linkText="OPACplus">
+              https://opacplus.bsb-muenchen.de/title/2747832-4</dv:reference>
+            <dv:presentation>
+              https://digipress2.digitale-sammlungen.de/calendar/newspaper/bsbmult00000002</dv:presentation>
+          </dv:links>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:digiprovMD>
+  </mets:amdSec>
+  <mets:structMap TYPE="LOGICAL">
+    <mets:div ADMID="AMD" DMDID="DMDLOG_0000" ID="LOG_0000"
+      LABEL="Allgemeine Zeitung" TYPE="newspaper">
+      <mets:div ID="LOG_0001" LABEL="1798" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1798_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0002" LABEL="1799" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1799_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0003" LABEL="1800" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1800_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0004" LABEL="1801" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1801_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0005" LABEL="1802" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1802_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0006" LABEL="1803" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1803_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0007" LABEL="1807" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1807_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0008" LABEL="1808" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1808_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0009" LABEL="1809" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1809_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0010" LABEL="1810" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1810_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0011" LABEL="1811" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1811_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0012" LABEL="1812" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1812_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0013" LABEL="1813" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1813_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0014" LABEL="1814" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1814_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0015" LABEL="1815" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1815_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0016" LABEL="1816" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1816_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0017" LABEL="1817" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1817_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0018" LABEL="1818" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1818_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0019" LABEL="1819" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1819_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0020" LABEL="1820" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1820_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0021" LABEL="1821" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1821_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0022" LABEL="1822" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1822_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0023" LABEL="1823" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1823_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0024" LABEL="1824" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1824_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0025" LABEL="1825" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1825_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0026" LABEL="1826" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1826_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0027" LABEL="1827" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1827_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0028" LABEL="1828" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1828_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0029" LABEL="1829" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1829_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0030" LABEL="1830" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1830_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0031" LABEL="1831" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1831_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0032" LABEL="1832" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1832_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0033" LABEL="1833" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1833_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0034" LABEL="1834" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1834_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0035" LABEL="1835" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1835_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0036" LABEL="1836" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1836_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0037" LABEL="1837" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1837_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0038" LABEL="1838" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1838_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0039" LABEL="1839" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1839_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0040" LABEL="1840" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1840_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0041" LABEL="1841" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1841_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0042" LABEL="1842" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1842_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0043" LABEL="1843" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1843_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0044" LABEL="1844" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1844_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0045" LABEL="1845" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1845_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0046" LABEL="1846" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1846_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0047" LABEL="1847" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1847_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0048" LABEL="1848" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1848_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0049" LABEL="1849" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1849_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0050" LABEL="1850" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1850_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0051" LABEL="1851" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1851_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0052" LABEL="1852" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1852_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0053" LABEL="1853" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1853_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0054" LABEL="1854" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1854_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0055" LABEL="1855" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1855_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0056" LABEL="1856" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1856_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0057" LABEL="1857" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1857_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0058" LABEL="1858" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1858_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0059" LABEL="1859" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1859_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0060" LABEL="1860" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1860_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0061" LABEL="1861" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1861_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0062" LABEL="1862" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1862_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0063" LABEL="1863" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1863_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0064" LABEL="1864" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1864_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0065" LABEL="1865" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1865_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0066" LABEL="1866" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1866_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0067" LABEL="1867" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1867_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0068" LABEL="1868" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1868_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0069" LABEL="1869" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1869_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0070" LABEL="1870" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1870_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0071" LABEL="1871" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1871_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0072" LABEL="1872" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1872_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0073" LABEL="1873" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1873_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0074" LABEL="1874" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1874_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0075" LABEL="1875" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1875_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0076" LABEL="1876" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1876_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0077" LABEL="1877" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1877_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0078" LABEL="1878" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1878_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0079" LABEL="1879" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1879_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0080" LABEL="1880" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1880_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0081" LABEL="1881" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1881_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0082" LABEL="1882" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1882_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0083" LABEL="1883" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1883_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0084" LABEL="1884" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1884_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0085" LABEL="1885" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1885_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0086" LABEL="1886" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1886_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0087" LABEL="1887" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1887_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0088" LABEL="1888" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1888_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0089" LABEL="1889" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1889_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0090" LABEL="1890" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1890_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0091" LABEL="1891" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1891_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0092" LABEL="1892" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1892_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0093" LABEL="1893" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1893_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0094" LABEL="1894" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1894_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0095" LABEL="1895" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1895_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0096" LABEL="1896" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1896_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0097" LABEL="1897" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1897_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0098" LABEL="1898" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1898_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0099" LABEL="1899" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1899_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0100" LABEL="1900" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1900_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0101" LABEL="1901" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1901_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0102" LABEL="1902" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1902_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0103" LABEL="1903" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1903_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0104" LABEL="1904" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1904_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0105" LABEL="1905" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1905_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0106" LABEL="1906" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1906_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0107" LABEL="1907" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1907_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0108" LABEL="1908" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1908_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0109" LABEL="1909" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1909_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0110" LABEL="1910" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1910_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0111" LABEL="1911" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1911_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0112" LABEL="1912" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1912_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0113" LABEL="1913" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1913_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0114" LABEL="1914" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1914_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0115" LABEL="1915" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1915_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0116" LABEL="1916" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1916_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0117" LABEL="1917" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1917_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0118" LABEL="1918" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1918_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0119" LABEL="1919" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1919_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0120" LABEL="1920" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1920_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0121" LABEL="1921" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1921_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0122" LABEL="1922" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1922_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0123" LABEL="1923" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1923_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0124" LABEL="1924" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1924_mets.xml" />
+      </mets:div>
+      <mets:div ID="LOG_0125" LABEL="1925" TYPE="year">
+        <mets:mptr xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL"
+          xlink:href="http://daten.digitale-sammlungen.de/~db/bsb_metsztg/243901-3/years_243901-3/year_243901-3_1925_mets.xml" />
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

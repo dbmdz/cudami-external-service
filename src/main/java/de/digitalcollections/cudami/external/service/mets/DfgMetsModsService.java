@@ -1,5 +1,6 @@
 package de.digitalcollections.cudami.external.service.mets;
 
+import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
 import de.digitalcollections.cudami.external.service.mods.DfgModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import org.mycore.libmeta.mets.model.Mets;
@@ -17,7 +18,9 @@ import org.w3c.dom.Element;
 public class DfgMetsModsService extends MetsService {
   private DfgModsService dfgModsService;
 
-  public DfgMetsModsService(DfgModsService dfgModsService) {
+  public DfgMetsModsService(
+      DfgModsService dfgModsService, CudamiRepositoryManager cudamiRepositoryManager) {
+    super(cudamiRepositoryManager);
     this.dfgModsService = dfgModsService;
   }
 

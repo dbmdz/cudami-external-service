@@ -31,7 +31,7 @@ public class DfgMetsModsController {
   }
 
   @GetMapping(
-      value = {"/mets/v1/digitalobjects/{uuid:" + UUID_PATTERN + "}/dfg"},
+      value = {"/mets/mods/v1/digitalobjects/{uuid:" + UUID_PATTERN + "}/dfg"},
       produces = MediaType.APPLICATION_XML_VALUE)
   public ResponseEntity<String> getByUuid(@PathVariable UUID uuid) throws Exception {
     DigitalObject digitalObject = new DigitalObject();
