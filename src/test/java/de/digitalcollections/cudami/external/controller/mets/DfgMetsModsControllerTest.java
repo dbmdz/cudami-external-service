@@ -35,7 +35,7 @@ class DfgMetsModsControllerTest {
 
     String testUuid = "550e8400-e29b-11d4-a716-446655440000";
     this.mockMvc
-        .perform(get("/mets/v1/digitalobjects/" + testUuid + "/dfg"))
+        .perform(get("/mets/mods/v1/digitalobjects/" + testUuid + "/dfg"))
         .andDo(print())
         .andExpect(status().is2xxSuccessful());
   }
