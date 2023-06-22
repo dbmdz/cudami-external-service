@@ -55,46 +55,6 @@ public class MetsService {
   }
 
   /**
-   * The overall purpose of the content file section element "fileSec" is to provide an inventory of
-   * and the location for the content files that comprise the digital object being described in the
-   * METS document
-   */
-  protected FileSec createFileSec(List<ImageFileResource> fileResources) {
-    /**
-     * A sequence of file group elements <fileGrp> can be used to group the digital files comprising
-     * the content of a METS object.
-     *
-     * <p>Innerhalb von mets:fileSec kann es beliebig viele mets:fileGrp geben, die sich jedoch alle
-     * durch den Wert des USE-Attributs unterscheiden müssen.
-     *
-     * <p>Es muss mindestens eine mets:fileGrp mit dem Attribut USE=“DEFAULT“ geben. Das Attribut
-     * USE gibt den Verwendungszweck der in der Dateigruppe enthaltenen Repräsentationen an. Im
-     * Kontext des DFG-Viewers werden die folgenden Attributwerte ausgewertet:
-     *
-     * <ul>
-     *   <li>DEFAULT: normale Präsentationsderivate,
-     *   <li>DOWNLOAD: herunterladbare (PDF-)Derivate,
-     *   <li>THUMBS: Vorschaubilder je Seite (max. 150x150 Pixel),
-     *   <li>TEASER: Voransicht des Werks (max. 150x150 Pixel),
-     *   <li>AUDIO: für digitale Tonaufnahmen,
-     *   <li>FULLTEXT: Volltext- und Layoutinformationen.
-     * </ul>
-     */
-    FileGrp fileGrpDefault = createFileGrpDefault(fileResources);
-
-    //    FileGrp fileGrpDownload = FileGrp.builder().USE("DOWNLOAD").build();
-
-    FileSec fileSec =
-        FileSec.builder()
-            .addFileGrp(fileGrpDefault)
-            // .addFileGrp(fileGrpMax)
-            // .addFileGrp(fileGrpMin)
-            //            .addFileGrp(fileGrpDownload)
-            .build();
-    return fileSec;
-  }
-
-  /**
    * DEFAULT: normale Präsentationsderivate
    *
    * <p>mets:fileGrp/mets:file: The file element <file> provides access to the content files for the
@@ -146,6 +106,69 @@ public class MetsService {
       i++;
     }
     return fileGrpDefault;
+  }
+
+  protected FileGrp createFileGrpThumbs(List<ImageFileResource> fileResources) {
+    FileGrp fileGrpThumbs = FileGrp.builder().USE("THUMBS").build();
+    int i = 0;
+    for (ImageFileResource imageFileResource : fileResources) {
+      File file =
+          File.builder()
+              .ID("FILE_" + StringUtils.leftPad("" + i, 4, "0") + "_THUMBS")
+              .MIMETYPE("image/jpeg")
+              .build();
+      fileGrpThumbs.getFile().add(file);
+
+      FLocat fLocat =
+          FLocat.builder()
+              .LOCTYPE(LOCTYPE.URL)
+              .xlinkHref(
+                  imageFileResource.getHttpBaseUrl().toString() + "/full/!150,150/0/default.jpg")
+              .build();
+      file.getFLocat().add(fLocat);
+      i++;
+    }
+    return fileGrpThumbs;
+  }
+
+  /**
+   * The overall purpose of the content file section element "fileSec" is to provide an inventory of
+   * and the location for the content files that comprise the digital object being described in the
+   * METS document
+   */
+  protected FileSec createFileSec(List<ImageFileResource> fileResources) {
+    /**
+     * A sequence of file group elements <fileGrp> can be used to group the digital files comprising
+     * the content of a METS object.
+     *
+     * <p>Innerhalb von mets:fileSec kann es beliebig viele mets:fileGrp geben, die sich jedoch alle
+     * durch den Wert des USE-Attributs unterscheiden müssen.
+     *
+     * <p>Es muss mindestens eine mets:fileGrp mit dem Attribut USE=“DEFAULT“ geben. Das Attribut
+     * USE gibt den Verwendungszweck der in der Dateigruppe enthaltenen Repräsentationen an. Im
+     * Kontext des DFG-Viewers werden die folgenden Attributwerte ausgewertet:
+     *
+     * <ul>
+     *   <li>DEFAULT: normale Präsentationsderivate,
+     *   <li>DOWNLOAD: herunterladbare (PDF-)Derivate,
+     *   <li>THUMBS: Vorschaubilder je Seite (max. 150x150 Pixel),
+     *   <li>TEASER: Voransicht des Werks (max. 150x150 Pixel),
+     *   <li>AUDIO: für digitale Tonaufnahmen,
+     *   <li>FULLTEXT: Volltext- und Layoutinformationen.
+     * </ul>
+     */
+    FileGrp fileGrpDefault = createFileGrpDefault(fileResources);
+    FileGrp fileGrpThumbs = createFileGrpThumbs(fileResources);
+
+    //    FileGrp fileGrpDownload = FileGrp.builder().USE("DOWNLOAD").build();
+
+    FileSec fileSec =
+        FileSec.builder()
+            .addFileGrp(fileGrpDefault)
+            .addFileGrp(fileGrpThumbs)
+            //            .addFileGrp(fileGrpDownload)
+            .build();
+    return fileSec;
   }
 
   /**
@@ -237,11 +260,18 @@ public class MetsService {
           Div.builder().ID("PHYS_" + number).ORDER(i).ORDERLABEL(number).TYPE("page").build();
       div.getDiv().add(subDiv);
 
-      Fptr fptr =
+      Fptr fptrDefault =
           Fptr.builder()
               .FILEID("FILE_" + StringUtils.leftPad("" + (i - 1), 4, "0") + "_DEFAULT")
               .build();
-      subDiv.getFptr().add(fptr);
+      subDiv.getFptr().add(fptrDefault);
+
+      Fptr fptrThumbs =
+          Fptr.builder()
+              .FILEID("FILE_" + StringUtils.leftPad("" + (i - 1), 4, "0") + "_THUMBS")
+              .build();
+      subDiv.getFptr().add(fptrThumbs);
+
       i++;
     }
     return structMap;
