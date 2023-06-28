@@ -3,6 +3,9 @@ package de.digitalcollections.cudami.external.service.mets;
 import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
 import de.digitalcollections.cudami.external.service.mods.DfgModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import org.mycore.libmeta.dfgviewer.DVRightsXMLProcessor;
+import org.mycore.libmeta.dfgviewer.model.Rights;
+import org.mycore.libmeta.dfgviewer.model.Rights.Builder;
 import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model._enums.MDTYPE;
 import org.mycore.libmeta.mets.model.mdsec.MdSec;
@@ -36,16 +39,34 @@ public class DfgMetsModsService extends MetsService {
     MdSec mdSec = MdSec.builder().mdWrap(mdWrap).build();
     mets.getDmdSec().add(mdSec);
 
-    // add DVRIGHTS to <mets:amdSec ID="AMD">/<mets:rightsMD ID="RIGHTS">
-    MdSec rightsMD = mets.getAmdSec().get(0).getRightsMD().get(0); // has been created before
+    // add DVRIGHTS to <mets:amdSec ID="AMD">/<mets:rightsMD ID="RIGHTS">/.../dv:rights
+    Rights rights = getDfgRightsForDigitalObject(digitalObject);
+    Element rightsElement =
+        DVRightsXMLProcessor.getInstance().marshalToDOM(rights).getDocumentElement();
     MdWrap mdWrapDVRights =
         MdWrap.builder().MDTYPE(MDTYPE.OTHER).MIMETYPE("text/xml").OTHERMDTYPE("DVRIGHTS").build();
+    mdWrapDVRights.setXmlData(XMLData.builder().addNode(rightsElement).build());
+    MdSec rightsMD = mets.getAmdSec().get(0).getRightsMD().get(0); // has been created before
     rightsMD.setMdWrap(mdWrapDVRights);
 
+    //    mdWrapDVRights
+    //        .getXmlData()
+    //        .getNodes()
+    //        .add(DVRightsXMLProcessor.getInstance().marshalToDOM(rights));
     // add DVLINKS to <mets:amdSec ID="AMD">/<mets:digiprovMD ID="DIGIPROV">
     //    MdSec digiprovMD = mets.getAmdSec().get(0).getDigiprovMD().get(0); // has been created
     // before
 
     return mets;
+  }
+
+  private Rights getDfgRightsForDigitalObject(DigitalObject digitalObject) {
+    Builder rightsBuilder =
+        Rights.builder()
+            .owner("Bayerische Staatsbibliothek")
+            .ownerLogo(
+                "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg")
+            .ownerSiteURL("https://www.bsb-muenchen.de/");
+    return rightsBuilder.build();
   }
 }

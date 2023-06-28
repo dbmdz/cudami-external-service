@@ -48,7 +48,7 @@ public class ModsService {
 
   protected OriginInfo createOriginInfo(DigitalObject digitalObject) {
     Item item = digitalObject.getItem();
-    if (item.getExemplifiesManifestation()) {
+    if (item != null && item.getExemplifiesManifestation()) {
       Manifestation manifestation = item.getManifestation();
       if (manifestation != null) {
         System.out.println(manifestation.getCreated());
@@ -91,7 +91,7 @@ public class ModsService {
 
   protected RelatedItem createRelatedItem(DigitalObject digitalObject) {
     Item item = digitalObject.getItem();
-    if (item.getExemplifiesManifestation()) {
+    if (item != null && item.getExemplifiesManifestation()) {
       Manifestation manifestation = item.getManifestation();
       if (manifestation != null) {
         // FIXME raus damit!
@@ -131,10 +131,12 @@ public class ModsService {
   protected ShelfLocator createShelfLocator(DigitalObject digitalObject) {
     ShelfLocator shelfLocator = null;
     Item item = digitalObject.getItem();
-    de.digitalcollections.model.identifiable.Identifier shelfNo =
-        item.getIdentifierByNamespace("shelfno");
-    if (shelfNo != null) {
-      shelfLocator = ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+    if (item != null) {
+      de.digitalcollections.model.identifiable.Identifier shelfNo =
+          item.getIdentifierByNamespace("shelfno");
+      if (shelfNo != null) {
+        shelfLocator = ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+      }
     }
     return shelfLocator;
   }
