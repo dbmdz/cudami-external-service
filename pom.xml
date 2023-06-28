@@ -53,6 +53,11 @@
     </dependency>
     <dependency>
       <groupId>org.mycore.libmeta</groupId>
+      <artifactId>libmeta-dfgviewer</artifactId>
+      <version>0.8.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore.libmeta</groupId>
       <artifactId>libmeta-mets</artifactId>
       <version>0.8.1-SNAPSHOT</version>
     </dependency>
