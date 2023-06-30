@@ -1,5 +1,6 @@
 package de.digitalcollections.cudami.external.service.mets;
 
+import de.digitalcollections.cudami.external.config.DfgConfig;
 import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
 import de.digitalcollections.cudami.external.service.mods.DfgModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
@@ -19,11 +20,15 @@ import org.w3c.dom.Element;
 /** Service for creation of DFG specific METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class DfgMetsModsService extends MetsService {
-  private DfgModsService dfgModsService;
+  private final DfgConfig dfgConfig;
+  private final DfgModsService dfgModsService;
 
   public DfgMetsModsService(
-      DfgModsService dfgModsService, CudamiRepositoryManager cudamiRepositoryManager) {
+      DfgModsService dfgModsService,
+      CudamiRepositoryManager cudamiRepositoryManager,
+      DfgConfig dfgConfig) {
     super(cudamiRepositoryManager);
+    this.dfgConfig = dfgConfig;
     this.dfgModsService = dfgModsService;
   }
 
@@ -49,10 +54,6 @@ public class DfgMetsModsService extends MetsService {
     MdSec rightsMD = mets.getAmdSec().get(0).getRightsMD().get(0); // has been created before
     rightsMD.setMdWrap(mdWrapDVRights);
 
-    //    mdWrapDVRights
-    //        .getXmlData()
-    //        .getNodes()
-    //        .add(DVRightsXMLProcessor.getInstance().marshalToDOM(rights));
     // add DVLINKS to <mets:amdSec ID="AMD">/<mets:digiprovMD ID="DIGIPROV">
     //    MdSec digiprovMD = mets.getAmdSec().get(0).getDigiprovMD().get(0); // has been created
     // before
@@ -63,10 +64,10 @@ public class DfgMetsModsService extends MetsService {
   private Rights getDfgRightsForDigitalObject(DigitalObject digitalObject) {
     Builder rightsBuilder =
         Rights.builder()
-            .owner("Bayerische Staatsbibliothek")
-            .ownerLogo(
-                "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg")
-            .ownerSiteURL("https://www.bsb-muenchen.de/");
+            .owner(dfgConfig.getRights().getOwner())
+            .ownerContact(dfgConfig.getRights().getOwnerContact())
+            .ownerLogo(dfgConfig.getRights().getOwnerLogo().toString())
+            .ownerSiteURL(dfgConfig.getRights().getOwnerSiteUrl().toString());
     return rightsBuilder.build();
   }
 }
