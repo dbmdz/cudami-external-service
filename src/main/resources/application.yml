@@ -2,6 +2,13 @@ cudami:
   server:
     url: http://localhost:9000
 
+dfg:
+  rights:
+    owner: "Bayerische Staatsbibliothek"
+    owner-contact: "mailto:mdz@digitale-sammlungen.de"
+    owner-logo: "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg"
+    owner-site-url: "https://www.bsb-muenchen.de/"
+
 management:
   endpoints:
     web:
