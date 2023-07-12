@@ -7,7 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
+import de.digitalcollections.cudami.external.repository.CudamiRepository;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ class DfgMetsModsControllerTest {
 
   @Autowired private MockMvc mockMvc;
 
-  @MockBean private CudamiRepositoryManager repoManager;
+  @MockBean private CudamiRepository repoManager;
   @MockBean private DfgMetsModsService service;
 
   @Test

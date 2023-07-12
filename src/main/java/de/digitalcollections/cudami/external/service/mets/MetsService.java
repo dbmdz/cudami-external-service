@@ -1,6 +1,6 @@
 package de.digitalcollections.cudami.external.service.mets;
 
-import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
+import de.digitalcollections.cudami.external.repository.CudamiRepository;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import java.util.List;
@@ -24,10 +24,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MetsService {
 
-  private CudamiRepositoryManager cudamiRepositoryManager;
+  private CudamiRepository cudamiRepository;
 
-  public MetsService(CudamiRepositoryManager cudamiRepositoryManager) {
-    this.cudamiRepositoryManager = cudamiRepositoryManager;
+  public MetsService(CudamiRepository cudamiRepository) {
+    this.cudamiRepository = cudamiRepository;
   }
 
   /**
@@ -241,8 +241,9 @@ public class MetsService {
      * <p>Das Attribut CONTENTIDS sollte die das Strukturelement identifizierenden PURL und/oder URN
      * mit Leerzeichen getrennt enthalten.
      */
-    // TODO replace fix values
-    Div divTop = Div.builder().ID("LOG_0000").LABEL("Allgemeine Zeitung").TYPE("newspaper").build();
+    String label = digitalObject.getLabel().getText();
+    String type = digitalObject.getItem().getManifestation().getManifestationType();
+    Div divTop = Div.builder().ID("LOG_0000").LABEL(label).TYPE(type).build();
     structMap.setDiv(divTop);
 
     return structMap;
@@ -283,8 +284,7 @@ public class MetsService {
 
     // get (IIIF-)ImageFileResources for DigitalObject and build different sizes/urls on
     // our own
-    List<ImageFileResource> fileResources =
-        cudamiRepositoryManager.getIiifFileResources(digitalObject);
+    List<ImageFileResource> fileResources = cudamiRepository.getIiifFileResources(digitalObject);
 
     // mets:fileSec
     FileSec fileSec = createFileSec(fileResources);

@@ -1,6 +1,6 @@
 package de.digitalcollections.cudami.external.controller.mets;
 
-import de.digitalcollections.cudami.external.repository.CudamiRepositoryManager;
+import de.digitalcollections.cudami.external.repository.CudamiRepository;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
@@ -21,11 +21,11 @@ public class DfgMetsModsController {
       "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$";
 
   private final DfgMetsModsService dfgMetsModsService;
-  private final CudamiRepositoryManager cudamiRepositoryManager;
+  private final CudamiRepository cudamiRepositoryManager;
 
   @SuppressFBWarnings
   public DfgMetsModsController(
-      CudamiRepositoryManager cudamiRepositoryManager, DfgMetsModsService dfgMetsModsService) {
+      CudamiRepository cudamiRepositoryManager, DfgMetsModsService dfgMetsModsService) {
     this.cudamiRepositoryManager = cudamiRepositoryManager;
     this.dfgMetsModsService = dfgMetsModsService;
   }
