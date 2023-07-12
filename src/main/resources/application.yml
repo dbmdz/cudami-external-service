@@ -9,6 +9,15 @@ dfg:
     owner-logo: "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg"
     owner-site-url: "https://www.bsb-muenchen.de/"
 
+iiif:
+  identifier:
+    namespaces:
+      - 'mdz-obj'
+      - 'mdz-obj-child'
+  presentation:
+    #baseUrl: "http://localhost:23232/presentation/v2/"
+    baseUrl: "https://api-dev.digitale-sammlungen.de/iiif/presentation/v2/"
+
 management:
   endpoints:
     web:
