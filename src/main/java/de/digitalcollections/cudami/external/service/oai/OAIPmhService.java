@@ -2,6 +2,8 @@ package de.digitalcollections.cudami.external.service.oai;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import de.digitalcollections.cudami.external.repository.CudamiRepository;
+import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
+import de.digitalcollections.model.identifiable.entity.Collection;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
 import de.digitalcollections.model.list.paging.PageRequest;
@@ -15,6 +17,10 @@ import java.time.ZoneOffset;
 import java.util.Base64;
 import java.util.List;
 import java.util.UUID;
+import org.jdom2.Element;
+import org.jdom2.input.DOMBuilder;
+import org.mycore.libmeta.mets.METSXMLProcessor;
+import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.oai.pmh.BadResumptionTokenException;
 import org.mycore.oai.pmh.CannotDisseminateFormatException;
 import org.mycore.oai.pmh.Granularity;
@@ -31,9 +37,11 @@ import org.mycore.oai.pmh.Record;
 import org.mycore.oai.pmh.ResumptionToken;
 import org.mycore.oai.pmh.Set;
 import org.mycore.oai.pmh.SimpleIdentify;
+import org.mycore.oai.pmh.SimpleMetadata;
 import org.mycore.oai.pmh.SimpleResumptionToken;
 import org.mycore.oai.pmh.dataprovider.OAIAdapter;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
 
 /**
  * see example implementation at
@@ -66,13 +74,16 @@ public class OAIPmhService implements OAIAdapter {
   }
 
   private final CudamiRepository cudamiRepository;
-
+  private final DfgMetsModsService dfgMetsModsService;
   private final DigitalCollectionsObjectMapper objectMapper;
 
   public OAIPmhService(
-      CudamiRepository cudamiRepository, DigitalCollectionsObjectMapper objectMapper) {
+      CudamiRepository cudamiRepository,
+      DigitalCollectionsObjectMapper objectMapper,
+      DfgMetsModsService dfgMetsModsService) {
     this.cudamiRepository = cudamiRepository;
     this.objectMapper = objectMapper;
+    this.dfgMetsModsService = dfgMetsModsService;
   }
 
   /**
@@ -246,6 +257,7 @@ public class OAIPmhService implements OAIAdapter {
     return identify;
   }
 
+  /** needed by JAXBOAIProvider */
   @Override
   public MetadataFormat getMetadataFormat(String prefix) throws CannotDisseminateFormatException {
     // TODO Auto-generated method stub
@@ -322,8 +334,41 @@ public class OAIPmhService implements OAIAdapter {
   @Override
   public Record getRecord(String identifier, MetadataFormat format)
       throws CannotDisseminateFormatException, IdDoesNotExistException {
-    // TODO Auto-generated method stub
-    return null;
+    Record result = null;
+
+    UUID digitalObjectUuid = null;
+    // cut uuid from identifier (may be even longer/more parts in the end...)
+    // see bdr: "identifier=oai:bdr.oai.bsb-muenchen.de:all:BDR-BV000036054-63455"
+    if (identifier.startsWith("oai:")) {
+      String uuidStr = identifier.substring(identifier.lastIndexOf(":") + 1);
+      digitalObjectUuid = UUID.fromString(uuidStr);
+    }
+
+    if (digitalObjectUuid != null) {
+      DigitalObject digitalObject =
+          cudamiRepository.getDigitalObject(
+              DigitalObject.builder().uuid(digitalObjectUuid).build());
+      try {
+        // TODO: support oai_dc/format declared in MetadataFormat
+        Mets mets = dfgMetsModsService.getMetsForDigitalObject(digitalObject);
+        // id spec: http://www.openarchives.org/OAI/openarchivesprotocol.html#UniqueIdentifier
+        String id = "oai:" + digitalObject.getUuid().toString();
+        Instant datestamp = digitalObject.getLastModified().toInstant(ZoneOffset.UTC);
+        Header header = new Header(id, datestamp);
+
+        result = new Record(header);
+        Document document = METSXMLProcessor.getInstance().marshalToDOM(mets);
+        // convert w3c element to jdom element:
+        DOMBuilder builder = new DOMBuilder();
+        Element element = builder.build(document.getDocumentElement());
+        result.setMetadata(new SimpleMetadata(element));
+      } catch (Exception e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    }
+
+    return result;
   }
 
   /**
@@ -412,10 +457,18 @@ public class OAIPmhService implements OAIAdapter {
     return null;
   }
 
+  /** needed by JAXBOAIProvider */
   @Override
   public Set getSet(String setSpec) throws NoSetHierarchyException, NoRecordsMatchException {
-    // TODO Auto-generated method stub
-    return null;
+    Collection collection = cudamiRepository.getCollection(setSpec);
+
+    if (collection != null) {
+      String id = collection.getUuid().toString();
+      String name = collection.getLabel().getText();
+      return new Set(id, name);
+    }
+
+    throw new NoRecordsMatchException("No collection for UUID " + setSpec + " found.");
   }
 
   /**
@@ -437,23 +490,58 @@ public class OAIPmhService implements OAIAdapter {
    */
   @Override
   public OAIDataList<? extends Set> getSets() throws NoSetHierarchyException {
-    // TODO Auto-generated method stub
-    return null;
+    Sorting sorting =
+        Sorting.builder()
+            .order(Order.builder().direction(Direction.ASC).property("lastModified").build())
+            .build();
+
+    PageRequest.Builder pageRequestBuilder = PageRequest.builder();
+    pageRequestBuilder
+        .pageNumber(0)
+        .pageSize(100) // list contains only minimal data, so 100 is no problem
+        .sorting(sorting)
+        .build();
+    PageRequest pageRequest = pageRequestBuilder.build();
+
+    return getSets(pageRequest);
+  }
+
+  private OAIDataList<? extends Set> getSets(PageRequest pageRequest) {
+    PageResponse<Collection> pageResponse = cudamiRepository.findCollections(pageRequest);
+
+    OAIDataList<Set> result = new OAIDataList<>();
+    if (pageResponse.hasContent()) {
+      List<Collection> content = pageResponse.getContent();
+      for (Collection collection : content) {
+        String id = collection.getUuid().toString();
+        String name = collection.getLabel().getText();
+        Set set = new Set(id, name);
+        result.add(set);
+      }
+    }
+
+    if (pageResponse.hasNext()) {
+      // set resumptiontoken
+      PageRequest nextPageRequest = pageRequest.next();
+      ResumptionToken resumptionToken = resumptionTokenFromPageRequest(nextPageRequest);
+      result.setResumptionToken(resumptionToken);
+    }
+    return result;
   }
 
   /** See {@link #getSets()} */
   @Override
   public OAIDataList<? extends Set> getSets(String resumptionToken)
       throws NoSetHierarchyException, BadResumptionTokenException {
-    // TODO Auto-generated method stub
-    return null;
+    PageRequest pageRequest = resumptionTokenToPageRequest(resumptionToken);
+    return getSets(pageRequest);
   }
 
   private ResumptionToken resumptionTokenFromPageRequest(PageRequest pageRequest) {
     ResumptionToken result = null;
     try {
-      byte[] pageRequestBytes = objectMapper.writeValueAsBytes(pageRequest);
-      String token = Base64.getEncoder().encodeToString(pageRequestBytes);
+      byte[] pageRequestWrapperBytes = objectMapper.writeValueAsBytes(pageRequest);
+      String token = Base64.getEncoder().encodeToString(pageRequestWrapperBytes);
       result = new SimpleResumptionToken(token);
     } catch (JsonProcessingException e) {
       // TODO Auto-generated catch block
@@ -466,8 +554,8 @@ public class OAIPmhService implements OAIAdapter {
       PageRequestWrapper pageRequestWrapper) {
     ResumptionToken result = null;
     try {
-      byte[] pageRequestWrapperBytes = objectMapper.writeValueAsBytes(pageRequestWrapper);
-      String token = Base64.getEncoder().encodeToString(pageRequestWrapperBytes);
+      byte[] pageRequestBytes = objectMapper.writeValueAsBytes(pageRequestWrapper);
+      String token = Base64.getEncoder().encodeToString(pageRequestBytes);
       result = new SimpleResumptionToken(token);
     } catch (JsonProcessingException e) {
       // TODO Auto-generated catch block

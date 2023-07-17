@@ -59,5 +59,5 @@ Every request must specify the wanted action through `verb`. See <http://www.ope
 * ListIdentifiers: List the headers of records with existing Dublin Core metadata format that are added, modified or deleted since January 1, 2022 in the set newspapers: <http://localhost:8080/oai/v2?verb=ListIdentifiers&from=2022-01-01&metadataPrefix=oai_dc&set=newspapers>
 * ListIdentifiers: get list of next page of a previous ListIdentifiers request: <http://localhost:8080/oai/v2?verb=ListIdentifiers&resumptionToken=eyJsa.......wfQ==>
 * ListRecords: Request records in the oai_dc metadata format, modified or added between 2:15pm and 2:20pm UTC on May 1st 2002.: <http://localhost:8080/oai/v2?verb=ListRecords&from=2002-05-01T14:15:00Z&until=2002-05-01T14:20:00Z&metadataPrefix=oai_dc>
-* GetRecord: Request a record in the Dublin Core metadata format:  <http://localhost:8080/oai/v2?verb=GetRecord&identifier=4624c822-1d16-4bfa-9d10-3aa45cfab4aa&metadataPrefix=oai_dc>
+* GetRecord: Request a record in the Dublin Core metadata format:  <http://localhost:8080/oai/v2?verb=GetRecord&identifier=oai:f611580a-1106-4c74-851f-9a6d12cb662c&metadataPrefix=oai_dc>
 * ListSets: List all sets of the repository: <http://localhost:8080/oai/v2?verb=ListSets>

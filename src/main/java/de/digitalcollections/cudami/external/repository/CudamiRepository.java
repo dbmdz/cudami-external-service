@@ -9,6 +9,7 @@ import de.digitalcollections.cudami.client.identifiable.entity.work.CudamiWorksC
 import de.digitalcollections.cudami.external.monitoring.ProcessingMetrics;
 import de.digitalcollections.cudami.external.monitoring.Watch;
 import de.digitalcollections.model.exception.TechnicalException;
+import de.digitalcollections.model.identifiable.entity.Collection;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
@@ -32,6 +33,47 @@ public class CudamiRepository {
   public CudamiRepository(CudamiClient cudamiClient, ProcessingMetrics metrics) {
     this.cudamiClient = cudamiClient;
     this.metrics = metrics;
+  }
+
+  public PageResponse<Collection> findCollections(PageRequest pageRequest) {
+    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
+    try {
+      return cudamiCollectionsClient.find(pageRequest);
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get Collections by page request.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public PageResponse<DigitalObject> findDigitalObjects(PageRequest pageRequest) {
+    CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
+    try {
+      return cudamiDigitalObjectsClient.find(pageRequest);
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get DigitalObjects by page request.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public PageResponse<DigitalObject> findDigitalObjectsOfCollection(
+      UUID collectionUuid, PageRequest pageRequest) {
+    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
+    try {
+      return cudamiCollectionsClient.findDigitalObjects(collectionUuid, pageRequest);
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get DigitalObjects by page request.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public Collection getCollection(String uuid) {
+    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
+    try {
+      return cudamiCollectionsClient.getByUuid(UUID.fromString(uuid));
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get Collection by uuid.", e);
+      throw new RuntimeException(e.getMessage());
+    }
   }
 
   public DigitalObject getDigitalObject(DigitalObject digitalObjectExample) {
@@ -104,27 +146,6 @@ public class CudamiRepository {
       return imageFileResources;
     } catch (TechnicalException e) {
       LOGGER.error("can not get DigitalObject by UUID.", e);
-      throw new RuntimeException(e.getMessage());
-    }
-  }
-
-  public PageResponse<DigitalObject> findDigitalObjects(PageRequest pageRequest) {
-    CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
-    try {
-      return cudamiDigitalObjectsClient.find(pageRequest);
-    } catch (TechnicalException e) {
-      LOGGER.error("can not get DigitalObjects by page request.", e);
-      throw new RuntimeException(e.getMessage());
-    }
-  }
-
-  public PageResponse<DigitalObject> findDigitalObjectsOfCollection(
-      UUID collectionUuid, PageRequest pageRequest) {
-    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
-    try {
-      return cudamiCollectionsClient.findDigitalObjects(collectionUuid, pageRequest);
-    } catch (TechnicalException e) {
-      LOGGER.error("can not get DigitalObjects by page request.", e);
       throw new RuntimeException(e.getMessage());
     }
   }
