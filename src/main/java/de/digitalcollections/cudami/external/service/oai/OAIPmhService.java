@@ -1,6 +1,7 @@
 package de.digitalcollections.cudami.external.service.oai;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import de.digitalcollections.cudami.external.config.OaiConfig;
 import de.digitalcollections.cudami.external.repository.CudamiRepository;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
 import de.digitalcollections.model.identifiable.entity.Collection;
@@ -13,6 +14,7 @@ import de.digitalcollections.model.list.sorting.Order;
 import de.digitalcollections.model.list.sorting.Sorting;
 import java.io.IOException;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Base64;
 import java.util.List;
@@ -33,6 +35,7 @@ import org.mycore.oai.pmh.NoMetadataFormatsException;
 import org.mycore.oai.pmh.NoRecordsMatchException;
 import org.mycore.oai.pmh.NoSetHierarchyException;
 import org.mycore.oai.pmh.OAIDataList;
+import org.mycore.oai.pmh.OAIIdentifierDescription;
 import org.mycore.oai.pmh.Record;
 import org.mycore.oai.pmh.ResumptionToken;
 import org.mycore.oai.pmh.Set;
@@ -76,14 +79,17 @@ public class OAIPmhService implements OAIAdapter {
   private final CudamiRepository cudamiRepository;
   private final DfgMetsModsService dfgMetsModsService;
   private final DigitalCollectionsObjectMapper objectMapper;
+  private final OaiConfig oaiConfig;
 
   public OAIPmhService(
+      OaiConfig oaiConfig,
       CudamiRepository cudamiRepository,
       DigitalCollectionsObjectMapper objectMapper,
       DfgMetsModsService dfgMetsModsService) {
     this.cudamiRepository = cudamiRepository;
-    this.objectMapper = objectMapper;
     this.dfgMetsModsService = dfgMetsModsService;
+    this.objectMapper = objectMapper;
+    this.oaiConfig = oaiConfig;
   }
 
   /**
@@ -228,7 +234,7 @@ public class OAIPmhService implements OAIAdapter {
    * <p>granularity: the finest harvesting granularity supported by the repository. The legitimate
    * values are YYYY-MM-DD and YYYY-MM-DDThh:mm:ssZ with meanings as defined in ISO8601.
    *
-   * <p>The response must include one or more instances of the following element:
+   * <p>The response MUST include one or more instances of the following element:
    *
    * <p>adminEmail : the e-mail address of an administrator of the repository.
    *
@@ -247,13 +253,50 @@ public class OAIPmhService implements OAIAdapter {
   @Override
   public Identify getIdentify() {
     SimpleIdentify identify = new SimpleIdentify();
+    // <repositoryName>
+    identify.setRepositoryName(oaiConfig.getIdentify().getRepositoryName());
+
+    // <baseURL>
+    identify.setBaseURL(oaiConfig.getIdentify().getBaseUrl());
+
+    // <adminEmail>
+    identify.setAdminEmailList(List.of(oaiConfig.getIdentify().getAdminEmail()));
+
+    // <granularity>
     identify.setGranularity(
         Granularity.YYYY_MM_DD_THH_MM_SS_Z); // cudami model provides lastModified as timestamp....
+
+    // <deletedRecord>
     identify.setDeletedRecordPolicy(
-        DeletedRecordPolicy.No); // the repository does not maintain information about
-    // deletions. A repository that indicates this level of
-    // support must not reveal a deleted status in any
+        DeletedRecordPolicy
+            .No); // the repository does not maintain information about deletions. A repository that
+    // indicates this level of support must not reveal a deleted status in any
     // response.
+
+    // <earliestDatestamp>
+    Sorting sorting =
+        Sorting.builder()
+            .order(Order.builder().property("lastModified").direction(Direction.ASC).build())
+            .build();
+    PageRequest pageRequest =
+        PageRequest.builder().pageNumber(0).pageSize(1).sorting(sorting).build();
+    PageResponse<DigitalObject> digitalObjects = cudamiRepository.findDigitalObjects(pageRequest);
+    if (digitalObjects.hasContent()) {
+      DigitalObject earliestChangedDigitalObject = digitalObjects.getContent().get(0);
+      LocalDateTime lastModified = earliestChangedDigitalObject.getLastModified();
+      Instant datestamp = lastModified.toInstant(ZoneOffset.UTC);
+      identify.setEarliestDatestamp(datestamp);
+    }
+
+    // <compression>: Not implemented
+
+    // <description>
+    String repositoryIdentifier = oaiConfig.getIdentify().getRepositoryIdentifier();
+    String sampleId = oaiConfig.getIdentify().getSampleId();
+    OAIIdentifierDescription oaiIdentifierDescription =
+        new OAIIdentifierDescription(repositoryIdentifier, sampleId);
+    identify.setDescriptionList(List.of(oaiIdentifierDescription));
+
     return identify;
   }
 

@@ -45,6 +45,7 @@ Endpoint implementing OAI-PMH (Open Archives Initiative - Protocol for Metadata 
 * Official Website: <http://www.openarchives.org/pmh/>
 * Specification OAI-PMH 2.0: <http://www.openarchives.org/OAI/openarchivesprotocol.html>
 * Implementation Guidelines for the Open Archives Initiative Protocol for Metadata Harvesting: <http://www.openarchives.org/OAI/2.0/guidelines.htm>
+* Specification and XML Schema for the OAI Identifier Format <http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm>
 
 #### Example requests
 

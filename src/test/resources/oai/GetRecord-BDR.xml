@@ -1,2 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OAI-PMH xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2023-07-17T08:56:43Z</responseDate><request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:bdr.oai.bsb-muenchen.de:all:BDR-BV000036054-63455">http://bdr.oai.bsb-muenchen.de/OAIHandler</request><GetRecord><record><header><identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BV000036054-63455</identifier><datestamp>2023-06-21</datestamp><setSpec>all</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"><dc:title>Armut in der Geschichte : Erscheinungsformen und Lösungsversuche der "Sozialen Frage" in Europa seit dem Mittelalter</dc:title><dc:creator>Fischer, Wolfram</dc:creator><dc:description>Wolfram Fischer</dc:description><dc:publisher>Göttingen : Vandenhoeck &amp; Ruprecht</dc:publisher><dc:date>1982</dc:date><dc:subject>Geschichte 1200-1980</dc:subject><dc:subject>Geschichte 1200-1981</dc:subject><dc:subject>Geschichte</dc:subject><dc:subject>Geschichte 500-1980</dc:subject><dc:subject>Armoede</dc:subject><dc:subject>Pauvres - Europe - Histoire</dc:subject><dc:subject>Sociale vraagstuk</dc:subject><dc:subject>Armut</dc:subject><dc:subject>Geschichte</dc:subject><dc:subject>Poor -- Europe -- History</dc:subject><dc:subject>Armut</dc:subject><dc:subject>Soziale Frage</dc:subject><dc:subject>Fürsorge</dc:subject><dc:subject>Europa</dc:subject><dc:subject>Europa</dc:subject><dc:language>ger</dc:language><dc:type>Text</dc:type><dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00047871-2</dc:identifier><dc:description>Volltext // Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Z 65.262-1476</dc:description></oai_dc:dc></metadata></record></GetRecord></OAI-PMH>
+<OAI-PMH xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2023-07-17T08:56:43Z</responseDate>
+  <request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:bdr.oai.bsb-muenchen.de:all:BDR-BV000036054-63455">http://bdr.oai.bsb-muenchen.de/OAIHandler</request>
+  <GetRecord>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BV000036054-63455</identifier>
+        <datestamp>2023-06-21</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Armut in der Geschichte : Erscheinungsformen und Lösungsversuche der "Sozialen Frage" in Europa seit dem Mittelalter</dc:title>
+          <dc:creator>Fischer, Wolfram</dc:creator>
+          <dc:description>Wolfram Fischer</dc:description>
+          <dc:publisher>Göttingen : Vandenhoeck &amp; Ruprecht</dc:publisher>
+          <dc:date>1982</dc:date>
+          <dc:subject>Geschichte 1200-1980</dc:subject>
+          <dc:subject>Geschichte 1200-1981</dc:subject>
+          <dc:subject>Geschichte</dc:subject>
+          <dc:subject>Geschichte 500-1980</dc:subject>
+          <dc:subject>Armoede</dc:subject>
+          <dc:subject>Pauvres - Europe - Histoire</dc:subject>
+          <dc:subject>Sociale vraagstuk</dc:subject>
+          <dc:subject>Armut</dc:subject>
+          <dc:subject>Geschichte</dc:subject>
+          <dc:subject>Poor -- Europe -- History</dc:subject>
+          <dc:subject>Armut</dc:subject>
+          <dc:subject>Soziale Frage</dc:subject>
+          <dc:subject>Fürsorge</dc:subject>
+          <dc:subject>Europa</dc:subject>
+          <dc:subject>Europa</dc:subject>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00047871-2</dc:identifier>
+          <dc:description>Volltext // Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Z 65.262-1476</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+  </GetRecord>
+</OAI-PMH>
