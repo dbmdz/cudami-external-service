@@ -5,11 +5,15 @@ import de.digitalcollections.cudami.client.CudamiClient;
 import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
 import java.net.http.HttpClient;
 import java.time.Duration;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Configuration
+@EnableCaching
+@EnableScheduling
 public class SpringConfig {
 
   @Bean

@@ -43,6 +43,11 @@ import org.mycore.oai.pmh.SimpleIdentify;
 import org.mycore.oai.pmh.SimpleMetadata;
 import org.mycore.oai.pmh.SimpleResumptionToken;
 import org.mycore.oai.pmh.dataprovider.OAIAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 
@@ -52,6 +57,7 @@ import org.w3c.dom.Document;
  */
 @Service
 public class OAIPmhService implements OAIAdapter {
+  private static final Logger LOGGER = LoggerFactory.getLogger(OAIPmhService.class);
 
   public static class PageRequestWrapper {
     private PageRequest pageRequest;
@@ -90,6 +96,12 @@ public class OAIPmhService implements OAIAdapter {
     this.dfgMetsModsService = dfgMetsModsService;
     this.objectMapper = objectMapper;
     this.oaiConfig = oaiConfig;
+  }
+
+  @CacheEvict(value = "oai.identify", allEntries = true)
+  @Scheduled(fixedRateString = "${oai.caching.identifyTTL}")
+  public void emptyIdentifyCache() {
+    LOGGER.info("emptying OAI Identify cache");
   }
 
   /**
@@ -173,7 +185,11 @@ public class OAIPmhService implements OAIAdapter {
       List<DigitalObject> content = pageResponse.getContent();
       for (DigitalObject digitalObject : content) {
         // id spec: http://www.openarchives.org/OAI/openarchivesprotocol.html#UniqueIdentifier
-        String id = "oai:" + digitalObject.getUuid().toString();
+        String id =
+            "oai:"
+                + oaiConfig.getIdentify().getRepositoryIdentifier()
+                + ":"
+                + digitalObject.getUuid().toString();
         Instant datestamp = digitalObject.getLastModified().toInstant(ZoneOffset.UTC);
         Header header = new Header(id, datestamp);
         result.add(header);
@@ -250,8 +266,13 @@ public class OAIPmhService implements OAIAdapter {
    * with this respect. Each description container must be accompanied by the URL of an XML schema
    * describing the structure of the description container.
    */
+  @Cacheable("oai.identify")
   @Override
   public Identify getIdentify() {
+    // WARNING: as getIdentify() is called for each item in ListIdentifiers or ListRecords (to get
+    // e.g. repositoryIdentifier for creating item id) we cache the Identify to avoid backend
+    // flooding because of getting earliestDatestamp!; cache eviction see method #emptyIdentifyCache
+
     SimpleIdentify identify = new SimpleIdentify();
     // <repositoryName>
     identify.setRepositoryName(oaiConfig.getIdentify().getRepositoryName());
@@ -381,7 +402,7 @@ public class OAIPmhService implements OAIAdapter {
 
     UUID digitalObjectUuid = null;
     // cut uuid from identifier (may be even longer/more parts in the end...)
-    // see bdr: "identifier=oai:bdr.oai.bsb-muenchen.de:all:BDR-BV000036054-63455"
+    // e.g.: "identifier=oai:oai.digitale-sammlungen.de:ff0fa0f9-a336-45a7-ab50-af0dc95306a7"
     if (identifier.startsWith("oai:")) {
       String uuidStr = identifier.substring(identifier.lastIndexOf(":") + 1);
       digitalObjectUuid = UUID.fromString(uuidStr);

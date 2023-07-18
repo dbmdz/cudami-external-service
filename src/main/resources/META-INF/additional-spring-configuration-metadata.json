@@ -1,5 +1,12 @@
-{"properties": [{
-  "name": "cudami.server.url",
-  "type": "java.lang.String",
-  "description": "URL of the cudami repository server"
-}]}
+{"properties": [
+  {
+    "name": "cudami.server.url",
+    "type": "java.lang.String",
+    "description": "URL of the cudami repository server"
+  },
+  {
+    "name": "oai.caching.identify-tTL",
+    "type": "java.lang.String",
+    "description": "Time to live in milliseconds"
+  }
+]}

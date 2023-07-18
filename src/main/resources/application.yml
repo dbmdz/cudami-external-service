@@ -19,6 +19,8 @@ iiif:
     baseUrl: "https://api-dev.digitale-sammlungen.de/iiif/presentation/v2/"
 
 oai:
+  caching:
+    identifyTTL: 3600000 # 1 hour (in ms): 3600000
   identify:
     admin-email: "mdz@digitale-sammlungen.de"
     base-url: "http://localhost:8080/oai/v2"
