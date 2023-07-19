@@ -16,13 +16,17 @@ import java.io.IOException;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import org.jdom2.Element;
 import org.jdom2.input.DOMBuilder;
 import org.mycore.libmeta.mets.METSXMLProcessor;
 import org.mycore.libmeta.mets.model.Mets;
+import org.mycore.libmeta.oaidc.OaiDcXMLProcessor;
+import org.mycore.libmeta.oaidc.model.OaiDc;
 import org.mycore.oai.pmh.BadResumptionTokenException;
 import org.mycore.oai.pmh.CannotDisseminateFormatException;
 import org.mycore.oai.pmh.Granularity;
@@ -34,6 +38,7 @@ import org.mycore.oai.pmh.MetadataFormat;
 import org.mycore.oai.pmh.NoMetadataFormatsException;
 import org.mycore.oai.pmh.NoRecordsMatchException;
 import org.mycore.oai.pmh.NoSetHierarchyException;
+import org.mycore.oai.pmh.OAIConstants;
 import org.mycore.oai.pmh.OAIDataList;
 import org.mycore.oai.pmh.OAIIdentifierDescription;
 import org.mycore.oai.pmh.Record;
@@ -86,16 +91,19 @@ public class OAIPmhService implements OAIAdapter {
   private final DfgMetsModsService dfgMetsModsService;
   private final DigitalCollectionsObjectMapper objectMapper;
   private final OaiConfig oaiConfig;
+  private final OaiDcService oaiDcService;
 
   public OAIPmhService(
       OaiConfig oaiConfig,
       CudamiRepository cudamiRepository,
       DigitalCollectionsObjectMapper objectMapper,
-      DfgMetsModsService dfgMetsModsService) {
+      DfgMetsModsService dfgMetsModsService,
+      OaiDcService oaiDcService) {
     this.cudamiRepository = cudamiRepository;
     this.dfgMetsModsService = dfgMetsModsService;
-    this.objectMapper = objectMapper;
     this.oaiConfig = oaiConfig;
+    this.oaiDcService = oaiDcService;
+    this.objectMapper = objectMapper;
   }
 
   @CacheEvict(value = "oai.identify", allEntries = true)
@@ -324,7 +332,12 @@ public class OAIPmhService implements OAIAdapter {
   /** needed by JAXBOAIProvider */
   @Override
   public MetadataFormat getMetadataFormat(String prefix) throws CannotDisseminateFormatException {
-    // TODO Auto-generated method stub
+    List<? extends MetadataFormat> metadataFormats = getMetadataFormats();
+    Optional<? extends MetadataFormat> resultOpt =
+        metadataFormats.stream().filter(mf -> mf.getPrefix().equals(prefix)).findFirst();
+    if (resultOpt.isPresent()) {
+      return resultOpt.get();
+    }
     return null;
   }
 
@@ -350,18 +363,36 @@ public class OAIPmhService implements OAIAdapter {
    *
    * <p>"noMetadataFormats" - There are no metadata formats available for the specified item.
    */
+  @Cacheable("oai.metadataformats")
   @Override
   public List<? extends MetadataFormat> getMetadataFormats() {
-    // TODO Auto-generated method stub
-    return null;
+    // we support "oai_dc" and "mets" for now.
+    // as they are generated on the fly, they are available for all objects.
+    // as list will only change when new format is implemented, we cache it without eviction. new
+    // deployment will reset cache.
+    List<MetadataFormat> result = new ArrayList<>();
+
+    // oai_dc
+    MetadataFormat metadataFormatOaiDc =
+        new MetadataFormat(OAIConstants.NS_OAI_DC, OAIConstants.SCHEMA_DC);
+    result.add(metadataFormatOaiDc);
+
+    // mets
+    MetadataFormat metadataFormatMets =
+        new MetadataFormat(
+            "mets", "http://www.loc.gov/METS/", "https://www.loc.gov/standards/mets/mets.xsd");
+    result.add(metadataFormatMets);
+
+    return result;
   }
 
   /** see {@link #getMetadataFormats()} */
   @Override
   public List<? extends MetadataFormat> getMetadataFormats(String identifier)
       throws IdDoesNotExistException, NoMetadataFormatsException {
-    // TODO Auto-generated method stub
-    return null;
+    // we support "oai_dc" and "mets" for now.
+    // as they are generated on the fly, they are available for all objects
+    return getMetadataFormats();
   }
 
   /**
@@ -413,15 +444,28 @@ public class OAIPmhService implements OAIAdapter {
           cudamiRepository.getDigitalObject(
               DigitalObject.builder().uuid(digitalObjectUuid).build());
       try {
-        // TODO: support oai_dc/format declared in MetadataFormat
-        Mets mets = dfgMetsModsService.getMetsForDigitalObject(digitalObject);
         // id spec: http://www.openarchives.org/OAI/openarchivesprotocol.html#UniqueIdentifier
-        String id = "oai:" + digitalObject.getUuid().toString();
+        String id =
+            "oai:"
+                + oaiConfig.getIdentify().getRepositoryIdentifier()
+                + ":"
+                + digitalObject.getUuid().toString();
         Instant datestamp = digitalObject.getLastModified().toInstant(ZoneOffset.UTC);
         Header header = new Header(id, datestamp);
-
         result = new Record(header);
-        Document document = METSXMLProcessor.getInstance().marshalToDOM(mets);
+
+        Document document;
+        if ("mets".equals(format.getPrefix())) {
+          Mets mets = dfgMetsModsService.getMetsForDigitalObject(digitalObject);
+          document = METSXMLProcessor.getInstance().marshalToDOM(mets);
+        } else if (OAIConstants.NS_OAI_DC.getPrefix().equals(format.getPrefix())) {
+          OaiDc oaiDc = oaiDcService.getOaiDcForDigitalObject(digitalObject);
+          document = OaiDcXMLProcessor.getInstance().marshalToDOM(oaiDc);
+        } else {
+          CannotDisseminateFormatException exception = new CannotDisseminateFormatException();
+          exception.setMetadataPrefix(format.getPrefix());
+          throw exception;
+        }
         // convert w3c element to jdom element:
         DOMBuilder builder = new DOMBuilder();
         Element element = builder.build(document.getDocumentElement());
