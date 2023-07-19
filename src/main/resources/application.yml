@@ -5,9 +5,9 @@ cudami:
 dfg:
   rights:
     owner: "Bayerische Staatsbibliothek"
-    owner-contact: "mailto:mdz@digitale-sammlungen.de"
-    owner-logo: "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg"
-    owner-site-url: "https://www.bsb-muenchen.de/"
+    ownerContact: "mailto:mdz@digitale-sammlungen.de"
+    ownerLogo: "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg"
+    ownerSiteUrl: "https://www.bsb-muenchen.de/"
 
 iiif:
   identifier:
@@ -22,11 +22,11 @@ oai:
   caching:
     identifyTTL: 3600000 # 1 hour (in ms): 3600000
   identify:
-    admin-email: "mdz@digitale-sammlungen.de"
-    base-url: "http://localhost:8080/oai/v2"
-    repository-identifier: "oai.digitale-sammlungen.de"
-    repository-name: "Digitale Sammlungen (MDZ)"
-    sample-id: "f611580a-1106-4c74-851f-9a6d12cb662c"
+    adminEmail: "mdz@digitale-sammlungen.de"
+    baseUrl: "http://localhost:8080/oai/v2"
+    repositoryIdentifier: "oai.digitale-sammlungen.de"
+    repositoryName: "Digitale Sammlungen (MDZ)"
+    sampleId: "f611580a-1106-4c74-851f-9a6d12cb662c"
     
     
 management:
