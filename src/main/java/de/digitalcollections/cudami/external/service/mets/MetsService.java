@@ -241,9 +241,18 @@ public class MetsService {
      * <p>Das Attribut CONTENTIDS sollte die das Strukturelement identifizierenden PURL und/oder URN
      * mit Leerzeichen getrennt enthalten.
      */
+    Div.Builder divBuilder = Div.builder();
+    divBuilder.ID("LOG_0000");
+
     String label = digitalObject.getLabel().getText();
-    String type = digitalObject.getItem().getManifestation().getManifestationType();
-    Div divTop = Div.builder().ID("LOG_0000").LABEL(label).TYPE(type).build();
+    divBuilder.LABEL(label);
+
+    if (digitalObject.getItem() != null && digitalObject.getItem().getManifestation() != null) {
+      String type = digitalObject.getItem().getManifestation().getManifestationType();
+      divBuilder.TYPE(type);
+    }
+
+    Div divTop = divBuilder.build();
     structMap.setDiv(divTop);
 
     return structMap;
