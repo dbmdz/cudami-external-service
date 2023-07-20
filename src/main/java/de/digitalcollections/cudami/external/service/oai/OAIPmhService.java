@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import de.digitalcollections.cudami.external.config.OaiConfig;
 import de.digitalcollections.cudami.external.repository.CudamiRepository;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
+import de.digitalcollections.cudami.external.service.oai.model.MetadataFormatWrapper;
+import de.digitalcollections.cudami.external.service.oai.model.PageRequestWrapper;
 import de.digitalcollections.model.identifiable.entity.Collection;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
@@ -34,6 +36,7 @@ import org.mycore.oai.pmh.Header;
 import org.mycore.oai.pmh.IdDoesNotExistException;
 import org.mycore.oai.pmh.Identify;
 import org.mycore.oai.pmh.Identify.DeletedRecordPolicy;
+import org.mycore.oai.pmh.Metadata;
 import org.mycore.oai.pmh.MetadataFormat;
 import org.mycore.oai.pmh.NoMetadataFormatsException;
 import org.mycore.oai.pmh.NoRecordsMatchException;
@@ -64,34 +67,11 @@ import org.w3c.dom.Document;
 public class OAIPmhService implements OAIAdapter {
   private static final Logger LOGGER = LoggerFactory.getLogger(OAIPmhService.class);
 
-  public static class PageRequestWrapper {
-    private PageRequest pageRequest;
-    private Set set;
-
-    public PageRequestWrapper() {}
-
-    public PageRequest getPageRequest() {
-      return pageRequest;
-    }
-
-    public Set getSet() {
-      return set;
-    }
-
-    public void setPageRequest(PageRequest pageRequest) {
-      this.pageRequest = pageRequest;
-    }
-
-    public void setSet(Set set) {
-      this.set = set;
-    }
-  }
-
   private final CudamiRepository cudamiRepository;
   private final DfgMetsModsService dfgMetsModsService;
-  private final DigitalCollectionsObjectMapper objectMapper;
   private final OaiConfig oaiConfig;
   private final OaiDcService oaiDcService;
+  private final DigitalCollectionsObjectMapper objectMapper;
 
   public OAIPmhService(
       OaiConfig oaiConfig,
@@ -174,11 +154,14 @@ public class OAIPmhService implements OAIAdapter {
     PageRequestWrapper pageRequestWrapper = new PageRequestWrapper();
     pageRequestWrapper.setSet(set);
     pageRequestWrapper.setPageRequest(pageRequest);
+    pageRequestWrapper.setMetadataFormatWrapper(new MetadataFormatWrapper(format));
     return getHeaders(pageRequestWrapper);
   }
 
   private OAIDataList<? extends Header> getHeaders(PageRequestWrapper pageRequestWrapper) {
     Set set = pageRequestWrapper.getSet();
+    MetadataFormat metadataFormat =
+        pageRequestWrapper.getMetadataFormatWrapper().getMetadataFormat();
     PageRequest pageRequest = pageRequestWrapper.getPageRequest();
 
     PageResponse<DigitalObject> pageResponse;
@@ -210,6 +193,7 @@ public class OAIPmhService implements OAIAdapter {
       PageRequestWrapper nextPageRequestWrapper = new PageRequestWrapper();
       nextPageRequestWrapper.setSet(set);
       nextPageRequestWrapper.setPageRequest(nextPageRequest);
+      nextPageRequestWrapper.setMetadataFormatWrapper(new MetadataFormatWrapper(metadataFormat));
       ResumptionToken resumptionToken =
           resumptionTokenFromPageRequestWrapper(nextPageRequestWrapper);
       result.setResumptionToken(resumptionToken);
@@ -524,10 +508,97 @@ public class OAIPmhService implements OAIAdapter {
   public OAIDataList<? extends Record> getRecords(
       MetadataFormat format, Set set, Instant from, Instant until)
       throws CannotDisseminateFormatException, NoSetHierarchyException, NoRecordsMatchException {
-    // TODO Auto-generated method stub
-    return null;
+    Sorting sorting =
+        Sorting.builder()
+            .order(Order.builder().direction(Direction.ASC).property("lastModified").build())
+            .build();
+
+    // TODO: filtering for from, until
+
+    PageRequest.Builder pageRequestBuilder = PageRequest.builder();
+    pageRequestBuilder
+        .pageNumber(0)
+        .pageSize(25) // list contains full, so keep list short
+        .sorting(sorting)
+        .build();
+    PageRequest pageRequest = pageRequestBuilder.build();
+
+    PageRequestWrapper pageRequestWrapper = new PageRequestWrapper();
+    pageRequestWrapper.setSet(set);
+    pageRequestWrapper.setPageRequest(pageRequest);
+    pageRequestWrapper.setMetadataFormatWrapper(new MetadataFormatWrapper(format));
+    return getRecords(pageRequestWrapper);
   }
 
+  private OAIDataList<? extends Record> getRecords(PageRequestWrapper pageRequestWrapper) {
+    Set set = pageRequestWrapper.getSet();
+    MetadataFormat format = pageRequestWrapper.getMetadataFormatWrapper().getMetadataFormat();
+    PageRequest pageRequest = pageRequestWrapper.getPageRequest();
+
+    PageResponse<DigitalObject> pageResponse;
+    if (set == null) {
+      pageResponse = cudamiRepository.findDigitalObjects(pageRequest);
+    } else {
+      UUID collectionUuid = UUID.fromString(set.getSpec());
+      pageResponse = cudamiRepository.findDigitalObjectsOfCollection(collectionUuid, pageRequest);
+    }
+    OAIDataList<Record> result = new OAIDataList<>();
+    if (pageResponse.hasContent()) {
+      List<DigitalObject> content = pageResponse.getContent();
+      for (DigitalObject digitalObject : content) {
+        // header
+        // id spec: http://www.openarchives.org/OAI/openarchivesprotocol.html#UniqueIdentifier
+        String id =
+            "oai:"
+                + oaiConfig.getIdentify().getRepositoryIdentifier()
+                + ":"
+                + digitalObject.getUuid().toString();
+        Instant datestamp = digitalObject.getLastModified().toInstant(ZoneOffset.UTC);
+        Header header = new Header(id, datestamp);
+
+        // metadata
+        Metadata metadata = null;
+        try {
+          Document document;
+          if ("mets".equals(format.getPrefix())) {
+            Mets mets = dfgMetsModsService.getMetsForDigitalObject(digitalObject);
+            document = METSXMLProcessor.getInstance().marshalToDOM(mets);
+          } else if (OAIConstants.NS_OAI_DC.getPrefix().equals(format.getPrefix())) {
+            OaiDc oaiDc = oaiDcService.getOaiDcForDigitalObject(digitalObject);
+            document = OaiDcXMLProcessor.getInstance().marshalToDOM(oaiDc);
+          } else {
+            CannotDisseminateFormatException exception = new CannotDisseminateFormatException();
+            exception.setMetadataPrefix(format.getPrefix());
+            throw exception;
+          }
+          // convert w3c element to jdom element:
+          DOMBuilder builder = new DOMBuilder();
+          Element element = builder.build(document.getDocumentElement());
+          metadata = new SimpleMetadata(element);
+        } catch (Exception e) {
+          LOGGER.error(
+              "Can not get metadata for digital object with UUID " + digitalObject.getUuid());
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+        Record record = new Record(header, metadata);
+        result.add(record);
+      }
+    }
+
+    if (pageResponse.hasNext()) {
+      // set resumptiontoken
+      PageRequest nextPageRequest = pageRequest.next();
+      PageRequestWrapper nextPageRequestWrapper = new PageRequestWrapper();
+      nextPageRequestWrapper.setSet(set);
+      nextPageRequestWrapper.setPageRequest(nextPageRequest);
+      nextPageRequestWrapper.setMetadataFormatWrapper(new MetadataFormatWrapper(format));
+      ResumptionToken resumptionToken =
+          resumptionTokenFromPageRequestWrapper(nextPageRequestWrapper);
+      result.setResumptionToken(resumptionToken);
+    }
+    return result;
+  }
   /**
    * See {@link #getRecords(MetadataFormat, Set, Instant, Instant)}
    *
@@ -560,9 +631,8 @@ public class OAIPmhService implements OAIAdapter {
   @Override
   public OAIDataList<? extends Record> getRecords(String resumptionToken)
       throws BadResumptionTokenException {
-    // TODO decode resumptionToken and extract PageRequest with filtering from it; issue PageRequest
-    // for next page
-    return null;
+    PageRequestWrapper pageRequestWrapper = resumptionTokenToPageRequestWrapper(resumptionToken);
+    return getRecords(pageRequestWrapper);
   }
 
   /** needed by JAXBOAIProvider */
