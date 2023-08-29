@@ -21,6 +21,8 @@ import org.mycore.libmeta.mods.model.origininfo.Place;
 import org.mycore.libmeta.mods.model.origininfo.place.PlaceTerm;
 import org.mycore.libmeta.mods.model.physicaldescription.DigitalOrigin;
 import org.mycore.libmeta.mods.model.titleInfo.Title;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -30,6 +32,9 @@ import java.util.Locale;
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class ModsService {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(ModsService.class);
+
   protected Identifier createIdentifierPurl(DigitalObject digitalObject) {
     // TODO
 
@@ -94,7 +99,7 @@ public class ModsService {
               .keyDate(Yes.YES)
               .build();
     } catch (Exception e) {
-      System.out.println(e.getStackTrace());
+      LOGGER.error("Error at creating date issued from manifestation data", e);
     }
     return dateIssued;
   }

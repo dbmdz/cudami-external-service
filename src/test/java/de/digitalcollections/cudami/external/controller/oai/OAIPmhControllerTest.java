@@ -13,11 +13,15 @@ import org.mycore.oai.pmh.Granularity;
 import org.mycore.oai.pmh.Identify.DeletedRecordPolicy;
 import org.mycore.oai.pmh.SimpleIdentify;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(OAIPmhController.class)
+@ConfigurationPropertiesScan(basePackages = "de.digitalcollections.cudami.external.config")
+@TestPropertySource("classpath:application.yml")
 class OAIPmhControllerTest {
 
   @Autowired private MockMvc mockMvc;
@@ -27,7 +31,7 @@ class OAIPmhControllerTest {
   @Test
   void testMissingVerb() throws Exception {
     this.mockMvc
-        .perform(get("/oai"))
+        .perform(get("/oai/v2"))
         .andDo(print())
         .andExpect(status().is4xxClientError())
         .andExpect(status().reason("Required parameter 'verb' is not present."));
@@ -46,7 +50,7 @@ class OAIPmhControllerTest {
     when(service.getIdentify()).thenReturn(identify);
 
     this.mockMvc
-        .perform(get("/oai?verb=Identify"))
+        .perform(get("/oai/v2?verb=Identify"))
         .andDo(print())
         .andExpect(status().is2xxSuccessful())
         .andExpect(content().string(containsString("<protocolVersion>2.0</protocolVersion>")))

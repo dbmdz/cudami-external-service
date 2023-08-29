@@ -1,8 +1,10 @@
 package de.digitalcollections.cudami.external.service.oai.model;
 
 import de.digitalcollections.model.list.paging.PageRequest;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.mycore.oai.pmh.Set;
 
+@SuppressFBWarnings
 public class PageRequestWrapper {
   private MetadataFormatWrapper metadataFormatWrapper;
   private PageRequest pageRequest;

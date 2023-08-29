@@ -14,6 +14,7 @@ import de.digitalcollections.model.list.paging.PageResponse;
 import de.digitalcollections.model.list.sorting.Direction;
 import de.digitalcollections.model.list.sorting.Order;
 import de.digitalcollections.model.list.sorting.Sorting;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -63,6 +64,7 @@ import org.w3c.dom.Document;
  * see example implementation at
  * https://github.com/MyCoRe-Org/oaipmh/blob/main/oaipmh-dataprovider-impl/src/test/java/org/mycore/oai/pmh/dataprovider/impl/SimpleOAIAdapter.java
  */
+@SuppressFBWarnings
 @Service
 public class OAIPmhService implements OAIAdapter {
   private static final Logger LOGGER = LoggerFactory.getLogger(OAIPmhService.class);
