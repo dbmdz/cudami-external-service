@@ -3,8 +3,6 @@ package de.digitalcollections.cudami.external.service.mods;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
-import java.time.LocalDate;
-import java.util.Locale;
 import org.mycore.libmeta.mods.model.Mods;
 import org.mycore.libmeta.mods.model.ModsVersion;
 import org.mycore.libmeta.mods.model._misc.CodeOrText;
@@ -12,14 +10,7 @@ import org.mycore.libmeta.mods.model._misc.DateEncoding;
 import org.mycore.libmeta.mods.model._misc.enums.LanguageTermAuthority;
 import org.mycore.libmeta.mods.model._misc.enums.RelatedItemType;
 import org.mycore.libmeta.mods.model._misc.enums.Yes;
-import org.mycore.libmeta.mods.model._toplevel.Identifier;
-import org.mycore.libmeta.mods.model._toplevel.Language;
-import org.mycore.libmeta.mods.model._toplevel.Location;
-import org.mycore.libmeta.mods.model._toplevel.OriginInfo;
-import org.mycore.libmeta.mods.model._toplevel.PhysicalDescription;
-import org.mycore.libmeta.mods.model._toplevel.RecordInfo;
-import org.mycore.libmeta.mods.model._toplevel.RelatedItem;
-import org.mycore.libmeta.mods.model._toplevel.TitleInfo;
+import org.mycore.libmeta.mods.model._toplevel.*;
 import org.mycore.libmeta.mods.model.language.LanguageTerm;
 import org.mycore.libmeta.mods.model.location.ShelfLocator;
 import org.mycore.libmeta.mods.model.origininfo.DateIssued;
@@ -27,6 +18,9 @@ import org.mycore.libmeta.mods.model.origininfo.Place;
 import org.mycore.libmeta.mods.model.origininfo.place.PlaceTerm;
 import org.mycore.libmeta.mods.model.physicaldescription.DigitalOrigin;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.util.Locale;
 
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
@@ -101,6 +95,7 @@ public class ModsService {
     if (item.getExemplifiesManifestation()) {
       Manifestation manifestation = item.getManifestation();
       if (manifestation != null) {
+        // FIXME raus damit!
         System.out.println(manifestation.getCreated());
 
         Locale locale = manifestation.getLanguage();
