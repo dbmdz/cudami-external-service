@@ -20,8 +20,6 @@ server:
   server-header: "@project.name@ v@project.version@"
 
 spring:
-  devtools:
-    add-properties: false
   main:
     banner-mode: 'off'
   profiles:
