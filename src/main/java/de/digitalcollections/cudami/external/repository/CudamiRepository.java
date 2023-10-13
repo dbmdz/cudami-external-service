@@ -17,12 +17,11 @@ import de.digitalcollections.model.identifiable.entity.work.Work;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import de.digitalcollections.model.list.paging.PageRequest;
 import de.digitalcollections.model.list.paging.PageResponse;
+import java.util.List;
+import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
-import java.util.UUID;
 
 @Repository
 public class CudamiRepository {
@@ -95,6 +94,11 @@ public class CudamiRepository {
           cudamiDigitalObjectsClient.getByUuid(digitalObjectExample.getUuid());
       digitalObjectWatch.stop();
 
+      // Parent digitalObject - fill recursively
+      if (digitalObject.getParent() != null) {
+        digitalObject.setParent(getDigitalObject(digitalObject.getParent()));
+      }
+
       if (digitalObject.getItem() != null) {
         // Item
         CudamiItemsClient cudamiItemsClient = cudamiClient.forItems();
@@ -102,6 +106,14 @@ public class CudamiRepository {
         Item item = cudamiItemsClient.getByUuid(digitalObject.getItem().getUuid());
         itemWatch.stop();
         digitalObject.setItem(item);
+
+        // Parent item
+        if (item.getPartOfItem() != null) {
+          itemWatch.reset();
+          Item partOfItemm = cudamiItemsClient.getByUuid(item.getPartOfItem().getUuid());
+          itemWatch.stop();
+          item.setPartOfItem(partOfItemm);
+        }
 
         if (item.getManifestation() != null) {
           // Manifestation

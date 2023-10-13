@@ -5,6 +5,10 @@ import com.datazuul.language.iso639.ISO639Languages;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
+import de.digitalcollections.model.text.TitleType;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import org.mycore.libmeta.mods.model.Mods;
 import org.mycore.libmeta.mods.model.ModsVersion;
 import org.mycore.libmeta.mods.model._misc.CodeOrText;
@@ -24,10 +28,6 @@ import org.mycore.libmeta.mods.model.titleInfo.Title;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
@@ -125,11 +125,40 @@ public class ModsService {
     item = digitalObject.getItem();
     if (item != null && item.getExemplifiesManifestation()) {
       manifestation = item.getManifestation();
+
       if (manifestation != null) {
         // mods:relatedItem/titleInfo/title
-        title =
-            Title.builder().content(manifestation.getTitles().get(0).getText().getText()).build();
-        titleInfoBuilder.addContent(title);
+        de.digitalcollections.model.text.Title titleMainMain =
+            manifestation.getTitles().stream()
+                .filter(t -> t.getTitleType().equals(new TitleType("main", "main")))
+                .findFirst()
+                .orElse(null);
+
+        if ("ADO".equals(manifestation.getManifestationType())) {
+          // Bei Vorlage eines ADOs, das zu 99% eine Zeitungsausgabe ist,
+          // sehen wir uns den Parent (es gibt wenn, dann nur einen!) an,
+          // ob dieser .....
+          if (manifestation.getParents() != null && !manifestation.getParents().isEmpty()) {
+            Manifestation parentManifestation = manifestation.getParents().get(0).getSubject();
+            if (parentManifestation != null
+                && ("NEWSPAPER".equalsIgnoreCase(parentManifestation.getManifestationType())
+                    || "JOURNAL".equalsIgnoreCase(parentManifestation.getManifestationType()))) {
+              titleMainMain =
+                  parentManifestation.getTitles().stream()
+                      .filter(t -> t.getTitleType().equals(new TitleType("main", "main")))
+                      .findFirst()
+                      .orElse(null);
+            }
+          }
+        }
+
+        if (titleMainMain != null) {
+          title =
+              Title.builder()
+                  .content(titleMainMain.getText().getText(manifestation.getLanguage()))
+                  .build();
+          titleInfoBuilder.addContent(title);
+        }
 
         // mods:relatedItem/language/languageTerm  authority="iso639-2b" type="code": (e.g. "ger")
         Locale locale = manifestation.getLanguage();
@@ -173,11 +202,20 @@ public class ModsService {
   }
 
   protected ShelfLocator createShelfLocator(DigitalObject digitalObject) {
+    Item itemWithShelfNumber;
+
+    // Wenn das Digitalisat ein umschließendes Digitalisat besitzt,
+    // speist sich die Signatur aus dem Item des umschließenden Digitalisats!
+    if (digitalObject.getParent() != null) {
+      itemWithShelfNumber = digitalObject.getParent().getItem();
+    } else {
+      itemWithShelfNumber = digitalObject.getItem();
+    }
+
     ShelfLocator shelfLocator = null;
-    Item item = digitalObject.getItem();
-    if (item != null) {
+    if (itemWithShelfNumber != null) {
       de.digitalcollections.model.identifiable.Identifier shelfNo =
-          item.getIdentifierByNamespace("shelfno");
+          itemWithShelfNumber.getIdentifierByNamespace("shelfno");
       if (shelfNo != null) {
         shelfLocator = ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
       }

@@ -1,8 +1,11 @@
 package de.digitalcollections.cudami.external.service.mets;
 
 import de.digitalcollections.cudami.external.repository.CudamiRepository;
+import de.digitalcollections.cudami.external.util.ManifestationHelper;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
+import de.digitalcollections.model.text.Title;
+import de.digitalcollections.model.text.TitleType;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.mycore.libmeta.mets.model.Mets;
@@ -244,12 +247,37 @@ public class MetsService {
     Div.Builder divBuilder = Div.builder();
     divBuilder.ID("LOG_0000");
 
-    String label = digitalObject.getLabel().getText();
-    divBuilder.LABEL(label);
-
     if (digitalObject.getItem() != null && digitalObject.getItem().getManifestation() != null) {
-      String type = digitalObject.getItem().getManifestation().getManifestationType();
-      divBuilder.TYPE(type);
+      if (ManifestationHelper.isNewspaperIssue(digitalObject.getItem().getManifestation())) {
+        Title title =
+            digitalObject
+                .getItem()
+                .getManifestation()
+                .getParents()
+                .get(0)
+                .getSubject()
+                .getTitles()
+                .stream()
+                .filter(t -> t.getTitleType().equals(new TitleType("main", "main")))
+                .findFirst()
+                .orElse(null);
+        if (title != null) {
+          String label = title.getText().getText();
+          divBuilder.LABEL(label);
+        } else {
+          String label = digitalObject.getLabel().getText();
+          divBuilder.LABEL(label);
+        }
+
+        // Spezialfall Zeitungsausgabe
+        divBuilder.TYPE("Newspaper");
+      } else {
+        String label = digitalObject.getLabel().getText();
+        divBuilder.LABEL(label);
+
+        String type = digitalObject.getItem().getManifestation().getManifestationType();
+        divBuilder.TYPE(type);
+      }
     }
 
     Div divTop = divBuilder.build();
