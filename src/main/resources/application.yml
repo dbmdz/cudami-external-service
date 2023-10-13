@@ -1,19 +1,22 @@
 cudami:
   server:
     url: http://localhost:9000
-    #url: https://api-dev.digitale-sammlungen.de/cudami
 
 management:
   endpoints:
     web:
       base-path: "/monitoring"
       exposure:
-        include: "*"
+        include:
+          - prometheus
+          - metrics
+          - info
+          - health
   server:
-    port: 18080
+    port: 18081
 
 server:
-  port: 8080
+  port: 8081
   server-header: "@project.name@ v@project.version@"
 
 spring:
