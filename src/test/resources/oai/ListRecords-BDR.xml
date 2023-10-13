@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.openarchives.org/OAI/2.0/"
+  xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2023-07-17T11:01:31Z</responseDate>
+  <request verb="ListRecords" metadataPrefix="oai_dc" set="all">http://bdr.oai.bsb-muenchen.de/OAIHandler</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002911-2646</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 1. 1756</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1756</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020668-4</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002914-50771</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 2. 1756</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1756</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020669-4</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002917-33360</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 3. 1756</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1756</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020670-6</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002919-43613</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 4. 1756</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1756</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020671-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002921-2898</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 5. 1757</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1757</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020672-7</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002933-45997</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 6. 1757</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1757</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020673-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002935-15275</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 7. 1757</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1757</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020674-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002937-17321</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 8. 1757</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1757</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020675-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002940-13659</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 9. 1757</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1757</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020676-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002944-50527</identifier>
+        <datestamp>2022-12-18</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schwäbische Nachrichten von Oeconomie-, Cameral-, Policey-, Handlungs-, Manufactur-, mechanischen und Bergwercks-Sachen / 10. 1757</dc:title>
+          <dc:contributor>Moser, Johann Jacob</dc:contributor>
+          <dc:description>dem Dr. überlassen von Johann Jacob Moser</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1757</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10020677-4</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Germ.sp. 317-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002961-50723</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>J. C. Dähnerts Pommersche Bibliothek / 1. 1750</dc:title>
+          <dc:contributor>Dähnert, Johann Carl</dc:contributor>
+          <dc:publisher>Greifswald : Verf.</dc:publisher>
+          <dc:date>1750</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000781-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 11 s-1/3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002964-38444</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>J. C. Dähnerts Pommersche Bibliothek / 2. 1751</dc:title>
+          <dc:contributor>Dähnert, Johann Carl</dc:contributor>
+          <dc:publisher>Greifswald : Verf.</dc:publisher>
+          <dc:date>1751</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000782-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 11 s-1/3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10002966-46634</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>J. C. Dähnerts Pommersche Bibliothek / 3. 1752</dc:title>
+          <dc:contributor>Dähnert, Johann Carl</dc:contributor>
+          <dc:publisher>Greifswald : Verf.</dc:publisher>
+          <dc:date>1752</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000783-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 11 s-1/3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003011-64462</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur : im Jahre .. / 1840</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur</dc:creator>
+          <dc:publisher>[Breslau]</dc:publisher>
+          <dc:date>1840</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000719-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003013-64246</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur : im Jahre .. / 1841</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur</dc:creator>
+          <dc:publisher>[Breslau]</dc:publisher>
+          <dc:date>1841</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000720-6</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003014-64066</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur : im Jahre .. / 1842</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur</dc:creator>
+          <dc:publisher>[Breslau]</dc:publisher>
+          <dc:date>1842</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000721-1</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003016-64058</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur : im Jahre .. / 1843</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur</dc:creator>
+          <dc:publisher>[Breslau]</dc:publisher>
+          <dc:date>1843</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000722-6</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.6</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003019-15279</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur : im Jahre .. / 1844</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur</dc:creator>
+          <dc:publisher>[Breslau]</dc:publisher>
+          <dc:date>1844</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000723-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.8</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003021-65423</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur : im Jahre .. / 1845</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur</dc:creator>
+          <dc:publisher>[Breslau]</dc:publisher>
+          <dc:date>1845</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000724-7</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.9</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003041-45566</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur, (Sudeten-Section) : im Jahre .. / 1845</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Section für die Sudetenkunde</dc:creator>
+          <dc:publisher>[S.l.] @</dc:publisher>
+          <dc:date>1845</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000725-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.11</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003048-47161</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur, (Technische Section) : im Jahre ... / 1845</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Technische Section</dc:creator>
+          <dc:publisher>[S.l.]</dc:publisher>
+          <dc:date>1845</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000726-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003051-29310</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur, (Technische Section) : im Jahre ... / 1847</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Technische Section</dc:creator>
+          <dc:publisher>[S.l.]</dc:publisher>
+          <dc:date>1847</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000727-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.14</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003060-12797</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur, (Geographische Section) : im Jahre ... / 1846</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Geographische Section</dc:creator>
+          <dc:publisher>[S.l.]</dc:publisher>
+          <dc:date>1846</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000728-8</dc:identifier>
+          <dc:description>Volltext // 2014 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.13</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003062-29052</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Auszug aus der Übersicht der Arbeiten und Veränderungen der Schlesischen Gesellschaft für Vaterländische Kultur, (Geographische Section) : im Jahre ... / 1847</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Geographische Section</dc:creator>
+          <dc:publisher>[S.l.]</dc:publisher>
+          <dc:date>1847</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000729-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.15</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003074-46462</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Resultate der von dem Vereine für die Sudetenkunde jetzt Geographischen Section der Schlesischen Gesellschaft für Vaterländische Cultur im Jahre ... ausgeführten meteorologischen Beobachtungen zu atmosphärischen, klimatologischen und hypsometrischen Zwecken / 1845</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Geographische Section</dc:creator>
+          <dc:publisher>Breslau</dc:publisher>
+          <dc:date>1845</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000730-1</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.12</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003085-13176</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Resultate der von der Section für die Sudetenkunde im Jahre ... veranlaßten meteorologischen Beobachtungen zu hypsometrischen und klimatologischen Zwecken / 1843</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Section für die Sudetenkunde</dc:creator>
+          <dc:description>Schlesische Gesellschaft für Vaterländische Kultur</dc:description>
+          <dc:publisher>Breslau</dc:publisher>
+          <dc:date>1843</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000731-6</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.5</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003087-13056</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Resultate der von der Section für die Sudetenkunde im Jahre ... veranlaßten meteorologischen Beobachtungen zu hypsometrischen und klimatologischen Zwecken / 1842</dc:title>
+          <dc:creator>Schlesische Gesellschaft für Vaterländische Kultur, Section für die Sudetenkunde</dc:creator>
+          <dc:description>Schlesische Gesellschaft für Vaterländische Kultur</dc:description>
+          <dc:publisher>Breslau</dc:publisher>
+          <dc:date>1842</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000732-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Bor. 5 o#Beibd.7</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003225-45358</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Kalender sampt der Practick vff das Jar ... / 1577</dc:title>
+          <dc:contributor>Wolf, Caspar</dc:contributor>
+          <dc:description>gestellt duch Caspar Wolffen</dc:description>
+          <dc:publisher>Zürych : Froschauer</dc:publisher>
+          <dc:date>1577</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10206063-6</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Res/Chrlg. 328 d-1577</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003239-37977</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Schreib Calender sammt der Practic auff das Jahr ... / 1594 (1593)</dc:title>
+          <dc:contributor>Farenych, Gregor</dc:contributor>
+          <dc:description>gestellet durch Gregorium Farenych</dc:description>
+          <dc:publisher>Grätz : Widmannstetter</dc:publisher>
+          <dc:date>1593</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00083772-2</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Res/Chrlg. 328 e-1594</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003362-54807</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Pfeffer und Salz / 1. 1786</dc:title>
+          <dc:publisher>Salzburg</dc:publisher>
+          <dc:date>1786</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10010866-9</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Austr. 3590-1/2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10003363-50708</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Pfeffer und Salz / 2. 1786</dc:title>
+          <dc:publisher>Salzburg</dc:publisher>
+          <dc:date>1786</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10010867-4</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Austr. 3590-1/2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10005128-43850</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Beiträge zur Vaterlandskunde für Innerösterreichs Einwohner / 1. 1790</dc:title>
+          <dc:contributor>Kindermann, Joseph Karl</dc:contributor>
+          <dc:description>hrsg. von Joseph Karl Kindermann</dc:description>
+          <dc:publisher>Grätz : Leykam</dc:publisher>
+          <dc:date>1790</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10010176-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Austr. 2462-1</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10005129-5616</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Beiträge zur Vaterlandskunde für Innerösterreichs Einwohner / 2. 1790</dc:title>
+          <dc:contributor>Kindermann, Joseph Karl</dc:contributor>
+          <dc:description>hrsg. von Joseph Karl Kindermann</dc:description>
+          <dc:publisher>Grätz : Leykam</dc:publisher>
+          <dc:date>1790</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10010177-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Austr. 2462-2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10005249-18455</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Versuche aus der Literatur und Moral / 1. 1767</dc:title>
+          <dc:contributor>Clodius, Christian August</dc:contributor>
+          <dc:description>[Christian August Clodius]</dc:description>
+          <dc:publisher>Leipzig : Breitkopf</dc:publisher>
+          <dc:date>1767</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10106887-4</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 234 y-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10005251-49232</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Versuche aus der Literatur und Moral / 2. 1767</dc:title>
+          <dc:contributor>Clodius, Christian August</dc:contributor>
+          <dc:description>[Christian August Clodius]</dc:description>
+          <dc:publisher>Leipzig : Breitkopf</dc:publisher>
+          <dc:date>1767</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10106888-0</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 234 y-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10005252-848</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Versuche aus der Literatur und Moral / 3. 1768</dc:title>
+          <dc:contributor>Clodius, Christian August</dc:contributor>
+          <dc:description>[Christian August Clodius]</dc:description>
+          <dc:publisher>Leipzig : Breitkopf</dc:publisher>
+          <dc:date>1768</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10106889-0</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 234 y-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10005253-33361</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Versuche aus der Literatur und Moral / 4. 1769</dc:title>
+          <dc:contributor>Clodius, Christian August</dc:contributor>
+          <dc:description>[Christian August Clodius]</dc:description>
+          <dc:publisher>Leipzig : Breitkopf</dc:publisher>
+          <dc:date>1769</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10106890-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 234 y-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10006912-48626</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Siegismund Justus Ehrhardts, ... Neue Diplomatische Beyträge zur Erläuterung der alten Niederschlesischen Geschichte und Rechte / 1. 1773</dc:title>
+          <dc:contributor>Ehrhardt, Siegismund Justus</dc:contributor>
+          <dc:publisher>Breßlau : Korn</dc:publisher>
+          <dc:date>1773</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000135-7</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Austr. 45-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10006913-44529</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Siegismund Justus Ehrhardts, ... Neue Diplomatische Beyträge zur Erläuterung der alten Niederschlesischen Geschichte und Rechte / 2. 1773</dc:title>
+          <dc:contributor>Ehrhardt, Siegismund Justus</dc:contributor>
+          <dc:publisher>Breßlau : Korn</dc:publisher>
+          <dc:date>1773</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000136-2</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Austr. 45-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10006914-56824</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Siegismund Justus Ehrhardts, ... Neue Diplomatische Beyträge zur Erläuterung der alten Niederschlesischen Geschichte und Rechte / 3. 1773</dc:title>
+          <dc:contributor>Ehrhardt, Siegismund Justus</dc:contributor>
+          <dc:publisher>Breßlau : Korn</dc:publisher>
+          <dc:date>1773</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000137-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Austr. 45-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10006915-52731</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Siegismund Justus Ehrhardts, ... Neue Diplomatische Beyträge zur Erläuterung der alten Niederschlesischen Geschichte und Rechte / 4. 1773</dc:title>
+          <dc:contributor>Ehrhardt, Siegismund Justus</dc:contributor>
+          <dc:publisher>Breßlau : Korn</dc:publisher>
+          <dc:date>1773</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10000138-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 4 Austr. 45-1/4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10008125-49304</identifier>
+        <datestamp>2022-12-26</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Locomotive : Zeitung für politische  Bildung des Volkes / 1848, Apr. - Okt. = No. 1 - 177</dc:title>
+          <dc:contributor>Held, Friedrich Wilhelm Alexander</dc:contributor>
+          <dc:publisher>Berlin : F. Reichardt</dc:publisher>
+          <dc:date>1848</dc:date>
+          <dc:subject>Geschichte 1842-1849</dc:subject>
+          <dc:subject>Politik</dc:subject>
+          <dc:subject>Halle (Saale)</dc:subject>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10612758-8</dc:identifier>
+          <dc:description>Volltext // 2011 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Per. 62 lm-1848,1/177</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009762-43214</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 1. 1825 = Tafel I - IV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1825</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707984-4</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009764-8392</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 2. 1825 = Tafel V - VIII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1825</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707985-0</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009765-7369</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 3. 1826 = Tafel IX - XII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1826</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707986-5</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009766-22730</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 4. 1826 = Tafel XIII - XVI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1826</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707987-1</dc:identifier>
+          <dc:description>Volltext // 2015 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009768-28871</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 5. 1826 = Tafel XVII - XXI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1826</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707988-6</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009772-26675</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 6. 1827 = Tafel XXII - XXV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1827</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707989-6</dc:identifier>
+          <dc:description>Volltext // 2015 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009774-57397</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 7. 1827 = Tafel XXVI - XXIX</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1827</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707990-3</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009776-38967</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 8. 1827 = Tafel XXX - XXXIII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1827</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707991-8</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009779-35899</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 9. 1828 = Tafel XXXIV - XXXVII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1828</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707992-4</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009781-10532</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 10. 1828 = Tafel XXXVIII - XLI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1828</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707993-0</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-1/10</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009783-17334</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 11. 1828 = Tafel XLII - XLV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1828</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707994-5</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009784-33091</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 12. 1829 = Tafel XLVI - XLIX</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1829</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707995-1</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009785-16830</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 13. 1829 = Tafel L - LIII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1829</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707996-6</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009786-16570</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 14. 1829 = Tafel LIV - LVI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1829</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707997-2</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009787-32839</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 15. 1829 = Tafel LVII - LX</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1829</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707998-7</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009788-34131</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 16. 1829 = Tafel LXI - LXIV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1829</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10707999-7</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009789-17838</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 17/18. 1830 = Tafel LXV - LXXII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1830</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708000-3</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009791-846</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 19/20. 1830 = Tafel LXXIII - LXXXI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1830</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708001-8</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009792-586</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 21. 1830 = Tafel LXXXII - LXXXVI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1830</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708002-4</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009793-49847</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 22. 1830 = Tafel LXXXVII - XC</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1830</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708003-9</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009794-66</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 23. 1830 = Tafel XCI - XCIV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1830</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708004-4</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009795-49343</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 24. 1831 = Tafel XCV - XCVIII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1831</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708005-0</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-11/24</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009796-37628</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 25. 1831 = Tafel XCIX - CII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1831</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708006-5</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009797-20993</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 26. 1832 = Tafel CIII - CVI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1832</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708007-0</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009798-22293</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 27. 1832 = Tafel CVII - CX</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1832</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708008-6</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009800-23101</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 28. 1833 = Tafel CXI - CXIV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1833</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708009-6</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009801-39616</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 29. 1833 = Tafel CXV - CXVII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1833</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708010-8</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009804-39372</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 30. 1833 = Tafel CXVIII - CXXI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1833</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708011-3</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009805-22833</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 31. 1833 = Tafel CXXII - CXXV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1833</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708012-9</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009806-22581</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 32. 1834 = Tafel CXXVI - CXXIX</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1834</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708013-4</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009808-40412</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 33. 1834 = Tafel CXXX - CXXXIII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1834</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708014-9</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009809-23841</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 34. 1834 = Tafel CXXXIV - CXXXVII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1834</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708015-5</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009811-7105</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 35. 1835 = Tafel CXXXVIII - CXLI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1835</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708016-0</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009813-55864</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 36. 1835 = Tafel CXLII - CXLV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1835</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708017-5</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009816-55604</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 37. 1835 = Tafel CXLVI - CXLIX</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1835</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708018-1</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009818-7389</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 38. 1836 = Tafel CL - CLIII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1836</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708019-1</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009820-6204</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 39. 1836 = Tafel CLIV - CLVII</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1836</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708020-3</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009821-55489</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 40. 1837 = Tafel CLVIII - CLXI</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1837</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708021-9</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-25/40</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10009823-46870</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Das Laboratorium : eine Sammlung von Abbildungen und Beschreibungen der besten und neuesten Apparate zum Behuf der practischen und physikalischen Chemie / 41. 1838 = Tafel CLXII - CLXV</dc:title>
+          <dc:publisher>Weimar : Landes-Industrie-Comptoir</dc:publisher>
+          <dc:date>1838</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10708022-4</dc:identifier>
+          <dc:description>Volltext // 2012 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- BHS II I 135-41</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10042060-12589</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Deutsches Lesecabinet : Sammlung von Novellen, Erzählungen, Gedichten, Charakteristiken und Genrebildern / 1. 1838</dc:title>
+          <dc:publisher>Bamberg : Literar.-Artist. Inst.</dc:publisher>
+          <dc:date>1838</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10116783-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 1125 h-1</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10042061-61584</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Deutsches Lesecabinet : Sammlung von Novellen, Erzählungen, Gedichten, Charakteristiken und Genrebildern / 2. 1838</dc:title>
+          <dc:publisher>Bamberg : Literar.-Artist. Inst.</dc:publisher>
+          <dc:date>1838</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10116784-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 1125 h-2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10042063-61864</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Deutsches Lesecabinet : Sammlung von Novellen, Erzählungen, Gedichten, Charakteristiken und Genrebildern / 3. 1838</dc:title>
+          <dc:publisher>Bamberg : Literar.-Artist. Inst.</dc:publisher>
+          <dc:date>1838</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10116785-3</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 1125 h-3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10042065-12769</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Deutsches Lesecabinet : Sammlung von Novellen, Erzählungen, Gedichten, Charakteristiken und Genrebildern / 4. 1839</dc:title>
+          <dc:publisher>Bamberg : Literar.-Artist. Inst.</dc:publisher>
+          <dc:date>1839</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10116786-9</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- P.o.germ. 1125 h-4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10042155-45369</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Preis-Verzeichniss für ... meines reichen Sortiments neuer immerblühender Rosen, sowie Gemüse-, Blumen-, Feld- &amp; Gras-Saamen : nebst einem Auszug meines Hauptverzeichnisses der neuesten und schönsten Topf- &amp; Freiland-Pflanzen / 1852</dc:title>
+          <dc:description>von Wilhelm Pfitzer, Kunst- und Handelsgärtner in Stuttgart</dc:description>
+          <dc:publisher>Stuttgart</dc:publisher>
+          <dc:date>1852</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10214556-8</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- 2 Oecon. 130,12</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10043239-39133</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Niederschrift der ... Arbeitstagung des Bayerischen Beratenden Landesausschusses : am ... / 1. 1946, 21. - 28. Februar</dc:title>
+          <dc:creator>Bayern, Beratender Landesausschuß</dc:creator>
+          <dc:publisher>[S.l.] @</dc:publisher>
+          <dc:date>1946</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00025377-9</dc:identifier>
+          <dc:description>Volltext // 2008 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Bavar. 4778 f-1/3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10043240-50722</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Niederschrift der ... Arbeitstagung des Bayerischen Beratenden Landesausschusses : am ... / 2. 1946, 9. April</dc:title>
+          <dc:creator>Bayern, Beratender Landesausschuß</dc:creator>
+          <dc:publisher>[S.l.] @</dc:publisher>
+          <dc:date>1946</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00025379-4</dc:identifier>
+          <dc:description>Volltext // 2008 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Bavar. 4778 f-1/3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10043241-64035</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Niederschrift der ... Arbeitstagung des Bayerischen Beratenden Landesausschusses : am ... / 3. 1946, 12. und 13. Juni</dc:title>
+          <dc:creator>Bayern, Beratender Landesausschuß</dc:creator>
+          <dc:publisher>[S.l.] @</dc:publisher>
+          <dc:date>1946</dc:date>
+          <dc:language>ger</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00025380-7</dc:identifier>
+          <dc:description>Volltext // 2008 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Bavar. 4778 f-1/3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10043334-20364</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Bulletin / 1872, December</dc:title>
+          <dc:creator>City Post Office (Washington, DC)</dc:creator>
+          <dc:publisher>Washington, DC</dc:publisher>
+          <dc:date>1872</dc:date>
+          <dc:language>eng</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11360373-6</dc:identifier>
+          <dc:description>Volltext // 2022 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Paed.th. 1127#Beibd.2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10044773-59255</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Calendarium jaurinense titulare et historicum : ad annum ... / 1758</dc:title>
+          <dc:description>annectuntur huic Chronica hungarorum Ioh. de Thwrocz ...</dc:description>
+          <dc:publisher>Jaurini : Streibig</dc:publisher>
+          <dc:date>1758</dc:date>
+          <dc:language>lat</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10009216-0</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Austr. 858-1758</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10044774-41663</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Calendarium jaurinense titulare et historicum : ad annum ... / 1765</dc:title>
+          <dc:description>annectuntur huic Chronica hungarorum Ioh. de Thwrocz ...</dc:description>
+          <dc:publisher>Jaurini : Streibig</dc:publisher>
+          <dc:date>1765</dc:date>
+          <dc:language>lat</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10009217-5</dc:identifier>
+          <dc:description>Volltext // 2010 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- Austr. 858-1765</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068318-45457</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 1. 1818</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1818</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025841-1</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-1</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068321-9018</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 2. 1818</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1818</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025842-7</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-2</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068324-46068</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 3. 1818</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1818</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025843-2</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-3</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068326-20915</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 4. 1818</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1818</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025844-7</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-4</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068329-24931</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 5. 1820</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1820</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025845-3</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-5</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068332-53614</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 6. 1821</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1821</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025846-8</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-6</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068335-24998</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 7. 1823</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1823</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025847-3</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-7</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>oai:bdr.oai.bsb-muenchen.de:all:BDR-BSBe10068338-46577</identifier>
+        <datestamp>2022-10-19</datestamp>
+        <setSpec>all</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title>Nouvelles lettres édifiantes des missions de la Chine et des Indes Orientales / 8. 1823</dc:title>
+          <dc:publisher>Paris</dc:publisher>
+          <dc:date>1823</dc:date>
+          <dc:language>und</dc:language>
+          <dc:type>Text</dc:type>
+          <dc:identifier>http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10025848-9</dc:identifier>
+          <dc:description>Volltext // 2013 digitalisiert von: Bayerische Staatsbibliothek, München. Exemplar mit der Signatur: München, Bayerische Staatsbibliothek -- H.eccl. 628 n-8</dc:description>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+    <resumptionToken expirationDate="2023-07-17T23:01:31Z" completeListSize="1493421" cursor="0">TGlzdFJlY29yZHM6OjoxMDA6MToyMDIzLTA3LTE3VDIzJTNBMDElM0EzMVo6MTQ5MzQyMQ:all:oai_dc</resumptionToken>
+  </ListRecords>
+</OAI-PMH>

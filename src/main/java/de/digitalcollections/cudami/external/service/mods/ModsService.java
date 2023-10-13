@@ -1,10 +1,10 @@
 package de.digitalcollections.cudami.external.service.mods;
 
+import com.datazuul.language.iso639.ISO639Language;
+import com.datazuul.language.iso639.ISO639Languages;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
-import java.time.LocalDate;
-import java.util.Locale;
 import org.mycore.libmeta.mods.model.Mods;
 import org.mycore.libmeta.mods.model.ModsVersion;
 import org.mycore.libmeta.mods.model._misc.CodeOrText;
@@ -13,17 +13,28 @@ import org.mycore.libmeta.mods.model._misc.enums.LanguageTermAuthority;
 import org.mycore.libmeta.mods.model._misc.enums.RelatedItemType;
 import org.mycore.libmeta.mods.model._misc.enums.Yes;
 import org.mycore.libmeta.mods.model._toplevel.*;
+import org.mycore.libmeta.mods.model._toplevel.OriginInfo.Builder;
 import org.mycore.libmeta.mods.model.language.LanguageTerm;
 import org.mycore.libmeta.mods.model.location.ShelfLocator;
 import org.mycore.libmeta.mods.model.origininfo.DateIssued;
 import org.mycore.libmeta.mods.model.origininfo.Place;
 import org.mycore.libmeta.mods.model.origininfo.place.PlaceTerm;
 import org.mycore.libmeta.mods.model.physicaldescription.DigitalOrigin;
+import org.mycore.libmeta.mods.model.titleInfo.Title;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class ModsService {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(ModsService.class);
+
   protected Identifier createIdentifierPurl(DigitalObject digitalObject) {
     // TODO
 
@@ -47,38 +58,50 @@ public class ModsService {
   }
 
   protected OriginInfo createOriginInfo(DigitalObject digitalObject) {
+    Builder originInfoBuilder = OriginInfo.builderForOriginInfo();
+
     Item item = digitalObject.getItem();
-    if (item.getExemplifiesManifestation()) {
+    if (item != null && item.getExemplifiesManifestation()) {
       Manifestation manifestation = item.getManifestation();
       if (manifestation != null) {
-        System.out.println(manifestation.getCreated());
+        // mods:dateIssued
+        DateIssued dateIssued = createDateIssued(manifestation);
+        if (dateIssued != null) {
+          originInfoBuilder.addContent(dateIssued);
+        }
 
-        LocalDate publicationDate = manifestation.getPublicationInfo().getNavDateRange().getStart();
+        // mods:place/mods:placeTerm
+        PlaceTerm placeTerm = PlaceTerm.builderForPlaceTerm().type(CodeOrText.TEXT).build();
+        Place place = Place.builderForPlace().addContent(placeTerm).build();
+        originInfoBuilder.addContent(place).build();
+        // TODO
       }
     }
 
-    // mods:place/mods:placeTerm
-    PlaceTerm placeTerm = PlaceTerm.builderForPlaceTerm().type(CodeOrText.TEXT).build();
-    Place place = Place.builderForPlace().addContent(placeTerm).build();
-    // TODO
+    return originInfoBuilder.build();
+  }
 
-    // mods:dateIssued
-    // see w3cdtf = https://www.w3.org/TR/NOTE-datetime
-    // see
-    // https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE
-    // DateTimeFormatter ISO_LOCAL_DATE as '2011-12-03'
-    /*
-       * LocalDate date = LocalDate.now();
-    DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
-    String text = date.format(formatter);
-       */
-    DateIssued dateIssued =
-        DateIssued.builderForDateIssued().encoding(DateEncoding.W3CDTF).keyDate(Yes.YES).build();
-    // TODO
-
-    OriginInfo originInfo =
-        OriginInfo.builderForOriginInfo().addContent(place).addContent(dateIssued).build();
-    return originInfo;
+  /*
+   * see w3cdtf = https://www.w3.org/TR/NOTE-datetime
+   * see https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE
+   * see DateTimeFormatter ISO_LOCAL_DATE as '2011-12-03'
+   */
+  private DateIssued createDateIssued(Manifestation manifestation) {
+    DateIssued dateIssued = null;
+    try {
+      LocalDate publicationDate = manifestation.getPublicationInfo().getNavDateRange().getStart();
+      DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
+      String text = publicationDate.format(formatter);
+      dateIssued =
+          DateIssued.builderForDateIssued()
+              .content(text)
+              .encoding(DateEncoding.W3CDTF)
+              .keyDate(Yes.YES)
+              .build();
+    } catch (Exception e) {
+      LOGGER.error("Error at creating date issued from manifestation data", e);
+    }
+    return dateIssued;
   }
 
   protected PhysicalDescription createPhysicalDescription(DigitalObject digitalObject) {
@@ -90,51 +113,74 @@ public class ModsService {
   }
 
   protected RelatedItem createRelatedItem(DigitalObject digitalObject) {
-    Item item = digitalObject.getItem();
-    if (item.getExemplifiesManifestation()) {
-      Manifestation manifestation = item.getManifestation();
-      if (manifestation != null) {
-        // FIXME raus damit!
-        System.out.println(manifestation.getCreated());
+    RelatedItem.Builder relatedItemBuilder =
+        RelatedItem.builderForRelatedItem().type(RelatedItemType.HOST);
 
+    Item item = null;
+    Manifestation manifestation = null;
+    Title title;
+    TitleInfo.Builder titleInfoBuilder = TitleInfo.builder();
+
+    // mods:relatedItem
+    item = digitalObject.getItem();
+    if (item != null && item.getExemplifiesManifestation()) {
+      manifestation = item.getManifestation();
+      if (manifestation != null) {
+        // mods:relatedItem/titleInfo/title
+        title =
+            Title.builder().content(manifestation.getTitles().get(0).getText().getText()).build();
+        titleInfoBuilder.addContent(title);
+
+        // mods:relatedItem/language/languageTerm  authority="iso639-2b" type="code": (e.g. "ger")
         Locale locale = manifestation.getLanguage();
+        String lang = locale.getISO3Language();
+        ISO639Language iso639Language = ISO639Languages.getByLocale(locale);
+        if (iso639Language != null) {
+          lang = iso639Language.getPart2B();
+        }
+
+        Language.Builder languageBuilder = Language.builderForLanguage();
+        LanguageTerm languageTerm =
+            LanguageTerm.builderForLanguaeTerm()
+                .authority(LanguageTermAuthority.ISO639_2B)
+                .type(CodeOrText.CODE)
+                .content(lang)
+                .build();
+        Language language = languageBuilder.addLanguageTerm(languageTerm).build();
+        relatedItemBuilder.addContent(language);
+
+        System.out.println(manifestation.getCreated());
       }
     }
-    // mods:titleInfo
-    TitleInfo titleInfo = TitleInfo.builder().build();
-    // TODO
 
-    // mods:language/mods:languageTerm authority="iso639-2b" type="code"
-    LanguageTerm languageTerm =
-        LanguageTerm.builderForLanguaeTerm()
-            .authority(LanguageTermAuthority.ISO639_2B)
-            .type(CodeOrText.CODE)
-            .build();
-    Language language = Language.builderForLanguage().addLanguageTerm(languageTerm).build();
-    // TODO
+    // Fallback (TODO: delete if item and manifestation are always present/filled)
+    if (item == null || manifestation == null) {
+      // mods:relatedItem/titleInfo/title
+      title = Title.builder().content(digitalObject.getLabel().getText()).build();
+      titleInfoBuilder.addContent(title);
+    }
 
-    // mods:recordInfo
+    // mods:relatedItem/recordInfo
     RecordInfo recordInfo = RecordInfo.builderForRecordInfo().build();
-    // mods:recordIdentifier
+    // mods:relatedItem/recordInfo/recordIdentifier
     // TODO
+
+    TitleInfo titleInfo = titleInfoBuilder.build();
 
     RelatedItem relatedItem =
-        RelatedItem.builderForRelatedItem()
-            .type(RelatedItemType.HOST)
-            .addContent(titleInfo)
-            .addContent(language)
-            .addContent(recordInfo)
-            .build();
+        relatedItemBuilder.addContent(titleInfo).addContent(recordInfo).build();
     return relatedItem;
   }
 
   protected ShelfLocator createShelfLocator(DigitalObject digitalObject) {
     ShelfLocator shelfLocator = null;
     Item item = digitalObject.getItem();
-    de.digitalcollections.model.identifiable.Identifier shelfNo =
-        item.getIdentifierByNamespace("shelfno");
-    if (shelfNo != null) {
-      shelfLocator = ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+    if (item != null) {
+      de.digitalcollections.model.identifiable.Identifier shelfNo =
+          item.getIdentifierByNamespace("shelfno");
+      if (shelfNo != null) {
+        shelfLocator = ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+      }
     }
     return shelfLocator;
   }

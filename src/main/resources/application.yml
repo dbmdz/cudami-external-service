@@ -2,6 +2,33 @@ cudami:
   server:
     url: http://localhost:9000
 
+dfg:
+  rights:
+    owner: "Bayerische Staatsbibliothek"
+    ownerContact: "mailto:mdz@digitale-sammlungen.de"
+    ownerLogo: "https://dfg-viewer.de/typo3temp/assets/images/d08200e38c0994139590ea9ad0b5c4fa.jpg"
+    ownerSiteUrl: "https://www.bsb-muenchen.de/"
+
+iiif:
+  identifier:
+    namespaces:
+      - 'mdz-obj'
+      - 'mdz-obj-child'
+  presentation:
+    #baseUrl: "http://localhost:23232/presentation/v2/"
+    baseUrl: "https://api-dev.digitale-sammlungen.de/iiif/presentation/v2/"
+
+oai:
+  caching:
+    identifyTTL: 3600000 # 1 hour (in ms): 3600000
+  identify:
+    adminEmail: "mdz@digitale-sammlungen.de"
+    baseUrl: "http://localhost:8080/oai/v2"
+    repositoryIdentifier: "oai.digitale-sammlungen.de"
+    repositoryName: "Digitale Sammlungen (MDZ)"
+    sampleId: "f611580a-1106-4c74-851f-9a6d12cb662c"
+    
+    
 management:
   endpoints:
     web:

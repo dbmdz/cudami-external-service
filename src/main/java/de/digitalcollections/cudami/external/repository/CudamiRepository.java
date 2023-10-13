@@ -1,6 +1,7 @@
 package de.digitalcollections.cudami.external.repository;
 
 import de.digitalcollections.cudami.client.CudamiClient;
+import de.digitalcollections.cudami.client.identifiable.entity.CudamiCollectionsClient;
 import de.digitalcollections.cudami.client.identifiable.entity.CudamiDigitalObjectsClient;
 import de.digitalcollections.cudami.client.identifiable.entity.work.CudamiItemsClient;
 import de.digitalcollections.cudami.client.identifiable.entity.work.CudamiManifestationsClient;
@@ -8,25 +9,71 @@ import de.digitalcollections.cudami.client.identifiable.entity.work.CudamiWorksC
 import de.digitalcollections.cudami.external.monitoring.ProcessingMetrics;
 import de.digitalcollections.cudami.external.monitoring.Watch;
 import de.digitalcollections.model.exception.TechnicalException;
+import de.digitalcollections.model.identifiable.entity.Collection;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import de.digitalcollections.model.identifiable.entity.work.Work;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
-import java.util.List;
+import de.digitalcollections.model.list.paging.PageRequest;
+import de.digitalcollections.model.list.paging.PageResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.UUID;
+
 @Repository
-public class CudamiRepositoryManager {
-  private static final Logger LOGGER = LoggerFactory.getLogger(CudamiRepositoryManager.class);
+public class CudamiRepository {
+  private static final Logger LOGGER = LoggerFactory.getLogger(CudamiRepository.class);
   private final CudamiClient cudamiClient;
   private final ProcessingMetrics metrics;
 
-  public CudamiRepositoryManager(CudamiClient cudamiClient, ProcessingMetrics metrics) {
+  public CudamiRepository(CudamiClient cudamiClient, ProcessingMetrics metrics) {
     this.cudamiClient = cudamiClient;
     this.metrics = metrics;
+  }
+
+  public PageResponse<Collection> findCollections(PageRequest pageRequest) {
+    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
+    try {
+      return cudamiCollectionsClient.find(pageRequest);
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get Collections by page request.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public PageResponse<DigitalObject> findDigitalObjects(PageRequest pageRequest) {
+    CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
+    try {
+      return cudamiDigitalObjectsClient.find(pageRequest);
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get DigitalObjects by page request.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public PageResponse<DigitalObject> findDigitalObjectsOfCollection(
+      UUID collectionUuid, PageRequest pageRequest) {
+    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
+    try {
+      return cudamiCollectionsClient.findDigitalObjects(collectionUuid, pageRequest);
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get DigitalObjects by page request.", e);
+      throw new RuntimeException(e.getMessage());
+    }
+  }
+
+  public Collection getCollection(String uuid) {
+    CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
+    try {
+      return cudamiCollectionsClient.getByUuid(UUID.fromString(uuid));
+    } catch (TechnicalException e) {
+      LOGGER.error("can not get Collection by uuid.", e);
+      throw new RuntimeException(e.getMessage());
+    }
   }
 
   public DigitalObject getDigitalObject(DigitalObject digitalObjectExample) {
