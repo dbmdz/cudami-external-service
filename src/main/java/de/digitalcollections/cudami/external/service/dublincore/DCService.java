@@ -5,19 +5,10 @@ import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
-import jakarta.xml.bind.JAXBElement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-import org.mycore.libmeta.dcsimple.model.DCDate;
-import org.mycore.libmeta.dcsimple.model.DCIdentifier;
-import org.mycore.libmeta.dcsimple.model.DCLanguage;
-import org.mycore.libmeta.dcsimple.model.DCTitle;
-import org.mycore.libmeta.dcsimple.model.ElementType;
+import java.util.*;
+import org.mycore.libmeta.dcsimple.model.*;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,8 +19,8 @@ public class DCService {
   // dates
   // see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/date/
   // TODO: even ranges can be expressed with "/", e.g. 1919/1925
-  public List<JAXBElement<ElementType>> createDCDates(DigitalObject digitalObject) {
-    List<JAXBElement<ElementType>> result = new ArrayList<>();
+  public List<DCElement> createDCDates(DigitalObject digitalObject) {
+    List<DCElement> result = new ArrayList<>();
     Manifestation manifestation = getManifestation(digitalObject);
     if (manifestation != null) {
       DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
@@ -41,8 +32,8 @@ public class DCService {
   }
 
   // identifiers
-  public List<JAXBElement<ElementType>> createDCIdentifiers(DigitalObject digitalObject) {
-    List<JAXBElement<ElementType>> result = new ArrayList<>();
+  public List<DCElement> createDCIdentifiers(DigitalObject digitalObject) {
+    List<DCElement> result = new ArrayList<>();
     Set<Identifier> identifiers = digitalObject.getIdentifiers();
     for (Identifier identifier : identifiers) {
       result.add(
@@ -55,8 +46,8 @@ public class DCService {
 
   // languages
   // see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/language/
-  public List<JAXBElement<ElementType>> createDCLanguages(DigitalObject digitalObject) {
-    List<JAXBElement<ElementType>> result = new ArrayList<>();
+  public List<DCElement> createDCLanguages(DigitalObject digitalObject) {
+    List<DCElement> result = new ArrayList<>();
 
     Manifestation manifestation = getManifestation(digitalObject);
     if (manifestation != null) {
@@ -79,8 +70,8 @@ public class DCService {
   }
 
   // titles
-  public List<JAXBElement<ElementType>> createDCTitles(DigitalObject digitalObject) {
-    List<JAXBElement<ElementType>> result = new ArrayList<>();
+  public List<DCElement> createDCTitles(DigitalObject digitalObject) {
+    List<DCElement> result = new ArrayList<>();
     if (digitalObject.getLabel() != null) {
       result.add(DCTitle.builder().value(digitalObject.getLabel().getText()).build());
     }
