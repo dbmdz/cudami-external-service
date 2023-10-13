@@ -1,7 +1,6 @@
 package de.digitalcollections.cudami.external.monitoring;
 
 import io.micrometer.core.instrument.Timer;
-
 import java.util.concurrent.TimeUnit;
 
 public class Watch {
@@ -21,5 +20,4 @@ public class Watch {
   public void reset() {
     this.startNanoSeconds = System.nanoTime();
   }
-
 }

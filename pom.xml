@@ -27,6 +27,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.datazuul.language</groupId>
+      <artifactId>iso-639</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+    <dependency>
       <groupId>de.digitalcollections.cudami</groupId>
       <artifactId>dc-cudami-client</artifactId>
       <version>7.1.1</version>
@@ -269,6 +274,13 @@
       <releases>
         <enabled>false</enabled>
       </releases>
+    </repository>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/datazuul/iso-639</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
     </repository>
   </repositories>
 

@@ -1,8 +1,11 @@
 package de.digitalcollections.cudami.external.service.mods;
 
+import com.datazuul.language.iso639.ISO639Languages;
+import de.digitalcollections.cudami.external.util.TitleUtil;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
+import java.time.LocalDate;
 import org.mycore.libmeta.mods.model.Mods;
 import org.mycore.libmeta.mods.model.ModsVersion;
 import org.mycore.libmeta.mods.model._misc.CodeOrText;
@@ -17,14 +20,16 @@ import org.mycore.libmeta.mods.model.origininfo.DateIssued;
 import org.mycore.libmeta.mods.model.origininfo.Place;
 import org.mycore.libmeta.mods.model.origininfo.place.PlaceTerm;
 import org.mycore.libmeta.mods.model.physicaldescription.DigitalOrigin;
+import org.mycore.libmeta.mods.model.titleInfo.Title;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.util.Locale;
 
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
 public class ModsService {
+  private static final Logger LOGGER = LoggerFactory.getLogger(ModsService.class);
+
   protected Identifier createIdentifierPurl(DigitalObject digitalObject) {
     // TODO
 
@@ -91,53 +96,71 @@ public class ModsService {
   }
 
   protected RelatedItem createRelatedItem(DigitalObject digitalObject) {
+    RelatedItem.Builder relatedItemBuilder =
+        RelatedItem.builderForRelatedItem().type(RelatedItemType.HOST);
+
     Item item = digitalObject.getItem();
+    Manifestation manifestation = null;
+
     if (item.getExemplifiesManifestation()) {
-      Manifestation manifestation = item.getManifestation();
-      if (manifestation != null) {
-        // FIXME raus damit!
-        System.out.println(manifestation.getCreated());
-
-        Locale locale = manifestation.getLanguage();
+      manifestation = item.getManifestation();
+      Manifestation titleManifestation = manifestation;
+      if (titleManifestation.getParents() != null && !titleManifestation.getParents().isEmpty()) {
+        // Use the first (and only) parent manifestation, which is the manifestation of the
+        // newspaper title
+        titleManifestation = titleManifestation.getParents().get(0).getSubject();
       }
-    }
-    // mods:titleInfo
-    TitleInfo titleInfo = TitleInfo.builder().build();
-    // TODO
 
-    // mods:language/mods:languageTerm authority="iso639-2b" type="code"
-    LanguageTerm languageTerm =
-        LanguageTerm.builderForLanguaeTerm()
-            .authority(LanguageTermAuthority.ISO639_2B)
-            .type(CodeOrText.CODE)
-            .build();
-    Language language = Language.builderForLanguage().addLanguageTerm(languageTerm).build();
-    // TODO
+      // mods:titleInfo
+      TitleInfo titleInfo =
+          TitleInfo.builder()
+              .addContent(
+                  Title.builder()
+                      .content(TitleUtil.filterTitle(titleManifestation, "main", "main"))
+                      .build())
+              .build();
+      relatedItemBuilder = relatedItemBuilder.addContent(titleInfo);
+
+      // mods:language/mods:languageTerm authority="iso639-2b" type="code"
+      LanguageTerm languageTerm =
+          LanguageTerm.builderForLanguaeTerm()
+              .authority(LanguageTermAuthority.ISO639_2B)
+              .type(CodeOrText.CODE)
+              .content(ISO639Languages.getByLocale(manifestation.getLanguage()).getPart2B())
+              .build();
+      Language language = Language.builderForLanguage().addLanguageTerm(languageTerm).build();
+      relatedItemBuilder = relatedItemBuilder.addContent(language);
+    }
 
     // mods:recordInfo
     RecordInfo recordInfo = RecordInfo.builderForRecordInfo().build();
     // mods:recordIdentifier
     // TODO
 
-    RelatedItem relatedItem =
-        RelatedItem.builderForRelatedItem()
-            .type(RelatedItemType.HOST)
-            .addContent(titleInfo)
-            .addContent(language)
-            .addContent(recordInfo)
-            .build();
+    RelatedItem relatedItem = relatedItemBuilder.addContent(recordInfo).build();
     return relatedItem;
   }
 
   protected ShelfLocator createShelfLocator(DigitalObject digitalObject) {
-    ShelfLocator shelfLocator = null;
     Item item = digitalObject.getItem();
     de.digitalcollections.model.identifiable.Identifier shelfNo =
         item.getIdentifierByNamespace("shelfno");
     if (shelfNo != null) {
-      shelfLocator = ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+      return ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+    } else {
+      if (item.getPartOfItem() != null) {
+        shelfNo = item.getPartOfItem().getIdentifierByNamespace("shelfno");
+        if (shelfNo != null) {
+          return ShelfLocator.builderForShelfLocator().content(shelfNo.getId()).build();
+        }
+      }
     }
-    return shelfLocator;
+
+    LOGGER.warn(
+        "Found no shelfno identifier for item "
+            + item.getUuid()
+            + ", neither in item, nor in surropunding item");
+    return null;
   }
 
   public Mods getModsForDigitalObject(DigitalObject digitalObject) throws Exception {
