@@ -1,135 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.6</version>
-    <relativePath /> <!-- lookup parent from repository -->
-  </parent>
+    <version>3.1.4</version>
+  </parent>      
 
-  <groupId>de.digitalcollections</groupId>
+  <groupId>de.digitalcollections.cudami.external</groupId>
   <artifactId>cudami-external-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${revision}</version>
+  <packaging>pom</packaging>
   <name>cudami External APIs Service</name>
-  <description>REST-Webservice providing the public APIs for cudami Repository
-    Server</description>
+  <description>REST-Webservice providing the public APIs for cudami Repository Server</description>
+  <url>https://github.com/dbmdz/cudami-external-service</url>
 
   <properties>
+    <revision>0.1.0-SNAPSHOT</revision>
     <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.datazuul.language</groupId>
-      <artifactId>iso-639</artifactId>
-      <version>1.1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>de.digitalcollections.cudami</groupId>
-      <artifactId>dc-cudami-client</artifactId>
-      <version>7.1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-prometheus</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.swagger.core.v3</groupId>
-      <artifactId>swagger-annotations</artifactId>
-      <version>2.2.9</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore</groupId>
-      <artifactId>oaipmh-dataprovider</artifactId>
-      <version>3.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore</groupId>
-      <artifactId>oaipmh-dataprovider-impl</artifactId>
-      <version>3.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.libmeta</groupId>
-      <artifactId>libmeta-dfgviewer</artifactId>
-      <version>0.8.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.libmeta</groupId>
-      <artifactId>libmeta-dublincore-oai</artifactId>
-      <version>0.8.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.libmeta</groupId>
-      <artifactId>libmeta-mets</artifactId>
-      <version>0.8.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.libmeta</groupId>
-      <artifactId>libmeta-mods</artifactId>
-      <version>0.8.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-cache</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-      <optional>true</optional>
-    </dependency>
-  </dependencies>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://github.com/dbmdz/cudami/blob/main/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Ralf Eichinger</name>
+      <id>datazuul</id>
+    </developer>
+    <developer>
+      <name>Matthias Lindinger</name>
+      <email>matthias.lindinger@bsb-muenchen.de</email>
+      <id>morpheus-87</id>
+    </developer>
+    <developer>
+      <name>Christoph Lorenz</name>
+      <email>christoph.lorenz@bsb-muenchen.de</email>
+      <id>clorenz</id>
+    </developer>
+    <developer>
+      <name>David Förster</name>
+      <email>david.foerster@bsb-muenchen.de</email>
+      <id>daforster</id>
+    </developer>
+  </developers>
+  <ciManagement>
+    <system>GitHub Actions</system>
+    <url>https://github.com/dbmdz/cudami-external-service/actions</url>
+  </ciManagement>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/dbmdz/cudami-external-service/issues</url>
+  </issueManagement>
+  <scm>
+    <connection>https://github.com/dbmdz/cudami-external-service.git</connection>
+    <developerConnection>git@github.com:dbmdz/cudami-external-service.git</developerConnection>
+    <url>https://github.com/dbmdz/cudami-external-service</url>
+  </scm>
+
+  <modules>
+    <module>api</module>
+    <module>service</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>de.digitalcollections.cudami</groupId>
+        <artifactId>dc-cudami-client</artifactId>
+        <version>7.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore.libmeta</groupId>
+        <artifactId>libmeta-dublincore-oai</artifactId>
+        <version>0.8.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore.libmeta</groupId>
+        <artifactId>libmeta-dublincore-simple</artifactId>
+        <version>0.8.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore.libmeta</groupId>
+        <artifactId>libmeta-mets</artifactId>
+        <version>0.8.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mycore.libmeta</groupId>
+        <artifactId>libmeta-mods</artifactId>
+        <version>0.8.1-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>false</filtering>
-      </resource>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>application.yml</include>
-        </includes>
-      </resource>
-    </resources>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>io.github.phillipuniverse</groupId>
+        <artifactId>githook-maven-plugin</artifactId>
+        <version>1.0.5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>install</goal>
+            </goals>
+            <configuration>
+              <hooks>
+                <pre-commit>
+                  if ! mvn com.spotify.fmt:fmt-maven-plugin:check ; then
+                  mvn com.spotify.fmt:fmt-maven-plugin:format
+                  echo -e "\e[31mCode has been reformatted to match code style\e[0m"
+                  echo -e "\e[31mPlease use git add … to add modified files\e[0m"
+                  echo "Your commit message was:"
+                  cat .git/COMMIT_EDITMSG
+                  exit 1
+                  fi
+                </pre-commit>
+              </hooks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.spotify.fmt</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>2.21.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
         <version>4.7.2.1</version>
         <dependencies>
-          <!-- overwrite dependency on spotbugs if you want to specify the
-          version of spotbugs -->
+          <!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
           <dependency>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs</artifactId>
@@ -145,46 +164,6 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>com.spotify.fmt</groupId>
-        <artifactId>fmt-maven-plugin</artifactId>
-        <version>2.20</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>format</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>io.github.phillipuniverse</groupId>
-        <artifactId>githook-maven-plugin</artifactId>
-        <version>1.0.5</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>install</goal>
-            </goals>
-            <configuration>
-              <hooks>
-                <pre-commit>
-                  if ! mvn com.spotify.fmt:fmt-maven-plugin:check ; then
-                  mvn com.spotify.fmt:fmt-maven-plugin:format
-                  echo -e "\e[31mCode has been reformatted to match code
-                  style\e[0m"
-                  echo -e "\e[31mPlease use git add … to add modified
-                  files\e[0m"
-                  echo "Your commit message was:"
-                  cat .git/COMMIT_EDITMSG
-                  exit 1
-                  fi
-                </pre-commit>
-              </hooks>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -194,7 +173,19 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -211,7 +202,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.2</version>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -254,11 +245,15 @@
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <distributionManagement>
@@ -271,13 +266,6 @@
 
   <repositories>
     <repository>
-      <id>github</id>
-      <url>https://maven.pkg.github.com/datazuul/iso-639</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
       <id>ossrh-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -287,6 +275,13 @@
       <releases>
         <enabled>false</enabled>
       </releases>
+    </repository>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/datazuul/iso-639</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
     </repository>
   </repositories>
 
@@ -324,3 +319,4 @@
     </profile>
   </profiles>
 </project>
+
