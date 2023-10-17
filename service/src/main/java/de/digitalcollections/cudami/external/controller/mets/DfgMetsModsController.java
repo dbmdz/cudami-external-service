@@ -4,6 +4,7 @@ import de.digitalcollections.cudami.external.repository.CudamiRepositoryImpl;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsServiceImpl;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import java.util.UUID;
 import org.mycore.libmeta.mets.METSXMLProcessor;
 import org.mycore.libmeta.mets.model.Mets;
 import org.springframework.http.HttpStatus;
@@ -12,8 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.UUID;
 
 @RestController
 public class DfgMetsModsController {

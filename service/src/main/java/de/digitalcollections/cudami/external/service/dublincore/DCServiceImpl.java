@@ -6,12 +6,11 @@ import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
-import org.mycore.libmeta.dcsimple.model.*;
-import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import org.mycore.libmeta.dcsimple.model.*;
+import org.springframework.stereotype.Service;
 
 @Service
 public class DCServiceImpl implements DCService {
@@ -33,7 +32,12 @@ public class DCServiceImpl implements DCService {
       }
       return result;
     } catch (Exception e) {
-      throw new ServiceException("Cannot create DC Dates for DigitalObject with uuid=" + digitalObject.getUuid() + ": " + e, e);
+      throw new ServiceException(
+          "Cannot create DC Dates for DigitalObject with uuid="
+              + digitalObject.getUuid()
+              + ": "
+              + e,
+          e);
     }
   }
 
@@ -50,7 +54,12 @@ public class DCServiceImpl implements DCService {
       }
       return result;
     } catch (Exception e) {
-      throw new ServiceException("Cannot create DC Identifiers fpr DigitalObject with uuid=" + digitalObject.getUuid() + ": " + e, e);
+      throw new ServiceException(
+          "Cannot create DC Identifiers fpr DigitalObject with uuid="
+              + digitalObject.getUuid()
+              + ": "
+              + e,
+          e);
     }
   }
 
@@ -79,7 +88,12 @@ public class DCServiceImpl implements DCService {
       }
       return result;
     } catch (Exception e) {
-      throw new ServiceException("Cannot create DC Languages for DigitalObject with uuid=" + digitalObject.getUuid() + ": " + e, e);
+      throw new ServiceException(
+          "Cannot create DC Languages for DigitalObject with uuid="
+              + digitalObject.getUuid()
+              + ": "
+              + e,
+          e);
     }
   }
 

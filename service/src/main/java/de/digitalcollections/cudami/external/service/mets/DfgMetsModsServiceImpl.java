@@ -10,6 +10,11 @@ import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObje
 import de.digitalcollections.model.identifiable.resource.LinkedDataFileResource;
 import de.digitalcollections.model.legal.License;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+import java.util.List;
+import java.util.Optional;
 import org.mycore.libmeta.dfgviewer.DVLinksXMLProcessor;
 import org.mycore.libmeta.dfgviewer.DVRightsXMLProcessor;
 import org.mycore.libmeta.dfgviewer.model.Links;
@@ -24,12 +29,6 @@ import org.mycore.libmeta.mods.MODSXMLProcessor;
 import org.mycore.libmeta.mods.model.Mods;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
-
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-import java.util.List;
-import java.util.Optional;
 
 /** Service for creation of DFG specific METS metadata by given (fully filled) DigitalObject. */
 @SuppressFBWarnings
@@ -72,7 +71,11 @@ public class DfgMetsModsServiceImpl extends MetsServiceImpl implements DfgMetsMo
       Element rightsElement =
           DVRightsXMLProcessor.getInstance().marshalToDOM(rights).getDocumentElement();
       MdWrap mdWrapDVRights =
-          MdWrap.builder().MDTYPE(MDTYPE.OTHER).MIMETYPE("text/xml").OTHERMDTYPE("DVRIGHTS").build();
+          MdWrap.builder()
+              .MDTYPE(MDTYPE.OTHER)
+              .MIMETYPE("text/xml")
+              .OTHERMDTYPE("DVRIGHTS")
+              .build();
       mdWrapDVRights.setXmlData(XMLData.builder().addNode(rightsElement).build());
       MdSec rightsMD = mets.getAmdSec().get(0).getRightsMD().get(0); // has been created before
       rightsMD.setMdWrap(mdWrapDVRights);

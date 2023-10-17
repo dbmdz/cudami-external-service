@@ -17,15 +17,15 @@ import de.digitalcollections.model.identifiable.entity.work.Work;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import de.digitalcollections.model.list.paging.PageRequest;
 import de.digitalcollections.model.list.paging.PageResponse;
+import java.util.List;
+import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.UUID;
-
 @Repository
-public class CudamiRepositoryImpl implements ListRepository, SingleObjectRepository, QueryRepository {
+public class CudamiRepositoryImpl
+    implements ListRepository, SingleObjectRepository, QueryRepository {
   private static final Logger LOGGER = LoggerFactory.getLogger(CudamiRepositoryImpl.class);
   private final CudamiClient cudamiClient;
   private final ProcessingMetrics metrics;
@@ -35,23 +35,27 @@ public class CudamiRepositoryImpl implements ListRepository, SingleObjectReposit
     this.metrics = metrics;
   }
 
-  public PageResponse<Collection> findCollections(PageRequest pageRequest) throws RepositoryException {
+  public PageResponse<Collection> findCollections(PageRequest pageRequest)
+      throws RepositoryException {
     CudamiCollectionsClient cudamiCollectionsClient = cudamiClient.forCollections();
     try {
       return cudamiCollectionsClient.find(pageRequest);
     } catch (TechnicalException e) {
       LOGGER.error("can not get Collections by page request.", e);
-      throw new RepositoryException("Cannot retrieve collections with pageRequest=" + pageRequest + ": " + e, e);
+      throw new RepositoryException(
+          "Cannot retrieve collections with pageRequest=" + pageRequest + ": " + e, e);
     }
   }
 
-  public PageResponse<DigitalObject> findDigitalObjects(PageRequest pageRequest) throws RepositoryException {
+  public PageResponse<DigitalObject> findDigitalObjects(PageRequest pageRequest)
+      throws RepositoryException {
     CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
     try {
       return cudamiDigitalObjectsClient.find(pageRequest);
     } catch (TechnicalException e) {
       LOGGER.error("can not get DigitalObjects by page request.", e);
-      throw new RepositoryException("Cannot retrieve digital objects with pageRequest=" + pageRequest + ": " + e, e);
+      throw new RepositoryException(
+          "Cannot retrieve digital objects with pageRequest=" + pageRequest + ": " + e, e);
     }
   }
 
@@ -62,7 +66,14 @@ public class CudamiRepositoryImpl implements ListRepository, SingleObjectReposit
       return cudamiCollectionsClient.findDigitalObjects(collectionUuid, pageRequest);
     } catch (TechnicalException e) {
       LOGGER.error("can not get DigitalObjects by page request.", e);
-      throw new RepositoryException("Cannot retrieve digital objects for collection with uuid=" + collectionUuid + " and pageRequest=" + pageRequest + ": " + e, e);
+      throw new RepositoryException(
+          "Cannot retrieve digital objects for collection with uuid="
+              + collectionUuid
+              + " and pageRequest="
+              + pageRequest
+              + ": "
+              + e,
+          e);
     }
   }
 
@@ -76,7 +87,8 @@ public class CudamiRepositoryImpl implements ListRepository, SingleObjectReposit
     }
   }
 
-  public DigitalObject getDigitalObject(DigitalObject digitalObjectExample) throws RepositoryException {
+  public DigitalObject getDigitalObject(DigitalObject digitalObjectExample)
+      throws RepositoryException {
     Watch digitalObjectWatch =
         this.metrics.startMeasure(ProcessingMetrics.MetadataOperation.GET_DIGITALOBJECT);
     Watch itemWatch = this.metrics.startMeasure(ProcessingMetrics.MetadataOperation.GET_ITEM);
@@ -128,7 +140,12 @@ public class CudamiRepositoryImpl implements ListRepository, SingleObjectReposit
       return digitalObject;
     } catch (TechnicalException e) {
       LOGGER.error("can not get DigitalObject by UUID.", e);
-      throw new RepositoryException("Cannot retrieve DigitalObject by example with uuid=" + digitalObjectExample.getUuid() + ": " + e, e);
+      throw new RepositoryException(
+          "Cannot retrieve DigitalObject by example with uuid="
+              + digitalObjectExample.getUuid()
+              + ": "
+              + e,
+          e);
     } finally {
       digitalObjectWatch.stop();
       itemWatch.stop();
@@ -138,7 +155,8 @@ public class CudamiRepositoryImpl implements ListRepository, SingleObjectReposit
     }
   }
 
-  public List<ImageFileResource> getIiifFileResources(DigitalObject digitalObject) throws RepositoryException {
+  public List<ImageFileResource> getIiifFileResources(DigitalObject digitalObject)
+      throws RepositoryException {
     CudamiDigitalObjectsClient cudamiDigitalObjectsClient = cudamiClient.forDigitalObjects();
     try {
       List<ImageFileResource> imageFileResources =
@@ -146,7 +164,12 @@ public class CudamiRepositoryImpl implements ListRepository, SingleObjectReposit
       return imageFileResources;
     } catch (TechnicalException e) {
       LOGGER.error("can not get DigitalObject by UUID.", e);
-      throw new RepositoryException("Cannot retrieve ImageFileResources for DigitalObject with uuid=" + digitalObject.getUuid() + ": " + e, e);
+      throw new RepositoryException(
+          "Cannot retrieve ImageFileResources for DigitalObject with uuid="
+              + digitalObject.getUuid()
+              + ": "
+              + e,
+          e);
     }
   }
 }

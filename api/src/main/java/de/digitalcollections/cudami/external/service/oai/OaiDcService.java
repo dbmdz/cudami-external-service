@@ -8,6 +8,7 @@ public interface OaiDcService {
 
   /**
    * Create Dublin Core OAI for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return OaiDC object
    * @throws ServiceException in case of an error

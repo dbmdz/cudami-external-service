@@ -16,6 +16,7 @@ public interface MetadataService {
 
   /**
    * Create the Digiprov metadata section
+   *
    * @param digitalObject the DigitalObject
    * @return MdSec object
    */
@@ -23,6 +24,7 @@ public interface MetadataService {
 
   /**
    * Create the rights metadata section
+   *
    * @param digitalObject the DigitalObject
    * @return MdSec object
    */

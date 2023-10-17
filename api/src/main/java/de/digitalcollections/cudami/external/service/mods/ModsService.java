@@ -8,6 +8,7 @@ public interface ModsService {
 
   /**
    * Creates the Mods data for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return Mods data
    * @throws ServiceException in case of an error

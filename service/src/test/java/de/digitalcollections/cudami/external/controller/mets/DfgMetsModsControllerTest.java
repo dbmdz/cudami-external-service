@@ -1,5 +1,12 @@
 package de.digitalcollections.cudami.external.controller.mets;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import de.digitalcollections.cudami.external.repository.CudamiRepositoryImpl;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsServiceImpl;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
@@ -11,13 +18,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DfgMetsModsController.class)
 @ConfigurationPropertiesScan(basePackages = "de.digitalcollections.cudami.external.config")

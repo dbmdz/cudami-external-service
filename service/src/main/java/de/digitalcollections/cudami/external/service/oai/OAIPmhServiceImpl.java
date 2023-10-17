@@ -19,6 +19,11 @@ import de.digitalcollections.model.list.sorting.Direction;
 import de.digitalcollections.model.list.sorting.Order;
 import de.digitalcollections.model.list.sorting.Sorting;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import java.io.IOException;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.*;
 import org.jdom2.Element;
 import org.jdom2.input.DOMBuilder;
 import org.mycore.libmeta.mets.METSXMLProcessor;
@@ -26,9 +31,9 @@ import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.oaidc.model.OaiDc;
 import org.mycore.libmeta.oaidc.xml.OaiDcXMLProcessor;
 import org.mycore.oai.pmh.*;
+import org.mycore.oai.pmh.Identify.DeletedRecordPolicy;
 import org.mycore.oai.pmh.Record;
 import org.mycore.oai.pmh.Set;
-import org.mycore.oai.pmh.Identify.DeletedRecordPolicy;
 import org.mycore.oai.pmh.dataprovider.OAIAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,12 +42,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
-
-import java.io.IOException;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.util.*;
 
 /**
  * see example implementation at
@@ -70,7 +69,7 @@ public class OAIPmhServiceImpl implements OAIAdapter {
       DfgMetsModsServiceImpl dfgMetsModsService,
       OaiDcServiceImpl oaiDcService) {
     this.listRepository = listRepository;
-    this.singleObjectRepository= singleObjectRepository;
+    this.singleObjectRepository = singleObjectRepository;
     this.queryRepository = queryRepository;
     this.dfgMetsModsService = dfgMetsModsService;
     this.oaiConfig = oaiConfig;
@@ -156,7 +155,8 @@ public class OAIPmhServiceImpl implements OAIAdapter {
     }
   }
 
-  private OAIDataList<? extends Header> getHeaders(PageRequestWrapper pageRequestWrapper) throws ServiceException, BadResumptionTokenException {
+  private OAIDataList<? extends Header> getHeaders(PageRequestWrapper pageRequestWrapper)
+      throws ServiceException, BadResumptionTokenException {
     Set set = pageRequestWrapper.getSet();
     MetadataFormat metadataFormat =
         pageRequestWrapper.getMetadataFormatWrapper().getMetadataFormat();
@@ -171,7 +171,8 @@ public class OAIPmhServiceImpl implements OAIAdapter {
         pageResponse = queryRepository.findDigitalObjectsOfCollection(collectionUuid, pageRequest);
       }
     } catch (RepositoryException e) {
-      throw new ServiceException("Cannot get headers for pageRequestWrapper=" + pageRequestWrapper + ": " + e,e);
+      throw new ServiceException(
+          "Cannot get headers for pageRequestWrapper=" + pageRequestWrapper + ": " + e, e);
     }
     OAIDataList<Header> result = new OAIDataList<>();
     if (pageResponse.hasContent()) {
@@ -211,7 +212,7 @@ public class OAIPmhServiceImpl implements OAIAdapter {
     try {
       return getHeaders(pageRequestWrapper);
     } catch (ServiceException e) {
-      String msg="Cannot get headers for resumptionToken=" + resumptionToken + ": " + e;
+      String msg = "Cannot get headers for resumptionToken=" + resumptionToken + ": " + e;
       LOGGER.error(msg, e);
       throw new BadResumptionTokenException(msg);
     }
@@ -306,7 +307,8 @@ public class OAIPmhServiceImpl implements OAIAdapter {
       digitalObjects = queryRepository.findDigitalObjects(pageRequest);
     } catch (RepositoryException e) {
       LOGGER.error("Cannot find DigitalObjects with pageRequest=" + pageRequest + ": " + e, e);
-      throw new RuntimeException("Cannot find DigitalObjects with pageRequest=" + pageRequest + ": " + e, e);
+      throw new RuntimeException(
+          "Cannot find DigitalObjects with pageRequest=" + pageRequest + ": " + e, e);
     }
     if (digitalObjects.hasContent()) {
       DigitalObject earliestChangedDigitalObject = digitalObjects.getContent().get(0);
@@ -470,7 +472,8 @@ public class OAIPmhServiceImpl implements OAIAdapter {
         result.setMetadata(new SimpleMetadata(element));
       } catch (Exception e) {
         LOGGER.error("Cannot get record for identifier=" + identifier + ": " + e, e);
-        throw new IdDoesNotExistException("Cannot get record for identifier=" + identifier + ": " + e);
+        throw new IdDoesNotExistException(
+            "Cannot get record for identifier=" + identifier + ": " + e);
       }
     }
 
@@ -544,12 +547,24 @@ public class OAIPmhServiceImpl implements OAIAdapter {
     try {
       return getRecords(pageRequestWrapper);
     } catch (BadResumptionTokenException | ServiceException e) {
-      LOGGER.error("Cannot get records for format=" + format + ", set=" + set + ", from=" + from + ", until=" + until + ": " + e, e);
+      LOGGER.error(
+          "Cannot get records for format="
+              + format
+              + ", set="
+              + set
+              + ", from="
+              + from
+              + ", until="
+              + until
+              + ": "
+              + e,
+          e);
       throw new NoRecordsMatchException(e.getMessage());
     }
   }
 
-  private OAIDataList<? extends Record> getRecords(PageRequestWrapper pageRequestWrapper) throws BadResumptionTokenException, ServiceException {
+  private OAIDataList<? extends Record> getRecords(PageRequestWrapper pageRequestWrapper)
+      throws BadResumptionTokenException, ServiceException {
     Set set = pageRequestWrapper.getSet();
     MetadataFormat format = pageRequestWrapper.getMetadataFormatWrapper().getMetadataFormat();
     PageRequest pageRequest = pageRequestWrapper.getPageRequest();
@@ -599,8 +614,12 @@ public class OAIPmhServiceImpl implements OAIAdapter {
           Element element = builder.build(document.getDocumentElement());
           metadata = new SimpleMetadata(element);
         } catch (Exception e) {
-          throw new ServiceException("Cannot get metadata for digitalObject with uuid=" + digitalObject.getUuid() + ": " + e, e);
-
+          throw new ServiceException(
+              "Cannot get metadata for digitalObject with uuid="
+                  + digitalObject.getUuid()
+                  + ": "
+                  + e,
+              e);
         }
         Record record = new Record(header, metadata);
         result.add(record);
@@ -721,7 +740,8 @@ public class OAIPmhServiceImpl implements OAIAdapter {
     }
   }
 
-  private OAIDataList<? extends Set> getSets(PageRequest pageRequest) throws BadResumptionTokenException, ServiceException {
+  private OAIDataList<? extends Set> getSets(PageRequest pageRequest)
+      throws BadResumptionTokenException, ServiceException {
     PageResponse<Collection> pageResponse = null;
     try {
       pageResponse = queryRepository.findCollections(pageRequest);
@@ -761,14 +781,15 @@ public class OAIPmhServiceImpl implements OAIAdapter {
     }
   }
 
-  private ResumptionToken resumptionTokenFromPageRequest(PageRequest pageRequest) throws BadResumptionTokenException {
+  private ResumptionToken resumptionTokenFromPageRequest(PageRequest pageRequest)
+      throws BadResumptionTokenException {
     ResumptionToken result = null;
     try {
       byte[] pageRequestWrapperBytes = objectMapper.writeValueAsBytes(pageRequest);
       String token = Base64.getEncoder().encodeToString(pageRequestWrapperBytes);
       result = new SimpleResumptionToken(token);
     } catch (JsonProcessingException e) {
-      String msg="Cannot extract resumption token from pageRequest=" + pageRequest + ": " + e;
+      String msg = "Cannot extract resumption token from pageRequest=" + pageRequest + ": " + e;
       LOGGER.error(msg, e);
       throw new BadResumptionTokenException(msg);
     }
@@ -783,27 +804,33 @@ public class OAIPmhServiceImpl implements OAIAdapter {
       String token = Base64.getEncoder().encodeToString(pageRequestBytes);
       result = new SimpleResumptionToken(token);
     } catch (JsonProcessingException e) {
-      String msg="Cannot extract resumption token from pageRequestWrapper=" + pageRequestWrapper + ": " + e;
+      String msg =
+          "Cannot extract resumption token from pageRequestWrapper="
+              + pageRequestWrapper
+              + ": "
+              + e;
       LOGGER.error(msg, e);
       throw new BadResumptionTokenException(msg);
     }
     return result;
   }
 
-  private PageRequest resumptionTokenToPageRequest(String resumptionToken) throws BadResumptionTokenException {
+  private PageRequest resumptionTokenToPageRequest(String resumptionToken)
+      throws BadResumptionTokenException {
     PageRequest result = null;
     try {
       byte[] token = Base64.getDecoder().decode(resumptionToken);
       result = objectMapper.readValue(token, PageRequest.class);
     } catch (IOException e) {
-      String msg="Cannot add resumptionToken=" + resumptionToken + " to pageRequest: " + e;
+      String msg = "Cannot add resumptionToken=" + resumptionToken + " to pageRequest: " + e;
       LOGGER.error(msg, e);
       throw new BadResumptionTokenException(msg);
     }
     return result;
   }
 
-  private PageRequestWrapper resumptionTokenToPageRequestWrapper(String resumptionToken) throws BadResumptionTokenException {
+  private PageRequestWrapper resumptionTokenToPageRequestWrapper(String resumptionToken)
+      throws BadResumptionTokenException {
     PageRequestWrapper result = null;
     try {
       byte[] token = Base64.getDecoder().decode(resumptionToken);

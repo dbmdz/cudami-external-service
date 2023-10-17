@@ -4,13 +4,12 @@ import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObje
 import org.mycore.libmeta.mods.model._toplevel.*;
 import org.mycore.libmeta.mods.model.location.ShelfLocator;
 
-/**
- * Service to create the individual Mods parts
- */
+/** Service to create the individual Mods parts */
 public interface ModsItemsService {
 
   /**
    * Create the purl indentifier for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return the purl identifier
    */
@@ -18,6 +17,7 @@ public interface ModsItemsService {
 
   /**
    * Create the URN identifier for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return the URN identifier
    */
@@ -25,6 +25,7 @@ public interface ModsItemsService {
 
   /**
    * Create the location for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return the location
    */
@@ -32,6 +33,7 @@ public interface ModsItemsService {
 
   /**
    * Create the OriginInfo for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return the origin info
    */
@@ -39,6 +41,7 @@ public interface ModsItemsService {
 
   /**
    * Create the physical description for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return the physical description
    */
@@ -46,6 +49,7 @@ public interface ModsItemsService {
 
   /**
    * Create the related item for a DigitalObject
+   *
    * @param digitalObject the DigitalObject
    * @return the related item
    */
@@ -53,6 +57,7 @@ public interface ModsItemsService {
 
   /**
    * Create the ShelfLocator for a DigitalObject
+   *
    * @param digitalObject the digitalObject
    * @return the shelf locator
    */

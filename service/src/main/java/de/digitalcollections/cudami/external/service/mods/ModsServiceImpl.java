@@ -6,6 +6,9 @@ import de.digitalcollections.cudami.external.service.ServiceException;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
 import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import org.mycore.libmeta.mods.model.Mods;
 import org.mycore.libmeta.mods.model.ModsVersion;
 import org.mycore.libmeta.mods.model._misc.CodeOrText;
@@ -25,10 +28,6 @@ import org.mycore.libmeta.mods.model.titleInfo.Title;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service

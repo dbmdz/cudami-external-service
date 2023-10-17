@@ -7,18 +7,18 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.1.4</version>
+    <relativePath/>
   </parent>      
 
   <groupId>de.digitalcollections.cudami.external</groupId>
   <artifactId>cudami-external-service</artifactId>
-  <version>${revision}</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>cudami External APIs Service</name>
   <description>REST-Webservice providing the public APIs for cudami Repository Server</description>
   <url>https://github.com/dbmdz/cudami-external-service</url>
 
   <properties>
-    <revision>0.1.0-SNAPSHOT</revision>
     <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -78,6 +78,11 @@
         <groupId>de.digitalcollections.cudami</groupId>
         <artifactId>dc-cudami-client</artifactId>
         <version>7.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>de.digitalcollections.cudami.external</groupId>
+        <artifactId>api</artifactId>
+        <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.mycore.libmeta</groupId>
@@ -174,18 +179,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>3.1.2</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

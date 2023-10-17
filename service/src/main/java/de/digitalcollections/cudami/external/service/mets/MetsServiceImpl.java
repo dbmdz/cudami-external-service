@@ -5,6 +5,7 @@ import de.digitalcollections.cudami.external.repository.RepositoryException;
 import de.digitalcollections.cudami.external.service.ServiceException;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
+import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.mycore.libmeta.mets.model.Mets;
 import org.mycore.libmeta.mets.model._enums.LOCTYPE;
@@ -21,11 +22,10 @@ import org.mycore.libmeta.mets.model.structmap.Div;
 import org.mycore.libmeta.mets.model.structmap.StructMap;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 /** Service for creation of METS metadata by given (fully filled) DigitalObject. */
 @Service
-public class MetsServiceImpl implements MetadataService, FileService, StructureService, MetsService {
+public class MetsServiceImpl
+    implements MetadataService, FileService, StructureService, MetsService {
 
   private ListRepository listRepository;
 
@@ -303,7 +303,6 @@ public class MetsServiceImpl implements MetadataService, FileService, StructureS
       // mets:structLink
       StructLink structLink = createStructLink(fileResources);
 
-
       Mets mets =
           Mets.builder()
               .addAmdSec(amdSec)
@@ -314,7 +313,8 @@ public class MetsServiceImpl implements MetadataService, FileService, StructureS
               .build();
       return mets;
     } catch (RepositoryException e) {
-      throw new ServiceException("Cannot get Mets for a DigitalObject=" + digitalObject + ": " + e, e);
+      throw new ServiceException(
+          "Cannot get Mets for a DigitalObject=" + digitalObject + ": " + e, e);
     }
   }
 }

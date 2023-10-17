@@ -1,5 +1,7 @@
 package de.digitalcollections.cudami.external.service.mets;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import de.digitalcollections.cudami.external.config.DfgConfig;
 import de.digitalcollections.cudami.external.config.IiifConfig;
 import de.digitalcollections.cudami.external.repository.CudamiRepositoryImpl;
@@ -7,6 +9,8 @@ import de.digitalcollections.cudami.external.service.mods.DfgModsServiceImpl;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
 import de.digitalcollections.model.text.LocalizedText;
+import java.util.Locale;
+import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.mycore.libmeta.mets.METSXMLProcessor;
 import org.mycore.libmeta.mets.model.Mets;
@@ -15,11 +19,6 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.TestPropertySource;
-
-import java.util.Locale;
-import java.util.UUID;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @ConfigurationPropertiesScan(basePackages = "de.digitalcollections.cudami.external.config")
