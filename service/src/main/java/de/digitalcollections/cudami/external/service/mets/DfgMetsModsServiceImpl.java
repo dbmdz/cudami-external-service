@@ -4,7 +4,7 @@ import de.digitalcollections.cudami.external.config.DfgConfig;
 import de.digitalcollections.cudami.external.config.IiifConfig;
 import de.digitalcollections.cudami.external.repository.ListRepository;
 import de.digitalcollections.cudami.external.service.ServiceException;
-import de.digitalcollections.cudami.external.service.mods.DfgModsServiceImpl;
+import de.digitalcollections.cudami.external.service.mods.DfgModsService;
 import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.LinkedDataFileResource;
@@ -35,11 +35,11 @@ import org.w3c.dom.Element;
 @Service
 public class DfgMetsModsServiceImpl extends MetsServiceImpl implements DfgMetsModsService {
   private final DfgConfig dfgConfig;
-  private final DfgModsServiceImpl dfgModsService;
+  private final DfgModsService dfgModsService;
   private final IiifConfig iiifConfig;
 
   public DfgMetsModsServiceImpl(
-      DfgModsServiceImpl dfgModsService,
+      DfgModsService dfgModsService,
       ListRepository listRepository,
       DfgConfig dfgConfig,
       IiifConfig iiifConfig) {

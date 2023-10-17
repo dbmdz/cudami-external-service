@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import de.digitalcollections.cudami.external.config.DfgConfig;
 import de.digitalcollections.cudami.external.config.IiifConfig;
-import de.digitalcollections.cudami.external.repository.CudamiRepositoryImpl;
+import de.digitalcollections.cudami.external.repository.CustomCudamiRepositoryImpl;
 import de.digitalcollections.cudami.external.service.mods.DfgModsServiceImpl;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.jackson.DigitalCollectionsObjectMapper;
@@ -25,7 +25,7 @@ import org.springframework.test.context.TestPropertySource;
 @TestPropertySource("classpath:application.yml")
 class DfgMetsModsServiceTest {
 
-  @MockBean private CudamiRepositoryImpl cudamiRepositoryManager;
+  @MockBean private CustomCudamiRepositoryImpl cudamiRepositoryManager;
   @MockBean private DigitalCollectionsObjectMapper digitalCollectionsObjectMapper;
   @Autowired private DfgConfig dfgConfig;
   @Autowired private IiifConfig iiifConfig;

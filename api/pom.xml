@@ -29,6 +29,10 @@
       <artifactId>dc-cudami-client</artifactId>
     </dependency>
     <dependency>
+      <groupId>io.micrometer</groupId>
+      <artifactId>micrometer-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.mycore.libmeta</groupId>
       <artifactId>libmeta-dublincore-oai</artifactId>
     </dependency>

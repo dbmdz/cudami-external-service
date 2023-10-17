@@ -85,6 +85,12 @@
         <version>${project.version}</version>
       </dependency>
       <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-registry-prometheus</artifactId>
+        <scope>runtime</scope>
+        <version>1.11.4</version>
+      </dependency>
+      <dependency>
         <groupId>org.mycore.libmeta</groupId>
         <artifactId>libmeta-dublincore-oai</artifactId>
         <version>0.8.1-SNAPSHOT</version>
