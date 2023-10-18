@@ -2,6 +2,7 @@ package de.digitalcollections.cudami.external.service.mets;
 
 import de.digitalcollections.cudami.external.repository.ListRepository;
 import de.digitalcollections.cudami.external.repository.RepositoryException;
+import de.digitalcollections.cudami.external.repository.SingleObjectRepository;
 import de.digitalcollections.cudami.external.service.ServiceException;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
@@ -28,9 +29,12 @@ public class MetsServiceImpl
     implements MetadataService, FileService, StructureService, MetsService {
 
   private ListRepository listRepository;
+  private SingleObjectRepository singleObjectRepository;
 
-  public MetsServiceImpl(ListRepository listRepository) {
+  public MetsServiceImpl(
+      ListRepository listRepository, SingleObjectRepository singleObjectRepository) {
     this.listRepository = listRepository;
+    this.singleObjectRepository = singleObjectRepository;
   }
 
   public AmdSec createAmdSec(DigitalObject digitalObject) {

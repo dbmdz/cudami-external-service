@@ -1,7 +1,6 @@
 package de.digitalcollections.cudami.external.controller.mets;
 
-import de.digitalcollections.cudami.external.repository.CudamiRepositoryImpl;
-import de.digitalcollections.cudami.external.service.mets.DfgMetsModsServiceImpl;
+import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.util.UUID;
@@ -20,15 +19,10 @@ public class DfgMetsModsController {
   public static final String UUID_PATTERN =
       "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$";
 
-  private final DfgMetsModsServiceImpl dfgMetsModsService;
-
-  // FIXME Use service instead of repositoryImpl!
-  private final CudamiRepositoryImpl cudamiRepositoryManager;
+  private final DfgMetsModsService dfgMetsModsService;
 
   @SuppressFBWarnings
-  public DfgMetsModsController(
-      CudamiRepositoryImpl cudamiRepositoryManager, DfgMetsModsServiceImpl dfgMetsModsService) {
-    this.cudamiRepositoryManager = cudamiRepositoryManager;
+  public DfgMetsModsController(DfgMetsModsService dfgMetsModsService) {
     this.dfgMetsModsService = dfgMetsModsService;
   }
 
@@ -38,9 +32,11 @@ public class DfgMetsModsController {
   public ResponseEntity<String> getByUuid(@PathVariable UUID uuid) throws Exception {
     DigitalObject digitalObject = new DigitalObject();
     digitalObject.setUuid(uuid);
-    digitalObject = cudamiRepositoryManager.getDigitalObject(digitalObject);
 
     Mets mets = dfgMetsModsService.getMetsForDigitalObject(digitalObject);
+    if (mets == null) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 
     String xml = METSXMLProcessor.getInstance().marshalToString(mets);
     return new ResponseEntity<String>(xml, HttpStatus.OK);

@@ -2,7 +2,8 @@ package de.digitalcollections.cudami.external.service.mets;
 
 import de.digitalcollections.cudami.external.config.DfgConfig;
 import de.digitalcollections.cudami.external.config.IiifConfig;
-import de.digitalcollections.cudami.external.repository.ListRepository;
+import de.digitalcollections.cudami.external.repository.RepositoryException;
+import de.digitalcollections.cudami.external.repository.SingleObjectRepository;
 import de.digitalcollections.cudami.external.service.ServiceException;
 import de.digitalcollections.cudami.external.service.mods.DfgModsService;
 import de.digitalcollections.model.identifiable.Identifier;
@@ -33,25 +34,44 @@ import org.w3c.dom.Element;
 /** Service for creation of DFG specific METS metadata by given (fully filled) DigitalObject. */
 @SuppressFBWarnings
 @Service
-public class DfgMetsModsServiceImpl extends MetsServiceImpl implements DfgMetsModsService {
+public class DfgMetsModsServiceImpl implements DfgMetsModsService {
+
+  private SingleObjectRepository singleObjectRepository;
+  private final MetsService metsService;
   private final DfgConfig dfgConfig;
   private final DfgModsService dfgModsService;
   private final IiifConfig iiifConfig;
 
   public DfgMetsModsServiceImpl(
+      MetsService metsService,
       DfgModsService dfgModsService,
-      ListRepository listRepository,
+      SingleObjectRepository singleObjectRepository,
       DfgConfig dfgConfig,
       IiifConfig iiifConfig) {
-    super(listRepository);
+    this.singleObjectRepository = singleObjectRepository;
+    this.metsService = metsService;
     this.dfgConfig = dfgConfig;
     this.dfgModsService = dfgModsService;
     this.iiifConfig = iiifConfig;
   }
 
   @Override
-  public Mets getMetsForDigitalObject(DigitalObject digitalObject) throws ServiceException {
-    Mets mets = super.getMetsForDigitalObject(digitalObject);
+  public Mets getMetsForDigitalObject(DigitalObject digitalObjectExample) throws ServiceException {
+
+    // Retrieve the DigitalObject by example
+    DigitalObject digitalObject;
+    try {
+      digitalObject = singleObjectRepository.getDigitalObject(digitalObjectExample);
+    } catch (RepositoryException e) {
+      throw new ServiceException(
+          "Cannot retrieve digitalObject by example=" + digitalObjectExample + ": " + e, e);
+    }
+
+    if (digitalObject == null) {
+      return null;
+    }
+
+    Mets mets = metsService.getMetsForDigitalObject(digitalObject);
 
     // add MODS to mets:dmdSec
     try {

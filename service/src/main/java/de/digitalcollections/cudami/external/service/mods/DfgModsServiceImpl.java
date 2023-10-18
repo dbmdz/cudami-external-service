@@ -12,10 +12,17 @@ import org.springframework.stereotype.Service;
  * Version 3.5, das von der Library of Congress gepflegt wird
  */
 @Service
-public class DfgModsServiceImpl extends ModsServiceImpl implements DfgModsService {
+public class DfgModsServiceImpl implements DfgModsService {
+
+  private ModsService modsService;
+
+  public DfgModsServiceImpl(ModsService modsService) {
+    this.modsService = modsService;
+  }
+
   @Override
   public Mods getModsForDigitalObject(DigitalObject digitalObject) throws ServiceException {
-    Mods mods = super.getModsForDigitalObject(digitalObject);
+    Mods mods = modsService.getModsForDigitalObject(digitalObject);
     return mods;
   }
 }

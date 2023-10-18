@@ -2,7 +2,6 @@ package de.digitalcollections.cudami.external.service.mods;
 
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import org.mycore.libmeta.mods.model._toplevel.*;
-import org.mycore.libmeta.mods.model.location.ShelfLocator;
 
 /** Service to create the individual Mods parts */
 public interface ModsItemsService {
@@ -24,7 +23,7 @@ public interface ModsItemsService {
   Identifier createIdentifierUrn(DigitalObject digitalObject);
 
   /**
-   * Create the location for a DigitalObject
+   * Create the location (<code>mods:shelfLocator</code>) for a DigitalObject
    *
    * @param digitalObject the DigitalObject
    * @return the location
@@ -54,12 +53,4 @@ public interface ModsItemsService {
    * @return the related item
    */
   RelatedItem createRelatedItem(DigitalObject digitalObject);
-
-  /**
-   * Create the ShelfLocator for a DigitalObject
-   *
-   * @param digitalObject the digitalObject
-   * @return the shelf locator
-   */
-  ShelfLocator createShelfLocator(DigitalObject digitalObject);
 }
