@@ -9,11 +9,17 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "iiif")
 @SuppressFBWarnings
-public class IiifConfig {
+public class IiifConfigImpl implements IiifConfig {
 
-  public static class Identifier {
+  public static class Identifier implements IiifConfig.Identifier {
 
     private List<String> namespaces;
+
+    public Identifier() {}
+
+    public Identifier(List<String> namespaces) {
+      this.namespaces = namespaces;
+    }
 
     public List<String> getNamespaces() {
       return namespaces;
@@ -24,9 +30,15 @@ public class IiifConfig {
     }
   }
 
-  public static class Presentation {
+  public static class Presentation implements IiifConfig.Presentation {
 
     private URI baseUrl;
+
+    public Presentation() {}
+
+    public Presentation(URI baseUrl) {
+      this.baseUrl = baseUrl;
+    }
 
     public URI getBaseUrl() {
       return baseUrl;
@@ -40,6 +52,13 @@ public class IiifConfig {
   private Identifier identifier;
 
   private Presentation presentation;
+
+  public IiifConfigImpl() {}
+
+  public IiifConfigImpl(Identifier identifier, Presentation presentation) {
+    this.identifier = identifier;
+    this.presentation = presentation;
+  }
 
   public Identifier getIdentifier() {
     return identifier;

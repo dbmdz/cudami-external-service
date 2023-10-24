@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * <p>Grundlage für dieses Anwendungsprofil ist das Metadata Object Description Schema(MODS) in der
  * Version 3.5, das von der Library of Congress gepflegt wird
  */
-@Service
+@Service("DfgModsServiceImpl")
 public class DfgModsServiceImpl implements DfgModsService {
 
   private ModsService modsService;

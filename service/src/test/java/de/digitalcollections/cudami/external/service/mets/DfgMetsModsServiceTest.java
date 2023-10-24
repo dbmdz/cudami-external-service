@@ -3,7 +3,7 @@ package de.digitalcollections.cudami.external.service.mets;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import de.digitalcollections.cudami.external.config.DfgConfig;
-import de.digitalcollections.cudami.external.config.IiifConfig;
+import de.digitalcollections.cudami.external.config.IiifConfigImpl;
 import de.digitalcollections.cudami.external.repository.CustomCudamiRepositoryImpl;
 import de.digitalcollections.cudami.external.service.mods.DfgModsServiceImpl;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
@@ -28,7 +28,7 @@ class DfgMetsModsServiceTest {
   @MockBean private CustomCudamiRepositoryImpl cudamiRepositoryManager;
   @MockBean private DigitalCollectionsObjectMapper digitalCollectionsObjectMapper;
   @Autowired private DfgConfig dfgConfig;
-  @Autowired private IiifConfig iiifConfig;
+  @Autowired private IiifConfigImpl iiifConfig;
 
   @Test
   void testMetsForDigitalObject() throws Exception {
