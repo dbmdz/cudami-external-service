@@ -4,6 +4,7 @@ import de.digitalcollections.cudami.external.repository.ListRepository;
 import de.digitalcollections.cudami.external.repository.RepositoryException;
 import de.digitalcollections.cudami.external.repository.SingleObjectRepository;
 import de.digitalcollections.cudami.external.service.ServiceException;
+import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import java.util.List;
@@ -71,5 +72,10 @@ public class MetsServiceImpl implements MetsService {
       throw new ServiceException(
           "Cannot get Mets for a DigitalObject=" + digitalObject + ": " + e, e);
     }
+  }
+
+  @Override
+  public Mets getMetsForFullCalendar(Identifier identifier) throws ServiceException {
+    return null;
   }
 }

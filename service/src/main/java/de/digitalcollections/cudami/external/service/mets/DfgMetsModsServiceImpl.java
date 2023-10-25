@@ -120,6 +120,11 @@ public class DfgMetsModsServiceImpl implements DfgMetsModsService {
     return mets;
   }
 
+  @Override
+  public Mets getMetsForFullCalendar(Identifier identifier) throws ServiceException {
+    return metsService.getMetsForFullCalendar(identifier);
+  }
+
   /*
    * Example:
    *
