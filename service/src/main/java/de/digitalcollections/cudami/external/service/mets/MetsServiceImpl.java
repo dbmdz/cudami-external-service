@@ -22,7 +22,6 @@ public class MetsServiceImpl implements MetsService {
   private FileService fileService;
   private ListRepository listRepository;
   private MetadataService metadataService;
-  private SingleObjectRepository singleObjectRepository;
   private StructureService structureService;
 
   public MetsServiceImpl(
@@ -34,7 +33,6 @@ public class MetsServiceImpl implements MetsService {
     this.fileService = fileService;
     this.listRepository = listRepository;
     this.metadataService = metadataService;
-    this.singleObjectRepository = singleObjectRepository;
     this.structureService = structureService;
   }
 
