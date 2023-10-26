@@ -4,6 +4,7 @@ import de.digitalcollections.cudami.external.controller.AbstractBaseController;
 import de.digitalcollections.cudami.external.service.mets.DfgMetsModsService;
 import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.UUID;
@@ -54,8 +55,9 @@ public class DfgMetsModsController extends AbstractBaseController {
       @PathVariable String namespace, @PathVariable String id, HttpServletRequest req)
       throws Exception {
     Identifier identifier = Identifier.builder().namespace(namespace).id(id).build();
+    Manifestation manifestation = Manifestation.builder().identifier(identifier).build();
 
-    Mets mets = dfgMetsModsService.getMetsForFullCalendar(identifier);
+    Mets mets = dfgMetsModsService.getFullCalendarMetsForManifestation(manifestation);
     if (mets == null) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

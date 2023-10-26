@@ -2,6 +2,7 @@ package de.digitalcollections.cudami.external.repository;
 
 import de.digitalcollections.model.identifiable.entity.Collection;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 
 /** Repository to retrieve single model objects */
 public interface SingleObjectRepository {
@@ -24,4 +25,13 @@ public interface SingleObjectRepository {
    */
   public DigitalObject getDigitalObject(DigitalObject digitalObjectExample)
       throws RepositoryException;
+
+  /**
+   * Retrieves a manifestation by example Manifestation (either uuid or identifier)
+   *
+   * @param manifestation example Manifestation
+   * @return the manifestation, or null
+   * @throws RepositoryException in case of an error
+   */
+  public Manifestation getManifestation(Manifestation manifestation) throws RepositoryException;
 }

@@ -9,6 +9,7 @@ import de.digitalcollections.cudami.client.identifiable.entity.work.CudamiWorksC
 import de.digitalcollections.cudami.external.monitoring.ProcessingMetrics;
 import de.digitalcollections.cudami.external.monitoring.Watch;
 import de.digitalcollections.model.exception.TechnicalException;
+import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.Collection;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
 import de.digitalcollections.model.identifiable.entity.item.Item;
@@ -170,6 +171,35 @@ public class CudamiRepositoryImpl
               + ": "
               + e,
           e);
+    }
+  }
+
+  @Override
+  public Manifestation getManifestation(Manifestation manifestation) throws RepositoryException {
+    if (manifestation == null) {
+      return null;
+    }
+
+    CudamiManifestationsClient cudamiManifestationsClient = cudamiClient.forManifestations();
+    Watch manifestationWatch =
+        this.metrics.startMeasure(ProcessingMetrics.MetadataOperation.GET_MANIFESTATION);
+    try {
+      if (manifestation.getUuid() != null) {
+        return cudamiManifestationsClient.getByUuid(manifestation.getUuid());
+      } else if (manifestation.getIdentifiers() != null) {
+        // We use the first identifier here
+        Identifier identifier = manifestation.getIdentifiers().stream().findFirst().orElseThrow();
+        return cudamiManifestationsClient.getByIdentifier(
+            identifier.getNamespace(), identifier.getId());
+      } else {
+        throw new RepositoryException(
+            "Cannot retrieve manifestation without UUID and identifier=" + manifestation);
+      }
+    } catch (TechnicalException e) {
+      throw new RepositoryException(
+          "Cannot retrieve manifestation by example=" + manifestation + ": " + e, e);
+    } finally {
+      manifestationWatch.stop();
     }
   }
 }

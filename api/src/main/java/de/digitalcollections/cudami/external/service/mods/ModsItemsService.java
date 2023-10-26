@@ -1,6 +1,7 @@
 package de.digitalcollections.cudami.external.service.mods;
 
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import org.mycore.libmeta.mods.model._toplevel.*;
 
 /** Service to create the individual Mods parts */
@@ -45,6 +46,14 @@ public interface ModsItemsService {
    * @return the physical description
    */
   PhysicalDescription createPhysicalDescription(DigitalObject digitalObject);
+
+  /**
+   * Create the physical description for a Manifestation
+   *
+   * @param manifestation the Manifestation
+   * @return the physical description
+   */
+  PhysicalDescription createPhysicalDescription(Manifestation manifestation);
 
   /**
    * Create the related item for a DigitalObject

@@ -8,6 +8,7 @@ import de.digitalcollections.cudami.external.service.ServiceException;
 import de.digitalcollections.cudami.external.service.mods.DfgModsService;
 import de.digitalcollections.model.identifiable.Identifier;
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import de.digitalcollections.model.identifiable.resource.LinkedDataFileResource;
 import de.digitalcollections.model.legal.License;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
@@ -56,15 +57,16 @@ public class DfgMetsModsServiceImpl implements DfgMetsModsService {
   }
 
   @Override
-  public Mets getMetsForDigitalObject(DigitalObject digitalObjectExample) throws ServiceException {
+  public Mets getMetsForDigitalObject(DigitalObject digitalObject) throws ServiceException {
 
-    // Retrieve the DigitalObject by example
-    DigitalObject digitalObject;
-    try {
-      digitalObject = singleObjectRepository.getDigitalObject(digitalObjectExample);
-    } catch (RepositoryException e) {
-      throw new ServiceException(
-          "Cannot retrieve digitalObject by example=" + digitalObjectExample + ": " + e, e);
+    // If the provided digitalObject is not filled, retrieve it
+    if (digitalObject.getLastModified() == null) {
+      try {
+        digitalObject = singleObjectRepository.getDigitalObject(digitalObject);
+      } catch (RepositoryException e) {
+        throw new ServiceException(
+            "Cannot retrieve digitalObject by example=" + digitalObject + ": " + e, e);
+      }
     }
 
     if (digitalObject == null) {
@@ -118,11 +120,6 @@ public class DfgMetsModsServiceImpl implements DfgMetsModsService {
     }
 
     return mets;
-  }
-
-  @Override
-  public Mets getMetsForFullCalendar(Identifier identifier) throws ServiceException {
-    return metsService.getMetsForFullCalendar(identifier);
   }
 
   /*
@@ -243,5 +240,28 @@ public class DfgMetsModsServiceImpl implements DfgMetsModsService {
       throw new RuntimeException("can not get/create IIIF presentation URL for digital object", e);
     }
     return result;
+  }
+
+  @Override
+  public Mets getFullCalendarMetsForManifestation(Manifestation manifestation)
+      throws ServiceException {
+    // If the provided manifestation is not filled, retrieve it
+    if (manifestation.getLastModified() == null) {
+      try {
+        manifestation = singleObjectRepository.getManifestation(manifestation);
+      } catch (RepositoryException e) {
+        throw new ServiceException(
+            "Cannot retrieve manifestation by example=" + manifestation + ": " + e, e);
+      }
+    }
+
+    if (manifestation == null) {
+      return null;
+    }
+
+    Mets mets = metsService.getFullCalendarMetsForManifestation(manifestation);
+
+    // TODO everything
+    return mets;
   }
 }

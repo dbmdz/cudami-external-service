@@ -107,6 +107,15 @@ public class ModsItemsServiceImpl implements ModsItemsService {
     return physicalDescription;
   }
 
+  @Override
+  public PhysicalDescription createPhysicalDescription(Manifestation manifestation) {
+    PhysicalDescription physicalDescription =
+        PhysicalDescription.builderForPhysicalDescription()
+            .addContent(DigitalOrigin.REFORMATTED_DIGITAL)
+            .build();
+    return physicalDescription;
+  }
+
   public RelatedItem createRelatedItem(DigitalObject digitalObject) {
     RelatedItem.Builder relatedItemBuilder =
         RelatedItem.builderForRelatedItem().type(RelatedItemType.HOST);
