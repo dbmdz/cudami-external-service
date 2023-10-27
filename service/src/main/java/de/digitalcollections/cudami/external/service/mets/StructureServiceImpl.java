@@ -1,6 +1,7 @@
 package de.digitalcollections.cudami.external.service.mets;
 
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
@@ -82,6 +83,24 @@ public class StructureServiceImpl implements StructureService {
       String type = digitalObject.getItem().getManifestation().getManifestationType();
       divBuilder.TYPE(type);
     }
+
+    Div divTop = divBuilder.build();
+    structMap.setDiv(divTop);
+
+    return structMap;
+  }
+
+  @Override
+  public StructMap createStructMapLogical(Manifestation manifestation) {
+    StructMap structMap = StructMap.builder().TYPE("LOGICAL").build();
+
+    Div.Builder divBuilder = Div.builder();
+    divBuilder.ID("LOG_0000").ADMID("AMD").DMDID("DMDLOG_0000");
+
+    String label = manifestation.getLabel().getText();
+    divBuilder.LABEL(label);
+
+    divBuilder.TYPE(manifestation.getManifestationType());
 
     Div divTop = divBuilder.build();
     structMap.setDiv(divTop);

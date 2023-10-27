@@ -1,6 +1,7 @@
 package de.digitalcollections.cudami.external.service.mets;
 
 import de.digitalcollections.model.identifiable.entity.digitalobject.DigitalObject;
+import de.digitalcollections.model.identifiable.entity.manifestation.Manifestation;
 import de.digitalcollections.model.identifiable.resource.ImageFileResource;
 import java.util.List;
 import org.mycore.libmeta.mets.model.structlink.StructLink;
@@ -53,6 +54,14 @@ public interface StructureService {
    * @return StructMap object
    */
   public StructMap createStructMapLogical(DigitalObject digitalObject);
+
+  /**
+   * Create the logical structure map for a manifestation, which results in a calendar
+   *
+   * @param manifestation the Manifestation
+   * @return StructMap object
+   */
+  public StructMap createStructMapLogical(Manifestation manifestation);
 
   /**
    * Create the physical structure map for a list of FileResources

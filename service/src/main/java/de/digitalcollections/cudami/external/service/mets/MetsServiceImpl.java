@@ -89,7 +89,10 @@ public class MetsServiceImpl implements MetsService {
     // mets:amdSec
     AmdSec amdSec = metadataService.createAmdSec(manifestation);
 
-    Mets mets = Mets.builder().addAmdSec(amdSec).build();
+    // mets:structMap TYPE="LOGICAL"
+    StructMap structMapLogical = structureService.createStructMapLogical(manifestation);
+
+    Mets mets = Mets.builder().addAmdSec(amdSec).addStructMap(structMapLogical).build();
     return mets;
   }
 }
